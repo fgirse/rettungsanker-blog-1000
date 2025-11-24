@@ -22,13 +22,15 @@ const architectsDaughter = Architects_Daughter({
   variable: "--font-architects",
 });
 
-
-
-
 export const metadata: Metadata = {
-  title: "Rettungsanker-Freiburg",
-  description: "Die Kiezkneipe in Freiburg",
-};
+  title: 'Rettungsanker-Freiburg',
+  description: 'Die Kiezkneipe in Freiburg',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+}
 
 export default function RootLayout({
   children,
