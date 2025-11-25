@@ -1,0 +1,14 @@
+# Query: react.js
+# ContextLines: 1
+
+2 results - 2 files
+
+app/dashboard/create-post/page.jsx:
+  127                <option value='javascript'>Rettungsanker-Freiburg</option>
+  128:               <option value='reactjs'>Bundesliga</option>
+  129                <option value='nextjs'>SC Freiburg</option>
+
+app/dashboard/update-post/[id]/page.jsx:
+  156                <option value='javascript'>Rettungsanker-Freiburg</option>
+  157:               <option value='reactjs'>Bundesliga</option>
+  158                <option value='nextjs'>SC Freiburg</option>

@@ -6,7 +6,6 @@
 import { useUser } from "@clerk/nextjs";
 import React from "react";
 import Image from "next/image";
-import Blog from "@/app/components/Blog"; 
 import Link from "next/link";
 
 const ClientPage = () => {

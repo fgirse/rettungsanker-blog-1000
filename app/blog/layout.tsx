@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import '../globals.css';
-import Header from '@/app/components/Header';
+import Script from 'next/script';
 import ThemeProviderClient from '@/app/components/ThemeProviderClient';
-import { ClerkProvider } from '@clerk/nextjs';
-import { ThemeModeScript } from 'flowbite-react';
+import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import { ClerkProvider } from '@clerk/nextjs';
+import '../globals.css';
+import ThemeCom from '@/app/components/ThemeCom';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,20 +13,23 @@ export const metadata: Metadata = {
 };
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
+  
   return (
-    <html lang="en">
-      <head>
-        <ThemeModeScript />
-      </head>
-      <>
-        <ClerkProvider>
-          <ThemeProviderClient>
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProviderClient>
-        </ClerkProvider>
-      </>
-    </html>
+    <>
+      <Script
+        src="../components/ThemeCom.jsx"
+        strategy="beforeInteractive"
+      />
+      
+        <ThemeProviderClient>
+          {/* If ThemeCom is a React client component, render it directly */}
+          <ThemeCom children={undefined} />
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProviderClient>
+      
+    </>
   );
+
 }

@@ -146,9 +146,9 @@ export default function Search() {
             <label className='font-semibold'>Category:</label>
             <Select onChange={handleChange} id='category'>
               <option value='uncategorized'>Uncategorized</option>
-              <option value='reactjs'>React.js</option>
-              <option value='nextjs'>Next.js</option>
-              <option value='javascript'>JavaScript</option>
+              <option value='Bundesliga'>Bundesliga</option>
+              <option value='SC Freiburg'>SC Freiburg</option>
+              <option value='Rettungsanker-Freiburg'>Rettungsanker-Freiburg</option>
             </Select>
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>

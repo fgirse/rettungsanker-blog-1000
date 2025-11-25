@@ -1,0 +1,105 @@
+# Query: Category
+# ContextLines: 1
+
+33 results - 10 files
+
+app/blog/page.tsx:
+  39          <Link
+  40:           href={'/search?category=null'}
+  41            className='text-3xl text-teal-500 hover:underline text-center cursor-pointer'
+
+app/components/DashboardComp.jsx:
+  148                <Table.HeadCell>Post Title</Table.HeadCell>
+  149:               <Table.HeadCell>Category</Table.HeadCell>
+  150              </Table.Head>
+
+  162                      <Table.Cell className='w-96'>{post.title}</Table.Cell>
+  163:                     <Table.Cell className='w-5'>{post.category}</Table.Cell>
+  164                    </Table.Row>
+
+app/components/DashPosts.jsx:
+   88                <Table.HeadCell>Post title</Table.HeadCell>
+   89:               <Table.HeadCell>Category</Table.HeadCell>
+   90                <Table.HeadCell>Delete</Table.HeadCell>
+
+  118                      </Table.Cell>
+  119:                     <Table.Cell>{post.category}</Table.Cell>
+  120                      <Table.Cell>
+
+app/components/PostCard.jsx:
+  13          <p className='text-lg font-semibold line-clamp-2'>{post.title}</p>
+  14:         <span className='italic text-sm'>{post.category}</span>
+  15          <Link
+
+app/dashboard/create-post/page.jsx:
+  122                onChange={(e) =>
+  123:                 setFormData({ ...formData, category: e.target.value })
+  124                }
+  125              >
+  126:               <option value='uncategorized'>Select a category</option>
+  127                <option value='Rettungsanker-Freiburg'>JavaScript</option>
+
+app/dashboard/update-post/[id]/page.jsx:
+  150                onChange={(e) =>
+  151:                 setFormData({ ...formData, category: e.target.value })
+  152                }
+  153:               value={formData.category}
+  154              >
+  155:               <option value='uncategorized'>Select a category</option>
+  156                <option value='javascript'>JavaScript</option>
+
+app/post/[slug]/page.jsx:
+  32        <Link
+  33:         href={`/search?category=${post && post.category}`}
+  34          className='self-center mt-5'
+
+  36          <Button color='gray' pill size='xs'>
+  37:           {post && post.category}
+  38          </Button>
+
+app/search/page.jsx:
+   10      sort: 'desc',
+   11:     category: 'uncategorized',
+   12    });
+
+   23      const sortFromUrl = urlParams.get('sort');
+   24:     const categoryFromUrl = urlParams.get('category');
+   25:     if (searchTermFromUrl || sortFromUrl || categoryFromUrl) {
+   26        setSidebarData({
+
+   29          sort: sortFromUrl,
+   30:         category: categoryFromUrl,
+   31        });
+
+   43            order: sortFromUrl || 'desc',
+   44:           category: categoryFromUrl || 'uncategorized',
+   45            searchTerm: searchTermFromUrl,
+
+   72      }
+   73:     if (e.target.id === 'category') {
+   74:       const category = e.target.value || 'uncategorized';
+   75:       setSidebarData({ ...sidebarData, category });
+   76      }
+
+   85      urlParams.set('sort', sidebarData.sort);
+   86:     urlParams.set('category', sidebarData.category);
+   87      const searchQuery = urlParams.toString();
+
+  103          order: sidebarData.sort,
+  104:         category: sidebarData.category,
+  105          searchTerm: sidebarData.searchTerm,
+
+  145            <div className='flex items-center gap-2'>
+  146:             <label className='font-semibold'>Category:</label>
+  147:             <Select onChange={handleChange} id='category'>
+  148                <option value='uncategorized'>Uncategorized</option>
+
+lib/models/post.model.js:
+  21      },
+  22:     category: {
+  23        type: String,
+
+models/post.model.js:
+  21      },
+  22:     category: {
+  23        type: String,
