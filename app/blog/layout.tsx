@@ -22,11 +22,11 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
       />
       
         <ThemeProviderClient>
-          {/* If ThemeCom is a React client component, render it directly */}
-          <ThemeCom children={undefined} />
-          <Header />
-          {children}
-          <Footer />
+          <ThemeCom>
+            <Header />
+            {children}
+            <Footer />
+          </ThemeCom>
         </ThemeProviderClient>
       
     </>

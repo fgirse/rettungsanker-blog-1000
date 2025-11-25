@@ -23,12 +23,12 @@ export default function Search() {
     const sortFromUrl = urlParams.get('sort');
     const categoryFromUrl = urlParams.get('category');
     if (searchTermFromUrl || sortFromUrl || categoryFromUrl) {
-      setSidebarData({
-        ...sidebarData,
+      setSidebarData((prevData) => ({
+        ...prevData,
         searchTerm: searchTermFromUrl,
         sort: sortFromUrl,
         category: categoryFromUrl,
-      });
+      }));
     }
     const fetchPosts = async () => {
       setLoading(true);
@@ -146,9 +146,9 @@ export default function Search() {
             <label className='font-semibold'>Category:</label>
             <Select onChange={handleChange} id='category'>
               <option value='uncategorized'>Uncategorized</option>
-              <option value='Bundesliga'>Bundesliga</option>
-              <option value='SC Freiburg'>SC Freiburg</option>
-              <option value='Rettungsanker-Freiburg'>Rettungsanker-Freiburg</option>
+              <option value='bundesliga'>Bundesliga</option>
+              <option value='sc-freiburg'>SC Freiburg</option>
+              <option value='rettungsanker-freiburg'>Rettungsanker-Freiburg</option>
             </Select>
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>

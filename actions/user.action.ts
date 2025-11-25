@@ -6,7 +6,7 @@
  */
 "use server";
 
-import User from "@/models/user.model";
+import User from "../lib/models/user.model"; 
 import { connect } from "@/db";
 
 export async function createUser(user: any) {

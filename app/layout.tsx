@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   title: 'Rettungsanker-Freiburg',
   description: 'Die Kiezkneipe in Freiburg',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
+    icon: '/Assets/Svg/image1.svg',
+    shortcut:'/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
 }

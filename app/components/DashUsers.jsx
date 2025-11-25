@@ -4,6 +4,7 @@ import { Table } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import { useUser } from '@clerk/nextjs';
+import Image from 'next/image';
 export default function DashUsers() {
   const { user, isLoaded } = useUser();
   const [users, setUsers] = useState([]);
@@ -31,7 +32,7 @@ export default function DashUsers() {
     if (user?.publicMetadata?.isAdmin) {
       fetchUsers();
     }
-  }, [user?.publicMetadata?.isAdmin]);
+  }, [user?.publicMetadata?.isAdmin, user?.publicMetadata?.userMongoId]);
 
   if (!user?.publicMetadata?.isAdmin && isLoaded) {
     return (
@@ -59,9 +60,11 @@ export default function DashUsers() {
                     {new Date(user.createdAt).toLocaleDateString()}
                   </Table.Cell>
                   <Table.Cell>
-                    <img
+                    <Image
                       src={user.profilePicture}
                       alt={user.username}
+                      width={40}
+                      height={40}
                       className='w-10 h-10 object-cover bg-gray-500 rounded-full'
                     />
                   </Table.Cell>

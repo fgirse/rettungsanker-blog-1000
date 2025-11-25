@@ -2,6 +2,7 @@ import CallToAction from '@/app/components/CallToAction';
 import RecentPosts from '@/app/components/RecentPosts';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
+import Image from 'next/image';
 export default async function PostPage({ params }) {
   let post = null;
   try {
@@ -37,9 +38,11 @@ export default async function PostPage({ params }) {
           {post && post.category}
         </Button>
       </Link>
-      <img
+      <Image
         src={post && post.image}
         alt={post && post.title}
+        width={1200}
+        height={600}
         className='mt-10 p-3 max-h-[600px] w-full object-cover'
       />
       <div className='flex justify-between p-3 border-b border-slate-500 mx-auto w-full max-w-2xl text-xs'>

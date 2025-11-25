@@ -6,6 +6,7 @@ import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 // https://dev.to/a7u/reactquill-with-nextjs-478b
 import 'react-quill-new/dist/quill.snow.css';
@@ -124,9 +125,9 @@ export default function CreatePostPage() {
               }
             >
               <option value='uncategorized'>Select a category</option>
-              <option value='Rettungsanker-Freiburg'>Rettungsanker-Freiburg</option>
-              <option value='Bundesliga'>Bundesliga</option>
-              <option value='SC Freiburg'>SC Freiburg</option>
+              <option value='javascript'>JavaScript</option>
+              <option value='reactjs'>React.js</option>
+              <option value='nextjs'>Next.js</option>
             </Select>
           </div>
           <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
@@ -160,9 +161,11 @@ export default function CreatePostPage() {
             <Alert color='failure'>{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <img
+            <Image
               src={formData.image}
               alt='upload'
+              width={800}
+              height={288}
               className='w-full h-72 object-cover'
             />
           )}

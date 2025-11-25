@@ -2,14 +2,30 @@ import Link from 'next/link';
 import CallToAction from '@/app/components/CallToAction';
 import RecentPosts from '@/app/components/RecentPosts';
 
+// Mark this page as dynamic since it fetches data
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   let posts = null;
   try {
-    const result = await fetch(process.env.URL + '/api/post/get', {
+    // Use absolute URL or relative path for server-side fetch
+    const baseUrl = process.env.NEXT_PUBLIC_URL || process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : 'http://localhost:3000';
+    
+    const result = await fetch(`${baseUrl}/api/post/get`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({ limit: 9, order: 'desc' }),
       cache: 'no-store',
     });
+    
+    if (!result.ok) {
+      throw new Error(`Failed to fetch posts: ${result.status}`);
+    }
+    
     const data = await result.json();
     posts = data.posts;
   } catch (error) {

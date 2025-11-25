@@ -3,6 +3,7 @@
 import { useUser } from '@clerk/nextjs';
 import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 // https://dev.to/a7u/reactquill-with-nextjs-478b
 import 'react-quill-new/dist/quill.snow.css';
@@ -188,9 +189,11 @@ export default function UpdatePost() {
             <Alert color='failure'>{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <img
+            <Image
               src={formData.image}
               alt='upload'
+              width={800}
+              height={288}
               className='w-full h-72 object-cover'
             />
           )}

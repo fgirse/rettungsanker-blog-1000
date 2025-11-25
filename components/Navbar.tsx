@@ -10,8 +10,8 @@ import React from "react";
 import Image from "next/image";
 import LogoNeu from "@/public/Assets/Img/LogoNeu.png";
 
-const Navbar = () => {
-  const { userId } = auth();
+const Navbar = async () => {
+  const { userId } = await auth();
   return (
     <div className="bg-red-950 h-[28vh] lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center rounded-b-xl">
       <Link href="/"  className="relative top-[5vh] left-6">

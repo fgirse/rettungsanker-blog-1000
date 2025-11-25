@@ -9,6 +9,7 @@ import {
 import { Button, Table } from 'flowbite-react';
 import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
+import Image from 'next/image';
 export default function DashboardComp() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
@@ -122,9 +123,11 @@ export default function DashboardComp() {
                 <Table.Body key={user._id} className='divide-y'>
                   <Table.Row className='bg-white dark:border-gray-700 dark:bg-gray-800'>
                     <Table.Cell>
-                      <img
+                      <Image
                         src={user.profilePicture}
                         alt='user'
+                        width={40}
+                        height={40}
                         className='w-10 h-10 rounded-full bg-gray-500'
                       />
                     </Table.Cell>
@@ -153,9 +156,11 @@ export default function DashboardComp() {
                 <Table.Body key={post._id} className='divide-y'>
                   <Table.Row className='bg-white dark:border-gray-700 dark:bg-gray-800'>
                     <Table.Cell>
-                      <img
+                      <Image
                         src={post.image}
                         alt='user'
+                        width={56}
+                        height={40}
                         className='w-14 h-10 rounded-md bg-gray-500'
                       />
                     </Table.Cell>
