@@ -1,14 +1,22 @@
 import PostCard from './PostCard';
+import { connect } from '@/lib/mongodb/mongoose';
+import Post from '@/lib/models/post.model';
+
 export default async function RecentPosts({limit}) {
   let posts = null;
   try {
-    const result = await fetch(process.env.URL + '/api/post/get', {
-      method: 'POST',
-      body: JSON.stringify({ limit: limit, order: 'desc' }),
-      cache: 'no-store',
-    });
-    const data = await result.json();
-    posts = data.posts;
+    await connect();
+    const fetchedPosts = await Post.find({})
+      .sort({ updatedAt: -1 })
+      .limit(limit || 3)
+      .lean();
+    
+    posts = fetchedPosts.map((post) => ({
+      ...post,
+      _id: post._id.toString(),
+      createdAt: post.createdAt.toISOString(),
+      updatedAt: post.updatedAt.toISOString(),
+    }));
   } catch (error) {
     console.log('Error getting post:', error);
   }

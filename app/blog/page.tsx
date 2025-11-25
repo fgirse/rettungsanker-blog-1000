@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import CallToAction from '@/app/components/CallToAction';
 import RecentPosts from '@/app/components/RecentPosts';
+import { connect } from '@/lib/mongodb/mongoose';
+import Post from '@/lib/models/post.model';
 
 // Mark this page as dynamic since it fetches data
 export const dynamic = 'force-dynamic';
@@ -8,26 +10,20 @@ export const dynamic = 'force-dynamic';
 export default async function Home() {
   let posts = null;
   try {
-    // Use absolute URL or relative path for server-side fetch
-    const baseUrl = process.env.NEXT_PUBLIC_URL || process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}` 
-      : 'http://localhost:3000';
+    // Connect to database and fetch posts directly
+    await connect();
+    posts = await Post.find({})
+      .sort({ updatedAt: -1 })
+      .limit(9)
+      .lean();
     
-    const result = await fetch(`${baseUrl}/api/post/get`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ limit: 9, order: 'desc' }),
-      cache: 'no-store',
-    });
-    
-    if (!result.ok) {
-      throw new Error(`Failed to fetch posts: ${result.status}`);
-    }
-    
-    const data = await result.json();
-    posts = data.posts;
+    // Convert MongoDB _id to string for JSON serialization
+    posts = posts.map((post: any) => ({
+      ...post,
+      _id: post._id.toString(),
+      createdAt: post.createdAt.toISOString(),
+      updatedAt: post.updatedAt.toISOString(),
+    }));
   } catch (error) {
     console.log('Error getting post:', error);
   }
@@ -37,8 +33,6 @@ export default async function Home() {
         <h1 className='text-3xl font-bold lg:text-6xl'>Willkommen zum Rettungsanker-Blog</h1>
         <p className='text-gray-500 text-sm sm:text-base'>
           Entdecke zahlreiche Artikel, Meinungen und Stellungsnahmen zu Themen wie <span className="border rounded-xl p-1 bg-yellow-500">Rettungsanker-Freiburg</span>, <span className="border rounded-xl p-1 bg-red-700">SC Freiburg</span>, <span className="border rounded-xl p-1 bg-yellow-600">Bundesliga</span> oder <span className="border rounded-xl p-1 bg-yellow-400">allgemeines</span>, die unseren interessierten Nutzern durch einen Blog präsentiert werden. Unser Blog bietet eine Plattform für den Austausch von Gedanken und Ideen rund um diese spannenden Themen. Tauche ein in die Welt des Rettungsanker-Blogs und bleibe stets informiert! &nbsp; (Die Redaktion des Rettungsankers behält sich vor rassistische, sexistische  oder Gewalt verherrlichende Beiträge oder Bemerkungen zu entfernen!)
-       
-          .
         </p>
         <Link
           href='/search'

@@ -3,17 +3,25 @@ import RecentPosts from '@/app/components/RecentPosts';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { connect } from '@/lib/mongodb/mongoose';
+import Post from '@/lib/models/post.model';
+
 export default async function PostPage({ params }) {
   let post = null;
   try {
-    const result = await fetch(process.env.URL + '/api/post/get', {
-      method: 'POST',
-      body: JSON.stringify({ slug: params.slug }),
-      cache: 'no-store',
-    });
-    const data = await result.json();
-    post = data.posts[0];
+    await connect();
+    const fetchedPost = await Post.findOne({ slug: params.slug }).lean();
+    
+    if (fetchedPost) {
+      post = {
+        ...fetchedPost,
+        _id: fetchedPost._id.toString(),
+        createdAt: fetchedPost.createdAt.toISOString(),
+        updatedAt: fetchedPost.updatedAt.toISOString(),
+      };
+    }
   } catch (error) {
+    console.error('Error fetching post:', error);
     post = { title: 'Failed to load post' };
   }
   if (!post || !post.title === 'Failed to load post') {
