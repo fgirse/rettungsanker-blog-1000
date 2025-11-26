@@ -5,8 +5,8 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 const ClientPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
@@ -15,7 +15,7 @@ const ClientPage = () => {
     return null;
   }
   return (
-    <section className="h-screen">
+    <section className="w-full flex flex-col items-center justify-center mt-10 mb-1">
       <div className="w-full flex flex-col items-center justify-center mt-10 mb-1">
       <Image
         src="/Assets/Img/LogoAlt.png"
@@ -23,8 +23,7 @@ const ClientPage = () => {
         width={450}
         height={50}
         className=""
-      />  
-      </div>
+      />
       <div className="h-full flex flex-col items-center justify-center text-2xl">
         Hello, {user.firstName} {user.lastName}! Willkommen im
         <span className="text-red-700 text-3xl text-shadow-lg headingA lg:text-6xl">
@@ -40,6 +39,7 @@ const ClientPage = () => {
           <span>Blog</span>
         </button>
       </Link>
+      </div>
     </section>
   );
 };

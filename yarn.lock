@@ -305,7 +305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudinary/transformation-builder-sdk@npm:^1.10.0":
+"@cloudinary/transformation-builder-sdk@npm:^1.10.0, @cloudinary/transformation-builder-sdk@npm:^1.15.1":
   version: 1.21.2
   resolution: "@cloudinary/transformation-builder-sdk@npm:1.21.2"
   dependencies:
@@ -314,12 +314,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudinary/url-gen@npm:1.15.0, @cloudinary/url-gen@npm:^1.7.0":
+"@cloudinary/url-gen@npm:1.15.0":
   version: 1.15.0
   resolution: "@cloudinary/url-gen@npm:1.15.0"
   dependencies:
     "@cloudinary/transformation-builder-sdk": "npm:^1.10.0"
   checksum: 10c0/4b50b690f40b117068d7396906e9bbda36bd4b8e6143bbc8ad57709cf18f7b3953611a414f56f6551680277e683c3e82f581b01d67e6d06ff88125f8c8f447d6
+  languageName: node
+  linkType: hard
+
+"@cloudinary/url-gen@npm:^1.7.0":
+  version: 1.22.0
+  resolution: "@cloudinary/url-gen@npm:1.22.0"
+  dependencies:
+    "@cloudinary/transformation-builder-sdk": "npm:^1.15.1"
+  checksum: 10c0/409c087224b847bdedb8ef1be142e67509e1caf339d43cb616640e143ba9746755269c8e53dec5b5e982710909a57a60c3fe11904dcb3d810c3c13407b948848
   languageName: node
   linkType: hard
 
@@ -3431,7 +3440,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flowbite@npm:2.5.1, flowbite@npm:^2.0.0":
+"flowbite@npm:2.5.1":
   version: 2.5.1
   resolution: "flowbite@npm:2.5.1"
   dependencies:
@@ -3439,6 +3448,17 @@ __metadata:
     flowbite-datepicker: "npm:^1.3.0"
     mini-svg-data-uri: "npm:^1.4.3"
   checksum: 10c0/e862b8b05998bb6c1301320c78af732da554456ea90f8e6e0de07f15fdf88ecd6268b3922ca4b4ae5ae9d1146effaba21c26bcc5543ce93d9d3b3ead17238904
+  languageName: node
+  linkType: hard
+
+"flowbite@npm:^2.0.0":
+  version: 2.5.2
+  resolution: "flowbite@npm:2.5.2"
+  dependencies:
+    "@popperjs/core": "npm:^2.9.3"
+    flowbite-datepicker: "npm:^1.3.0"
+    mini-svg-data-uri: "npm:^1.4.3"
+  checksum: 10c0/7de6311d4aef16b4854d88bab7943d59db16077a90a1da757fee06c70ef8bba8bb2579d3c5b3d5ceab85d9b9500b16d13eb4c55521f3a02989620f9a4ba3a2ed
   languageName: node
   linkType: hard
 
@@ -6713,9 +6733,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.4, zod@npm:^3.25.0 || ^4.0.0":
+"zod@npm:^3.22.4":
   version: 3.25.76
   resolution: "zod@npm:3.25.76"
   checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.25.0 || ^4.0.0":
+  version: 4.1.13
+  resolution: "zod@npm:4.1.13"
+  checksum: 10c0/d7e74e82dba81a91ffc3239cd85bc034abe193a28f7087a94ab258a3e48e9a7ca4141920cac979a0d781495b48fc547777394149f26be04c3dc642f58bbc3941
   languageName: node
   linkType: hard
