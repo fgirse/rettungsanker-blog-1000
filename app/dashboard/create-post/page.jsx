@@ -40,33 +40,51 @@ export default function CreatePostPage() {
         return;
       }
       setImageUploadError(null);
+      
+      console.log('Starting upload for file:', file.name);
+      console.log('Firebase config check:', {
+        hasApiKey: !!process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+        hasStorageBucket: !!process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+      });
+      
       const storage = getStorage(app);
       const fileName = new Date().getTime() + '-' + file.name;
       const storageRef = ref(storage, fileName);
       const uploadTask = uploadBytesResumable(storageRef, file);
+      
       uploadTask.on(
         'state_changed',
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log('Upload progress:', progress);
           setImageUploadProgress(progress.toFixed(0));
         },
         (error) => {
-          setImageUploadError('Image upload failed');
+          console.error('Upload error:', error);
+          console.error('Error code:', error.code);
+          console.error('Error message:', error.message);
+          setImageUploadError(`Image upload failed: ${error.message}`);
           setImageUploadProgress(null);
         },
         () => {
+          console.log('Upload completed, getting download URL...');
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            console.log('Download URL:', downloadURL);
             setImageUploadProgress(null);
             setImageUploadError(null);
             setFormData({ ...formData, image: downloadURL });
+          }).catch((urlError) => {
+            console.error('Error getting download URL:', urlError);
+            setImageUploadError('Failed to get download URL');
+            setImageUploadProgress(null);
           });
         }
       );
     } catch (error) {
-      setImageUploadError('Image upload failed');
+      console.error('Caught error in handleUploadImage:', error);
+      setImageUploadError(`Image upload failed: ${error.message}`);
       setImageUploadProgress(null);
-      console.log(error);
     }
   };
 
