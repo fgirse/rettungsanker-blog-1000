@@ -79,28 +79,34 @@ export default function CreatePostPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('📝 Submitting post with data:', formData);
+    
     try {
       const res = await fetch('/api/post/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          userMongoId: user.publicMetadata.userMongoId,
-        }),
+        body: JSON.stringify(formData),
       });
+      
       const data = await res.json();
+      console.log('📡 Response from API:', { status: res.status, data });
+      
       if (!res.ok) {
-        setPublishError(data.message);
+        setPublishError(data.message || 'Failed to create post');
+        console.error('❌ Post creation failed:', data);
         return;
       }
+      
       if (res.ok) {
         setPublishError(null);
+        console.log('✅ Post created successfully! Slug:', data.slug);
         router.push(`/post/${data.slug}`);
       }
     } catch (error) {
-      setPublishError('Something went wrong');
+      console.error('❌ Error submitting post:', error);
+      setPublishError(`Something went wrong: ${error.message}`);
     }
   };
 
@@ -175,6 +181,9 @@ export default function CreatePostPage() {
               height={288}
               className='w-full h-72 object-cover'
             />
+          )}
+          {publishError && (
+            <Alert color='failure'>{publishError}</Alert>
           )}
 
           <ReactQuill
