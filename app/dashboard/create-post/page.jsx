@@ -37,9 +37,9 @@ export default function CreatePostPage() {
       console.log('🚀 Starting Cloudinary upload for:', file.name);
       
       // Create FormData for Cloudinary upload
-      const formData = new FormData();
-      formData.append('file', file);
-      formData.append('upload_preset', 'ml_default'); // Cloudinary unsigned preset
+      const uploadFormData = new FormData();
+      uploadFormData.append('file', file);
+      uploadFormData.append('upload_preset', 'ml_default'); // Cloudinary unsigned preset
       
       const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
       console.log('📤 Uploading to Cloudinary cloud:', cloudName);
@@ -49,7 +49,7 @@ export default function CreatePostPage() {
         `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
         {
           method: 'POST',
-          body: formData,
+          body: uploadFormData,
         }
       );
       
@@ -65,7 +65,7 @@ export default function CreatePostPage() {
       
       setImageUploadProgress(100);
       setImageUploadError(null);
-      setFormData({ ...formData, image: data.secure_url });
+      setFormData((prev) => ({ ...prev, image: data.secure_url }));
       
       // Reset progress after a short delay
       setTimeout(() => setImageUploadProgress(null), 1000);
@@ -168,9 +168,11 @@ export default function CreatePostPage() {
             <Alert color='failure'>{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <img
+            <Image
               src={formData.image}
               alt='upload'
+              width={800}
+              height={288}
               className='w-full h-72 object-cover'
             />
           )}
