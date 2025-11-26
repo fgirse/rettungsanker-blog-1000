@@ -8,13 +8,6 @@ const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 // https://dev.to/a7u/reactquill-with-nextjs-478b
 import 'react-quill-new/dist/quill.snow.css';
 
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from 'firebase/storage';
-import { app } from '../../../../firebase';
 import { useEffect, useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -62,34 +55,49 @@ export default function UpdatePost() {
         setImageUploadError('Please select an image');
         return;
       }
+      
       setImageUploadError(null);
-      const storage = getStorage(app);
-      const fileName = new Date().getTime() + '-' + file.name;
-      const storageRef = ref(storage, fileName);
-      const uploadTask = uploadBytesResumable(storageRef, file);
-      uploadTask.on(
-        'state_changed',
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          setImageUploadProgress(progress.toFixed(0));
-        },
-        (error) => {
-          setImageUploadError('Image upload failed');
-          setImageUploadProgress(null);
-        },
-        () => {
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setImageUploadProgress(null);
-            setImageUploadError(null);
-            setFormData({ ...formData, image: downloadURL });
-          });
+      setImageUploadProgress(1);
+      console.log('🚀 Starting Cloudinary upload for:', file.name);
+      
+      // Create FormData for Cloudinary upload
+      const uploadFormData = new FormData();
+      uploadFormData.append('file', file);
+      uploadFormData.append('upload_preset', 'ml_default'); // Cloudinary unsigned preset
+      
+      const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+      console.log('📤 Uploading to Cloudinary cloud:', cloudName);
+      
+      // Upload to Cloudinary
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+        {
+          method: 'POST',
+          body: uploadFormData,
         }
       );
+      
+      setImageUploadProgress(50);
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error?.message || 'Upload failed');
+      }
+      
+      const data = await response.json();
+      console.log('✅ Upload successful! URL:', data.secure_url);
+      
+      setImageUploadProgress(100);
+      setImageUploadError(null);
+      setFormData({ ...formData, image: data.secure_url });
+      
+      // Reset progress after a short delay
+      setTimeout(() => setImageUploadProgress(null), 1000);
+      
     } catch (error) {
-      setImageUploadError('Image upload failed');
+      console.error('❌ Cloudinary upload error:', error);
+      setImageUploadError(`Upload failed: ${error.message}`);
       setImageUploadProgress(null);
-      console.log(error);
     }
   };
 

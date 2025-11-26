@@ -2,22 +2,14 @@
 
 import { useUser } from '@clerk/nextjs';
 import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react';
+import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 // https://dev.to/a7u/reactquill-with-nextjs-478b
 import 'react-quill-new/dist/quill.snow.css';
-
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from 'firebase/storage';
-import { app } from '@/firebase';
 
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -39,51 +31,48 @@ export default function CreatePostPage() {
         setImageUploadError('Please select an image');
         return;
       }
+      
       setImageUploadError(null);
+      setImageUploadProgress(1);
+      console.log('🚀 Starting Cloudinary upload for:', file.name);
       
-      console.log('Starting upload for file:', file.name);
-      console.log('Firebase config check:', {
-        hasApiKey: !!process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-        hasStorageBucket: !!process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-      });
+      // Create FormData for Cloudinary upload
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('upload_preset', 'ml_default'); // Cloudinary unsigned preset
       
-      const storage = getStorage(app);
-      const fileName = new Date().getTime() + '-' + file.name;
-      const storageRef = ref(storage, fileName);
-      const uploadTask = uploadBytesResumable(storageRef, file);
+      const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+      console.log('📤 Uploading to Cloudinary cloud:', cloudName);
       
-      uploadTask.on(
-        'state_changed',
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log('Upload progress:', progress);
-          setImageUploadProgress(progress.toFixed(0));
-        },
-        (error) => {
-          console.error('Upload error:', error);
-          console.error('Error code:', error.code);
-          console.error('Error message:', error.message);
-          setImageUploadError(`Image upload failed: ${error.message}`);
-          setImageUploadProgress(null);
-        },
-        () => {
-          console.log('Upload completed, getting download URL...');
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            console.log('Download URL:', downloadURL);
-            setImageUploadProgress(null);
-            setImageUploadError(null);
-            setFormData({ ...formData, image: downloadURL });
-          }).catch((urlError) => {
-            console.error('Error getting download URL:', urlError);
-            setImageUploadError('Failed to get download URL');
-            setImageUploadProgress(null);
-          });
+      // Upload to Cloudinary
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+        {
+          method: 'POST',
+          body: formData,
         }
       );
+      
+      setImageUploadProgress(50);
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error?.message || 'Upload failed');
+      }
+      
+      const data = await response.json();
+      console.log('✅ Upload successful! URL:', data.secure_url);
+      
+      setImageUploadProgress(100);
+      setImageUploadError(null);
+      setFormData({ ...formData, image: data.secure_url });
+      
+      // Reset progress after a short delay
+      setTimeout(() => setImageUploadProgress(null), 1000);
+      
     } catch (error) {
-      console.error('Caught error in handleUploadImage:', error);
-      setImageUploadError(`Image upload failed: ${error.message}`);
+      console.error('❌ Cloudinary upload error:', error);
+      setImageUploadError(`Upload failed: ${error.message}`);
       setImageUploadProgress(null);
     }
   };
@@ -119,7 +108,7 @@ export default function CreatePostPage() {
     return null;
   }
 
-  if (isSignedIn ) {
+  if (isSignedIn && user.publicMetadata.isAdmin) {
     return (
       <div className='p-3 max-w-3xl mx-auto min-h-screen'>
         <h1 className='text-center text-3xl my-7 font-semibold'>
@@ -143,9 +132,9 @@ export default function CreatePostPage() {
               }
             >
               <option value='uncategorized'>Select a category</option>
-              <option value='rettungsanker-freiburg'>Rettungsanker-Freiburg</option>
-              <option value='bundesliga'>Bundesliga</option>
-              <option value='scfreiburg'>SC Freiburg</option>
+              <option value='javascript'>JavaScript</option>
+              <option value='reactjs'>React.js</option>
+              <option value='nextjs'>Next.js</option>
             </Select>
           </div>
           <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
@@ -179,11 +168,9 @@ export default function CreatePostPage() {
             <Alert color='failure'>{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <Image
+            <img
               src={formData.image}
               alt='upload'
-              width={800}
-              height={288}
               className='w-full h-72 object-cover'
             />
           )}
