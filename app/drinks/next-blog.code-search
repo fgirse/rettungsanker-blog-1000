@@ -1,0 +1,9 @@
+# Query: next-blog
+# ContextLines: 1
+
+1 result - 1 file
+
+lib/mongodb/mongoose.js:
+  19      await mongoose.connect(mongoUri, {
+  20:       dbName: 'rettungsanker-blog',
+  21      });
