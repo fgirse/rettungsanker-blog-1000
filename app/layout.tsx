@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
-import { dark } from "@clerk/themes";
+import { neobrutalism } from "@clerk/themes";
 import InfoBar from "@/components/InfoBar";
 
 
@@ -52,10 +52,10 @@ export default function RootLayout({
       publishableKey={publishableKey}
       signInUrl={signInUrl}
       signUpUrl={signUpUrl}
-      appearance={{ baseTheme: dark }}
+      appearance={{ baseTheme: neobrutalism }} 
     >
       <html lang="en">
-        <body className={architectsDaughter.className}>
+        <body className={architectsDaughter.variable}>
           {/* <ClerkLoading>
             <div className="flex items-center justify-center h-screen text-2xl">
               LOADING...
