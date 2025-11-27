@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* stylelint-disable at-rule-no-unknown */
+/* Tailwind directives are processed by PostCSS with TailwindCSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* stylelint-enable at-rule-no-unknown */
 
 body {
   background-color: rgb(23, 23, 23);
@@ -128,13 +131,13 @@ body {
 .shape-lighthouse {
   shape-margin: 80px;
   float: left;
-  shape-outside: url("/Assets/Img/lighthouse3.png");
+  shape-outside: url("../public/Assets/Img/lighthouse3.png");
   shape-image-threshold: 0.6;
 }
 
 .portraitMick {
   shape-margin: 80px;
-  shape-outside: url("/Assets/Img/portraitmick.png");
+  shape-outside: url("../public/Assets/Img/portraitmick.png");
   shape-image-threshold: 0.6;
 }
 

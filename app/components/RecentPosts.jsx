@@ -21,9 +21,9 @@ export default async function RecentPosts({limit}) {
     console.log('Error getting post:', error);
   }
   return (
-    <div className='flex flex-col justify-center items-center mb-5'>
-      <h1 className='text-xl mt-5'>Recent articles</h1>
-      <div className='flex flex-wrap gap-5 mt-5 justify-center'>
+    <div className='w-full mb-5'>
+      <h1 className='text-xl mt-5 text-center mb-8'>Recent articles</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full'>
         {posts && posts.map((post) => <PostCard key={post._id} post={post} />)}
       </div>
     </div>

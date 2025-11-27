@@ -1,0 +1,126 @@
+{
+  "timestamp": "2025-11-27T08:16:29.181Z",
+  "checks": {
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": {
+      "passed": true,
+      "details": "Set"
+    },
+    "CLERK_SECRET_KEY": {
+      "passed": true,
+      "details": "Set"
+    },
+    "WEBHOOK_SECRET": {
+      "passed": true,
+      "details": "Set"
+    },
+    "NEXT_PUBLIC_URL": {
+      "passed": true,
+      "details": "Set"
+    },
+    "MONGODB_URL": {
+      "passed": true,
+      "details": "Set"
+    },
+    "app/api/webhooks/clerk/route.ts": {
+      "passed": true,
+      "details": ""
+    },
+    "lib/actions/user.js": {
+      "passed": true,
+      "details": ""
+    },
+    "lib/models/user.model.js": {
+      "passed": true,
+      "details": ""
+    },
+    "lib/mongodb/mongoose.js": {
+      "passed": true,
+      "details": ""
+    },
+    "middleware.ts": {
+      "passed": true,
+      "details": ""
+    },
+    ".env.local": {
+      "passed": true,
+      "details": ""
+    },
+    "MongoDB Connection": {
+      "passed": true,
+      "details": "Connected"
+    },
+    "User Collection Accessible": {
+      "passed": true,
+      "details": "2 documents"
+    },
+    "Admin Users": {
+      "passed": true,
+      "details": "1 admin(s)"
+    },
+    "Regular Users": {
+      "passed": true,
+      "details": "1 user(s)"
+    },
+    "Email Uniqueness": {
+      "passed": true,
+      "details": "0 duplicates found"
+    },
+    "Username Uniqueness": {
+      "passed": true,
+      "details": "0 duplicates found"
+    },
+    "WEBHOOK_SECRET validation": {
+      "passed": true,
+      "details": ""
+    },
+    "Svix header validation": {
+      "passed": true,
+      "details": ""
+    },
+    "user.created event handling": {
+      "passed": true,
+      "details": ""
+    },
+    "user.updated event handling": {
+      "passed": true,
+      "details": ""
+    },
+    "user.deleted event handling": {
+      "passed": true,
+      "details": ""
+    },
+    "Clerk metadata sync": {
+      "passed": true,
+      "details": ""
+    },
+    "Error handling": {
+      "passed": true,
+      "details": ""
+    },
+    "Request logging": {
+      "passed": true,
+      "details": ""
+    },
+    "createOrUpdateUser function": {
+      "passed": true,
+      "details": ""
+    },
+    "deleteUser function": {
+      "passed": true,
+      "details": ""
+    },
+    "MongoDB connection": {
+      "passed": true,
+      "details": ""
+    },
+    "Email handling": {
+      "passed": true,
+      "details": ""
+    },
+    "Logging": {
+      "passed": true,
+      "details": ""
+    }
+  },
+  "summary": {}
+}

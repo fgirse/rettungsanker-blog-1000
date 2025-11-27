@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:signup": "node test-signup-sync.mjs",
+    "test:db": "node test-mongodb.mjs",
+    "check:users": "node check-users.mjs",
+    "check:dashboard": "node check-dashboard-access.mjs",
+    "debug:webhook": "node debug-webhook-config.mjs",
+    "health:check": "node health-check.mjs",
+    "sync:metadata": "node sync-clerk-metadata.mjs",
+    "promote:admin": "node promote-admin.mjs",
+    "monitor:webhook": "bash webhook-monitor.sh"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.35.5",

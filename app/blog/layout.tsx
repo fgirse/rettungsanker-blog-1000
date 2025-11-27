@@ -25,7 +25,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
           <ThemeCom>
             <Header />
             {children}
-            <Footer />
+          
           </ThemeCom>
         </ThemeProviderClient>
       

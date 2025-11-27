@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
 import { neobrutalism } from "@clerk/themes";
 import InfoBar from "@/components/InfoBar";
-
-
-
 import { Bowlby_One, Architects_Daughter } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const bowlbyOne = Bowlby_One({
   weight: "400",
@@ -62,13 +59,12 @@ export default function RootLayout({
             </div>
           </ClerkLoading> */}
           <ClerkLoaded>
-            <div className="max-w-8xl mx-auto">
-              <div className="flex flex-col h-screen">
-                <Navbar />
-                <InfoBar /> 
-                {children}
-              </div>
+            <div className="flex flex-col min-h-screen w-screen overflow-x-hidden">
+              <Navbar />
+              <InfoBar /> 
+              {children}
             </div>
+            <Footer />
           </ClerkLoaded>
         </body>
       </html>

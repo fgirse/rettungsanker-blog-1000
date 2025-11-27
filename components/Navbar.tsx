@@ -13,49 +13,49 @@ import LogoNeu from "@/public/Assets/Img/LogoNeu.png";
 const Navbar = async () => {
   const { userId } = await auth();
   return (
-    <div className="bg-red-950 h-[28vh] lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center rounded-b-xl">
-      <Link href="/"  className="relative top-[5vh] left-6">
-        <div className="">
-          <Image src={LogoNeu} alt="Logo Rettungsanker" width={100} height={100} className="h-12 w-auto" />
+    <div className="w-screen bg-red-950 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center rounded-b-xl">
+      <Link href="/"  className="relative lg:top-[7vh] left-6">
+        <div className="w-full">
+          <Image src={LogoNeu} alt="Logo Rettungsanker" width={100} height={70} className=" w-auto" />
         </div>
       </Link>
       
-      <ul className="mb-7 lg:text-2xl uppercase flex justify-end gap-x-12 py-3 px-6">
+      <ul className="mb-9 lg:text-2xl uppercase flex justify-end gap-x-12 py-3 px-6">
         <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
           <Link href="/">
          
             <li>Home</li>
           </Link>
         </div>
              <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
           <Link href="/about">
          
             <li>über uns</li>
           </Link>
         </div>
                 <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
           <Link href="/drinks">
             <li>drinks</li>
           </Link>
         </div>
                <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
           <Link href="/sportarena">
             <li>sportarena</li>
           </Link>
         </div>
                 <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
           <Link href="/wohin">
             <li>wohin?</li>
           </Link>
         </div>
         <div className="flex items-center gap-2">
                 
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
           <Link href="/client">
          
             <li>client</li>

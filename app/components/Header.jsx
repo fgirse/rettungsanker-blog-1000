@@ -35,7 +35,7 @@ export default function Header() {
     }
   }, [searchParams]);
   return (
-    <Navbar className='border-b-2 bg-orange-300 text-red'>
+    <Navbar className='w-[100vw] border-b-2 bg-orange-300 text-red'>
       <Link
         href='/'
         className='cursor-pointer inteself-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
