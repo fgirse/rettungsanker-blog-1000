@@ -12,7 +12,7 @@ export default function ThemeCom({ children }) {
 
   return (
     <div className={theme}>
-      <div className='max-w-3xl bg-white text-gray-700 dark:text-gray-200 dark:bg-gray-900'>
+      <div className='max-w-9xl bg-white text-gray-700 dark:text-gray-200 dark:bg-gray-900'>
         {children}
       </div>
     </div>

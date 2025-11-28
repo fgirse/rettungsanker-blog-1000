@@ -9,53 +9,54 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import LogoNeu from "@/public/Assets/Img/LogoNeu.png";
+import BottomNavigation from "./BottomNavigation";
 
 const Navbar = async () => {
   const { userId } = await auth();
   return (
-    <div className="w-screen bg-red-950 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center rounded-b-xl">
-      <Link href="/"  className="relative lg:top-[7vh] left-6">
-        <div className="w-full">
-          <Image src={LogoNeu} alt="Logo Rettungsanker" width={100} height={70} className=" w-auto" />
+    <div className="h-[8vh] bg-red-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center rounded-b-xl lg:h-[100vh]">
+      <Link href="/"  className="relative top-[2vh] lg:top-[5vh] left-6">
+        <div className="">
+          <Image src={LogoNeu} alt="Logo Rettungsanker" width={100} height={100} className="h-8 lg:h-12 w-auto" />
         </div>
       </Link>
       
-      <ul className="mb-9 lg:text-2xl uppercase flex justify-end gap-x-12 py-3 px-6">
+      <ul className="hidden lg:mb-7 lg:text-2xl lg:uppercase lg:flex lg:justify-end lg:gap-x-12 lg:py-3 lg:px-6">
         <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
           <Link href="/">
          
             <li>Home</li>
           </Link>
         </div>
              <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
           <Link href="/about">
          
             <li>über uns</li>
           </Link>
         </div>
                 <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
           <Link href="/drinks">
             <li>drinks</li>
           </Link>
         </div>
                <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
           <Link href="/sportarena">
             <li>sportarena</li>
           </Link>
         </div>
                 <div className="flex items-center gap-2">
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
           <Link href="/wohin">
             <li>wohin?</li>
           </Link>
         </div>
         <div className="flex items-center gap-2">
                 
-           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={50} height={50} className=""/>
+           <Image src="/Assets/Svg/Bulleye.svg" alt="Logo Rettungsanker" width={75} height={75} className=""/>
           <Link href="/client">
          
             <li>client</li>
@@ -83,6 +84,7 @@ const Navbar = async () => {
           )}
         </div>
       </ul>
+      <BottomNavigation />
     </div>
   );
 };

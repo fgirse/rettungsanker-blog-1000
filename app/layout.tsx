@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
-import Navbar from "@/components/Navbar";
+import Navigation from "@/components/Menuebar";
 import { neobrutalism } from "@clerk/themes";
 import InfoBar from "@/components/InfoBar";
 import { Bowlby_One, Architects_Daughter } from "next/font/google";
 import Footer from "@/components/Footer";
+import { Suspense } from "react";
 
 const bowlbyOne = Bowlby_One({
   weight: "400",
@@ -51,21 +52,25 @@ export default function RootLayout({
       signUpUrl={signUpUrl}
       appearance={{ baseTheme: neobrutalism }} 
     >
-      <html lang="en">
-        <body className={architectsDaughter.variable}>
-          {/* <ClerkLoading>
+       <html lang='en' suppressHydrationWarning>
+        <body>
+          <ClerkLoading>
             <div className="flex items-center justify-center h-screen text-2xl">
               LOADING...
             </div>
-          </ClerkLoading> */}
-          <ClerkLoaded>
+          </ClerkLoading>
+        
             <div className="flex flex-col min-h-screen w-screen overflow-x-hidden">
-              <Navbar />
-              <InfoBar /> 
+              <Suspense fallback={<div className="h-24 bg-gray-100"></div>}>
+                <Navigation />
+              </Suspense>
+              <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
+                <InfoBar /> 
+              </Suspense>
               {children}
             </div>
             <Footer />
-          </ClerkLoaded>
+        
         </body>
       </html>
     </ClerkProvider>

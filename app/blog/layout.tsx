@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import ThemeProviderClient from '@/app/components/ThemeProviderClient';
 import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
 import { ClerkProvider } from '@clerk/nextjs';
 import '../globals.css';
 import ThemeCom from '@/app/components/ThemeCom';
@@ -25,7 +24,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
           <ThemeCom>
             <Header />
             {children}
-          
+        
           </ThemeCom>
         </ThemeProviderClient>
       

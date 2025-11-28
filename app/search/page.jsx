@@ -1,10 +1,11 @@
 'use client';
 
 import { Button, Select, TextInput } from 'flowbite-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PostCard from '../components/PostCard';
-export default function Search() {
+
+function SearchContent() {
   const [sidebarData, setSidebarData] = useState({
     searchTerm: '',
     sort: 'desc',
@@ -179,5 +180,13 @@ export default function Search() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Search() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 }
