@@ -7,7 +7,7 @@ import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
+import Image from "next/image"; 
 import LogoNeu from "@/public/Assets/Img/LogoNeu.png";
 import BottomNavigation from "./BottomNavigation";
 

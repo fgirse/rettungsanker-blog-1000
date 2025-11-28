@@ -7,6 +7,8 @@ import InfoBar from "@/components/InfoBar";
 import { Bowlby_One, Architects_Daughter } from "next/font/google";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
+import ScrollToTopButton from "@/components/BackToTop/ScrollToTop";
+import { Scroll } from "lucide-react";
 
 const bowlbyOne = Bowlby_One({
   weight: "400",
@@ -69,6 +71,7 @@ export default function RootLayout({
               </Suspense>
               {children}
             </div>
+            <ScrollToTopButton />
             <Footer />
         
         </body>

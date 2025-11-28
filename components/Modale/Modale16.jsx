@@ -52,7 +52,7 @@ export default function Modale16() {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
-          <Transition
+          <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
@@ -61,12 +61,12 @@ export default function Modale16() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog className="fixed inset-0  bg-slate-60" />
-          </Transition>
+            <div className="fixed inset-0  bg-slate-600" />
+          </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition
+              <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 scale-95"
@@ -87,9 +87,9 @@ export default function Modale16() {
                     </button>
                   </div>
                 </Dialog.Panel>
-              </Transition>
+                </Transition.Child>
+              </div>
             </div>
-          </div>
         </Dialog>
       </Transition>
     </>

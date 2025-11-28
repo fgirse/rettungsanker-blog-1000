@@ -2,7 +2,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Bento from "@/components/Bento";
-import World from "@/components/World";
+import Event from "@/components/Event";
 import Sportarena from "@/components/Sportarena";
 import Team from "@/components/Team";
 import Wohin from "@/components/Wohin";
@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       <About />
       <Bento />
-      <World />
+      <Event />
       <Sportarena />
       <Team />
       <Wohin />
