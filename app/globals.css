@@ -5,10 +5,15 @@
 @import "tailwindcss/utilities";
 /* stylelint-enable at-rule-no-unknown */
 
+html,
 body {
   background-color: rgb(23, 23, 23);
   color: white;
-  font-family: "Architects Daughter";
+  font-family: "Architects Daughter", cursive;
+}
+
+* {
+  font-family: "Architects Daughter", cursive;
 }
 
 

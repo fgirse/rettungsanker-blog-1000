@@ -18,7 +18,7 @@ const Profile = async () => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-8">
-      <h1 className="text-2xl">{user?.username}</h1>
+      <h1 className="text-2xl text-white">{user?.username}</h1>
       <UserProfile />
     </div>
   );

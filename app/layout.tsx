@@ -53,7 +53,7 @@ export default function RootLayout({
       appearance={{ baseTheme: neobrutalism }} 
     >
        <html lang='en' suppressHydrationWarning>
-        <body>
+        <body className={`h-[100dvh] w-screen overflow-x-hidden ${bowlbyOne.variable} ${architectsDaughter.variable}`} suppressHydrationWarning>
           <ClerkLoading>
             <div className="flex items-center justify-center h-screen text-2xl">
               LOADING...
