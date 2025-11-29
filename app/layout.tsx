@@ -55,7 +55,7 @@ export default function RootLayout({
       appearance={{ baseTheme: neobrutalism }} 
     >
        <html lang='en' suppressHydrationWarning>
-        <body className={`h-[100dvh] w-screen overflow-x-hidden ${bowlbyOne.variable} ${architectsDaughter.variable}`} suppressHydrationWarning>
+        <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable}`}>
           <ClerkLoading>
             <div className="flex items-center justify-center h-screen text-2xl">
               LOADING...
@@ -71,13 +71,14 @@ export default function RootLayout({
               </Suspense>
               <main className="flex flex-col min-h-screen w-[100vw] overflow-x-hidden">
                 {children}
-              </main>
-            
-            <ScrollToTopButton />
+              </main> 
+
+                 <ScrollToTopButton />
             <Footer />
         
         </body>
       </html>
     </ClerkProvider>
-  );
+
+);
 }
