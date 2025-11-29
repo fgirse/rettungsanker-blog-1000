@@ -62,15 +62,17 @@ export default function RootLayout({
             </div>
           </ClerkLoading>
         
-            <div className="flex flex-col min-h-screen w-[100vw] overflow-x-hidden">
+          
               <Suspense fallback={<div className="h-24 bg-gray-100"></div>}>
                 <Navigation />
               </Suspense>
               <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
                 <InfoBar /> 
               </Suspense>
-              {children}
-            </div>
+              <main className="flex flex-col min-h-screen w-[100vw] overflow-x-hidden">
+                {children}
+              </main>
+            
             <ScrollToTopButton />
             <Footer />
         
