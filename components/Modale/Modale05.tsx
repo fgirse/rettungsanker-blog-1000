@@ -4,7 +4,7 @@
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react";
 import { useState } from "react";
 
-export function Component() {
+export default function Component() {
   const [openModal, setOpenModal] = useState(true);
 
   return (
@@ -35,7 +35,7 @@ export function Component() {
                         anbieten. Hier sind Ihren Wünschen im Grunde genommen
                         keine Grenzen gesetzt. <br />
                         <br /> Unsere Koperationspartner{' '}
-                        <img src="/LogoLeckerladen.svg" className="inline w-20 h-12 objectfit-contain  align-middle" />{' '}
+                        <img src="/Assets/Svg/LogoLeckerladen.svg" className="inline w-20 h-12 objectfit-contain  align-middle" />{' '}
                         sind für ausgezeichnete und ideenreiche Apero-Buffets
                         oder Menues besoders ausgewiesen und werden nichts
                         unversucht lassen Ihre Wünsche und Ideen umzusetzten.
