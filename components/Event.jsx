@@ -8,7 +8,7 @@ import { StartSteps, TypingText } from '@/components/CustomTexts';
 import { staggerContainer, fadeIn, planetVariants } from '@/utils/motion';
 import  ScrollToTop from '@/components/BackToTop/ScrollToTop.js'
 import Image from 'next/image';
-import Crowdparty from '../public/Assets/Img/crowdparty.png';
+import Crowdparty from '@/public/Assets/Img/Crowdparty.png';
 
 const Event = () => (
   <section id="section-events" className={`${styles.paddings} relative z-10`}>
