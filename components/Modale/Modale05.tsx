@@ -9,15 +9,12 @@ export default function Component() {
 
   return (
     <>
-      <Button onClick={() => setOpenModal(true)}>Info</Button>
-      <Modal show={openModal} onClose={() => setOpenModal(false)}>
-        <ModalHeader>Event ???</ModalHeader>
+      <Button className="rounded xl bg-lime-500 text-white text-6xl" onClick={() => setOpenModal(true)}>Info</Button>
+      <Modal className="" show={openModal} onClose={() => setOpenModal(false)}>
+        <ModalHeader className="text-amber-400 bg-zinc-900 text-4xl text" >Event ???</ModalHeader>
         <ModalBody>
-          <div className="space-y-6">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
-              companies around the world are updating their terms of service agreements to comply.
-            </p>
+          <div className="space-y-6 bg-red-900">
+       
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
             Der Rettungsanker und seine Räumlichkeiten sind eine
                         ideale Location um Ihre privaten oder geschäftlichen
@@ -29,7 +26,7 @@ export default function Component() {
                         <br />
                         Auch können wir Ihnen - falls dies erwünscht - ein
                         vollumfängliches{' '}
-                        <span className="font-bold text-yellow-400">
+                        <span className="font-bold text-yellow-600">
                           Catering
                         </span>{' '}
                         anbieten. Hier sind Ihren Wünschen im Grunde genommen
