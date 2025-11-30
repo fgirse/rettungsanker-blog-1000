@@ -9,9 +9,19 @@ export default function Component() {
 
   return (
     <>
-      <Button className="rounded-xl bg-lime-500 text-white text-4xl" onClick={() => setOpenModal(true)}>Info</Button>
+      <Button className="w-36 uppercase rounded-xl bg-lime-500 text-white hover:bg-fuchsia-700" onClick={() => setOpenModal(true)}>
+        <div className="flex justify-center items-center mb-2 gap-x-3">
+          <svg className="w-12 h-12 rounded-full bg-white text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="236" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+          </svg>
+
+        <p className="text-3xl font-semibold text-gray-100 dark:text-white">
+          Info 
+        </p>
+</div>
+      </Button>
       <Modal className="" show={openModal} onClose={() => setOpenModal(false)}>
-        <ModalHeader className="text-amber-400 bg-zinc-900 text-4xl text" >Event ???</ModalHeader>
+        <ModalHeader className="text-amber-400 bg-zinc-900 uppercase text-4xl text" >Event ???</ModalHeader>
         <ModalBody>
           <div className="space-y-6 bg-red-900">
        

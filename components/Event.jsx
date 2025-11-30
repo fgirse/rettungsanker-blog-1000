@@ -42,8 +42,8 @@ const Event = () => (
               key={index}
               className="flex items-start gap-3"
             >
-              <div className="text-yellow-300 font-bold">{index < 9 ? `0${index + 1}` : `${index + 1}`}</div>
-              <div className="text-white">{feature}</div>
+              <div className="text-white font-bold">{index < 9 ? `0${index + 1}` : `${index + 1}`}</div>
+              <div className="text-white lg:text-3xl">{feature}</div>
             </div>
           ))}
         </div>

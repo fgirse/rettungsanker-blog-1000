@@ -38,6 +38,28 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                             <Link href="/" className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70">Start</Link>
                         </div>
                     </li>
+                    <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" className="w-36 uppercase text-2xl inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base px-4 py-2.5 focus:outline-none" type="button">
+                                    über uns
+  <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+</button>
+
+{/* Dropdown menu */}
+<div id="dropdownDelay" className="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+    <ul className="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDelayButton">
+      <li>
+        <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Settings</a>
+      </li>
+      <li>
+        <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Earnings</a>
+      </li>
+      <li>
+        <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign out</a>
+      </li>
+    </ul>
+</div>
                     <li>
                         <div className="flex items-center">
                             <Image src={Bulleye} alt="Bulleye" width={40} height={40} className=""/>
@@ -160,3 +182,5 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
 }
 
 export default MenuebarClient
+
+

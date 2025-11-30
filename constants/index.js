@@ -27,11 +27,10 @@ export const exploreWorlds = [
 ];
 
 export const startingFeatures = [
-  'Die Räumlichkeiten des Rettungsankers stehen Dir zur Verfügung',
-  'Individuelle Planung nach Deinen Wünschen',
-  'Auf Wunsch Catering möglich',
-  'Weitere Info click Button'
-  
+  '🎈Die Räumlichkeiten des Rettungsankers stehen Dir zur Verfügung',
+  '🎈individuelle Planung nach Deinen Wünschen',
+  '🎈Auf Wunsch Catering möglich',
+  '🎈Weitere Info click Button'
 ];
 
 export const newFeatures = [
