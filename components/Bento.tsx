@@ -78,7 +78,7 @@ export default function Bento() {
               />
             </div>
           </div>
-          <div className="col-start-1 row-start-6 col-span-3 md:col-start-6 md:row-start-3 md:col-span-2 md:row-span-3 bg-slate-900  borderrounded-md p-10">
+          <div className="col-start-1 row-start-6 col-span-3 md:col-start-6 md:row-start-3 md:col-span-2 md:row-span-3 bg-slate-900  border rounded-md p-10">
             <div className="flex flex-col items-center justify-center h-full">
               <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
                 regionale weine
@@ -100,7 +100,7 @@ export default function Bento() {
               />
             </div>
           </div>
-          <div className="col-start-1 row-start-8 col-span-3 md:col-start-2 md:row-start-6 md:col-span-2 md:row-span-3 bg-slate-900  borderrounded-md p-10">
+          <div className="col-start-1 row-start-8 col-span-3 md:col-start-2 md:row-start-6 md:col-span-2 md:row-span-3 bg-slate-900  border rounded-md p-10">
             <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
               cocktails & longdrinks
             </h1>

@@ -69,7 +69,7 @@ export default function RootLayout({
               <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
                 <InfoBar /> 
               </Suspense>
-              <main className="flex flex-col min-h-screen w-[100vw] overflow-x-hidden">
+              <main className="flex flex-col w-[100vw] overflow-x-hidden">
                 {children}
               </main> 
 
