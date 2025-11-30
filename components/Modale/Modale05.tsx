@@ -21,11 +21,11 @@ export default function Component() {
 </div>
       </Button>
       <Modal className="" show={openModal} onClose={() => setOpenModal(false)}>
-        <ModalHeader className="text-amber-400 bg-zinc-900 uppercase text-4xl text" >Event ???</ModalHeader>
+        <ModalHeader className="text-amber-400 bg-zinc-900 uppercase text-4xl headingA" >Event ???</ModalHeader>
         <ModalBody>
-          <div className="space-y-6 bg-red-900">
+          <div className="space-y-6 bg-zinc-800">
        
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            <p className="text-base leading-relaxed text-gray-100 dark:text-gray-100">
             Der Rettungsanker und seine Räumlichkeiten sind eine
                         ideale Location um Ihre privaten oder geschäftlichen
                         Anlässe wie Geburtstage, Hochzeiten und Verlobungen,
@@ -42,7 +42,7 @@ export default function Component() {
                         anbieten. Hier sind Ihren Wünschen im Grunde genommen
                         keine Grenzen gesetzt. <br />
                         <br /> Unsere Koperationspartner{' '}
-                        <img src="/Assets/Svg/LogoLeckerladen.svg" className="inline w-20 h-12 objectfit-contain  align-middle" />{' '}
+                        <img src="/Assets/Svg/LogoLeckerladen.svg" className="inline w-24 h-24 objectfit-contain  align-middle" />{' '}
                         sind für ausgezeichnete und ideenreiche Apero-Buffets
                         oder Menues besoders ausgewiesen und werden nichts
                         unversucht lassen Ihre Wünsche und Ideen umzusetzten.
