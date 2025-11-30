@@ -9,7 +9,7 @@ export default function Component() {
 
   return (
     <>
-      <Button className="rounded xl bg-lime-500 text-white text-6xl" onClick={() => setOpenModal(true)}>Info</Button>
+      <Button className="rounded-xl bg-lime-500 text-white text-4xl" onClick={() => setOpenModal(true)}>Info</Button>
       <Modal className="" show={openModal} onClose={() => setOpenModal(false)}>
         <ModalHeader className="text-amber-400 bg-zinc-900 text-4xl text" >Event ???</ModalHeader>
         <ModalBody>
@@ -52,10 +52,8 @@ export default function Component() {
           </div>
         </ModalBody>
         <ModalFooter>
-          <Button onClick={() => setOpenModal(false)}>I accept</Button>
-          <Button color="alternative" onClick={() => setOpenModal(false)}>
-            Decline
-          </Button>
+          <Button className="rounded xl bg-lime-500 text-white text-6xl" onClick={() => setOpenModal(false)}>zurück</Button>
+
         </ModalFooter>
       </Modal>
     </>
