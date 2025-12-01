@@ -25,7 +25,7 @@ export default function Component() {
         <ModalBody>
           <div className="space-y-6 bg-zinc-800">
        
-            <p className="text-base leading-relaxed text-gray-100 dark:text-gray-100">
+            <p className="text-base leading-relaxed text-gray-100 dark:text-gray-100 p-5">
             Der Rettungsanker und seine Räumlichkeiten sind eine
                         ideale Location um Ihre privaten oder geschäftlichen
                         Anlässe wie Geburtstage, Hochzeiten und Verlobungen,
