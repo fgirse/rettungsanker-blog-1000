@@ -57,7 +57,7 @@ export default function RootLayout({
        <html lang='en' suppressHydrationWarning>
         <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable}`}>
           <ClerkLoading>
-            <div className="flex items-center justify-center h-screen text-2xl">
+            <div className=" text-2xl">
               LOADING...
             </div>
           </ClerkLoading>

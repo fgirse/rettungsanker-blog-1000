@@ -7,6 +7,8 @@ import LogoNeu from "@/public/Assets/Img/LogoNeu.png";
 import Bulleye from "@/public/Assets/Svg/Bulleye.svg";
 import { UserButton, useUser } from "@clerk/nextjs";
 import Headline from "./Headline";
+import Arrow from "@/public/Assets/Svg/arrowred2.svg";
+import  Dropdown  from "@/components/Dropdown";
 
 interface MenuebarClientProps {
   userId: string | null;
@@ -55,94 +57,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   </Link>
                 </div>
               </li>
-              <button
-                id="dropdownDelayButton"
-                data-dropdown-toggle="dropdownDelay"
-                data-dropdown-delay="500"
-                data-dropdown-trigger="hover"
-                className="w-36 uppercase text-2xl inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base px-4 py-2.5 focus:outline-none"
-                type="button"
-              >
-                über uns
-                <svg
-                  className="w-4 h-4 ms-1.5 -me-0.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m19 9-7 7-7-7"
-                  />
-                </svg>
-              </button>
 
-              {/* Dropdown menu */}
-              <div
-                id="dropdownDelay"
-                className="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-48"
-              >
-                <ul
-                  className="p-2 text-sm text-body font-medium"
-                  aria-labelledby="dropdownDelayButton"
-                >
-                  <li>
-                    <Link
-                      href="/about/team"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about/history"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      History
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about/earnings"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Earnings
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Sign out
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <li>
-                <div className="flex items-center">
-                  <Image
-                    src={Bulleye}
-                    alt="Bulleye"
-                    width={40}
-                    height={40}
-                    className=""
-                  />
-                  <Link
-                    href="/about"
-                    className="block w-28 text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
-                  >
-                    über uns
-                  </Link>
-                </div>
-              </li>
+              <Dropdown />
               <li>
                 <div className="flex items-center">
                   <Image
@@ -187,13 +103,35 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                     className=""
                   />
                   <Link
-                    href="/wohin"
-                    className="block w-28  text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    href="/sportarena"
+                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
-                    wohin ?
+                    wohin?
                   </Link>
                 </div>
               </li>
+              {/* Handmade arrow with NEW indicator */}
+                  <div className="ml-2 relative rotate-[-20deg]">
+
+                    <Image
+
+
+                      src={Arrow}
+                      alt="Arrow"
+                      width={80}
+                      height={100}
+                      className="animate-bounce"
+
+
+                    />
+
+
+
+                    <span className=" top-24 lg:translate-x-12 lg:translate-y-5 absolute lg:top-12 bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full rotate-[18deg]">
+                      NEU
+                    </span>
+                  </div>
+                  
               <li>
                 <div className="flex items-center relative group">
                   <Image
@@ -209,25 +147,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   >
                     blog
                   </Link>
-                  {/* Handmade arrow with NEW indicator */}
-                  <div className="ml-2 relative">
-                    <svg
-                      className="w-6 h-6 text-amber-400 animate-bounce"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                      NEW
-                    </span>
-                  </div>
+                  
                 </div>
               </li>
             </ul>
@@ -269,7 +189,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           </div>
 
           {/* Auth Buttons - Right Side */}
-          <div className="flex items-center gap-4 w-full lg:w-auto">
+          <div className="relative lg:left-[12vw] flex items-end gap-4 w-full lg:w-auto">
             {!userId ? (
               <>
                 <Link href="/sign-in" className="flex-1 lg:flex-none">
@@ -430,22 +350,16 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                     blog
                   </Link>
                   {/* Handmade arrow with NEW indicator */}
-                  <div className="ml-2 ">
-                    <svg
-                      className="w-24 h-24 text-amber-400 animate-bounce transition:scale-150 transition:translate-y-[5vh]"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                      NEW
+                  <div className="ml-2 rotate-[140deg] translate-x-[16vw]">
+                    <Image
+                      src={Arrow}
+                      alt="Arrow"
+                      width={60}
+                      height={80}
+                      className="animate-bounce"
+                    />
+                    <span className="absolute top-[-20vw] right-28 bg-lime-500 text-white text-2xl font-bold px-2 py-0.5 rounded-full rotate-[-140deg]">
+                      {"NEW"}
                     </span>
                   </div>
                 </div>
