@@ -4,5 +4,6 @@ import MenuebarClient from './MenuebarClient'
 
 export default async function Menuebar() {
   const { userId } = await auth();
+
   return <MenuebarClient userId={userId || null} />
 }

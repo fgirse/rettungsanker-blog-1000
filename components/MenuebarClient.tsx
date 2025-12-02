@@ -266,23 +266,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   </Link>
                 </div>
               </li>
-              <li>
-                <div className="flex items-center">
-                  <Image
-                    src={Bulleye}
-                    alt="Bulleye"
-                    width={40}
-                    height={40}
-                    className=""
-                  />
-                  <Link
-                    href="/about"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
-                  >
-                    über uns
-                  </Link>
-                </div>
-              </li>
+              <Dropdown />
               <li>
                 <div className="flex items-center">
                   <Image

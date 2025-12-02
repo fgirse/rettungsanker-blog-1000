@@ -7,7 +7,7 @@ import { HiCog, HiCurrencyDollar, HiLogout, HiViewGrid } from "react-icons/hi";
 
 export default function DropdownMenu() {
   return (
-    <Dropdown className="z-50 text-xl uppercase" label="über uns">
+    <Dropdown className="z-50 text-2xl uppercase" label="über uns">
       <DropdownHeader>
         <span className="block text-sm"></span>
         <span className="block truncate text-sm font-medium"></span>

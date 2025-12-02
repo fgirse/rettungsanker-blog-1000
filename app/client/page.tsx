@@ -15,7 +15,7 @@ const ClientPage = () => {
     return null;
   }
   return (
-    <section className="w-full flex flex-col items-center justify-center mt-10 mb-1">
+    <section className="w-full h-screen flex flex-col items-center justify-center mt-10 mb-1">
       <div className="w-full flex flex-col items-center justify-center mt-10 mb-1">
       <Image
         src="/Assets/Img/LogoAlt.png"
@@ -30,7 +30,7 @@ const ClientPage = () => {
           rettungsanker-blog
         </span>
       </div>
-  <Link href="/blog" className="flex flex-col items-center mb-10">
+  <Link href="/blog" className="mt-[50vh]flex flex-col items-center mb-10">
         <button className="relative uppercase px-4 py-1 border top-[-30vh] text-3xl bg-red-900 text-white rounded-md hover:bg-red-800 transition inline-flex items-center gap-3">
           {/* Inline arrow SVG (uses currentColor so it inherits text color) */}
           <svg aria-hidden="true" className="h-6 w-auto bg-black p-1 text-white" width="24" height="20" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
