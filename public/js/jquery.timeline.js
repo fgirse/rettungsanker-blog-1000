@@ -66,7 +66,7 @@
 		if (typeof audiojs !== 'undefined' && audiojs.events) {
 			audiojs.events.ready(function() {
 				var as = audiojs.createAll({
-					autoplay: true,
+					autoplay: false,
 					loop: true,
 				});
 				audio.prettyPaused = 0;

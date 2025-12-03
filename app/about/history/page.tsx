@@ -267,7 +267,7 @@ const History = () => {
 								<div className="column">
 									<div className="c225">
 										<span className="date">2023 - WIDE COLUMN SAMPLE</span>
-										<span><Image src="/images/logos.png" alt="Logos" width={200} height={100} /></span>
+										<span><Image src="/images/logos.png" alt="Logos" width={50} height={50} /></span>
 										<span className="txt">Ut enim ad minim veniam, quis nostrud exercit ullamco. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span>	
 										<span className="thumb"><a href="#extended_text2" data-rel="prettyPhoto" title=""><Image src="/images/read_more.png" alt="" width={30} height={30} className="readmore" title="READ MORE" /></a></span>
 										
@@ -299,7 +299,7 @@ const History = () => {
 						
 						{/* AUDIO PLAYER */}
 						<div className="audio_player">
-							<audio src="/mp3/" preload="auto"></audio>
+							<audio src="/mp3/Hans Albers - Auf der Reeperbahn Nachts um halb eins MP3 Klingelton [A4P].mp3" preload="auto"></audio>
 						</div>
 										
 				
@@ -315,8 +315,14 @@ const History = () => {
 			</div> {/* end timeline container */}
 
 		</div> {/* end container */}		
-<h1 className="text-center mt-[40vh] text-6xl font-bold">Timeline</h1>
+<h1 className="mt-[55vh] text-center lg:mt-[40vh] text-6xl font-bold">Timeline</h1>
 	<h1 className="text-center mt-[2vh] text-6xl font-bold">Rettungsanker Freiburg</h1>
+		<div className="flex justify-center">
+			<h1 className="border w-96 text-center mt-[2vh] text-xl font-bold">Oben rechts zeigt sich ein Lautsprechersymbol- Drücken Sie es und hören Sie "....aufder Reeperbahn Nachts um halb Eins !"</h1>
+		</div>
+
+
+
 	
 	</section>
 </>

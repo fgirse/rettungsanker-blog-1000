@@ -24,7 +24,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
 
   return (
     <header>
-      <nav className="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-yellow-900 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[13vh]">
+      <nav className=" border-gray-200 px-4 lg:px-6 py-2.5 lg:py-10 dark:bg-yellow-900 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[13vh]">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-auto max-w-screen-xl gap-4">
           {/* Logo and Primary Menu */}
           <div className="flex justify-between items-center w-full lg:w-auto">
@@ -33,7 +33,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                 src={LogoNeu}
                 width={120}
                 height={90}
-                className="lg:relative lg:right-[10vw] "
+                className=" "
                 alt="Rettungsanker-Logo"
               />
             </Link>
@@ -45,13 +45,13 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
                     href="/"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block w-[5vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-xl xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     Start
                   </Link>
@@ -64,13 +64,13 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
                     href="/drinks"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-xl xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     Angebot
                   </Link>
@@ -81,13 +81,13 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
                     href="/sportarena"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block w-[9vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-xl xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     sportarena
                   </Link>
@@ -98,20 +98,20 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
-                    href="/sportarena"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    href="/wohin"
+                    className="block w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-xl xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     wohin?
                   </Link>
                 </div>
               </li>
               {/* Handmade arrow with NEW indicator */}
-                  <div className="ml-2 relative rotate-[-20deg]">
+                  <div className=" rotate-[-20deg]">
 
                     <Image
 
@@ -127,23 +127,23 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
 
 
 
-                    <span className=" top-24 lg:translate-x-12 lg:translate-y-5 absolute lg:top-12 bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full rotate-[18deg]">
+                    <span className=" top-24 lg:translate-x- lg:translate-y-5 absolute lg:top-12 bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full rotate-[18deg]">
                       NEU
                     </span>
                   </div>
-                  
-              <li>
+          
+              <li className="">
                 <div className="flex items-center relative group">
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
                     href="/client"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400  xl:text-2xl 2xl:text-3xl  lg:text-xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     blog
                   </Link>
@@ -156,7 +156,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
             <button
               onClick={toggleMobileMenu}
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-100 rounded-lg lg:hidden hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-100 rounded-lg lg:hidden hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 lg:text-xl xl:text-2xl 2xl:text-3xl dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="mobile-menu-2"
               aria-expanded={isMobileMenuOpen}
             >
@@ -254,8 +254,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
@@ -272,8 +272,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
@@ -289,8 +289,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
@@ -306,8 +306,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link
@@ -323,8 +323,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   <Image
                     src={Bulleye}
                     alt="Bulleye"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className=""
                   />
                   <Link

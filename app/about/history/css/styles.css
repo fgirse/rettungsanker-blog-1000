@@ -75,7 +75,7 @@ img {
 #timeline .viewport {
 	overflow: hidden;
 	position: relative;
-	background: url(/images/background.jpg) no-repeat 0 0;
+	background: url(/Assets/Img/atlantic.png) repeat 0 0;
 }
 
 #timeline .viewport .images {
@@ -140,7 +140,7 @@ img {
 	font-size: 13px;
 	font-weight: 700;
 	line-height: 16px;
-	color: #0096ff;
+	color: #ffc400;
 
 }
 

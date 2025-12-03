@@ -72,7 +72,7 @@ export default function AnimatedLogo() {
       </h1>
       <h1
         ref={textRef2}
-        className="relative top-[-9vh] lg:top-[-33vh] headingA text-[10vw] md:text-7xl lg:text-[7vw] text-amber-700 text-center tracking-wide"
+        className="relative top-[-9vh] lg:top-[-37vh] headingA text-[10vw] md:text-7xl lg:text-[7vw] text-red-700 text-center tracking-wide"
       >
         kiezkneipe
       </h1>

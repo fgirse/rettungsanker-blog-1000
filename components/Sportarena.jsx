@@ -6,7 +6,7 @@ import { TypingText } from "@/components/CustomTexts";
 import { planetVariants, staggerContainer, fadeIn } from "../utils/motion";
 import Modale16 from "@/components/Modale/Modale16";
 import Marquee from "@/components/ticker";
-import Fussball from "@/public/Assets/Svg/5555.svg";
+import Fussball from "@/public/Assets/Svg/Fussball.svg";
 import Image from "next/image";
 
 const SportArena = () => (

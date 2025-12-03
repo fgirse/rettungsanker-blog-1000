@@ -55,6 +55,10 @@ body {
       format("svg");
 }
 
+#dropdown {
+  font-size: 3.25rem;
+}
+
 .headingA {
   -webkit-text-stroke-width: 2.33px;
   -webkit-text-stroke-color: #ffffff;
