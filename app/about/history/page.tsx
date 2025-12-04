@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import './css/styles.css';
 import Script from 'next/script';
 
 const History = () => {
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	useEffect(() => {
 		// Load scripts only on client side, sequentially
 		const scripts = [
@@ -135,7 +136,7 @@ const History = () => {
 			<div className=" flex flex-col items-center justify-center">
 
 		{/* DEMO CONTAINER (THIS SHOULD BE YOUR DESTINATION DIV) */}
-		<div className="mt-12 container w-[95vw] lg:w-[100vw]">
+		<div className={`${isMobileMenuOpen ? 'mt-[43vh]' : 'lg:mt-12'} `}>
 			
 			{/* PRELOAD */}
 			<div className="preload">
@@ -144,7 +145,7 @@ const History = () => {
 			
 			
 			{/* TIMELINE CONTAINER */}
-			<div id="timeline_container">
+			<div id="timeline_container" className="overflow-x-hidden">
 				
 				{/* TIMELINE */}
 				<div id="timeline" 
@@ -314,7 +315,22 @@ const History = () => {
 						
 						{/* AUDIO PLAYER */}
 						<div className="audio_player">
-							<audio src="/mp3/Hans Albers - Auf der Reeperbahn Nachts um halb eins MP3 Klingelton [A4P].mp3" preload="auto"></audio>
+							<audio src="/mp3/Hans Albers - Auf der Reeperbahn Nachts um halb eins MP3 Klingelton [A4P].mp3" preload="auto">
+								<p>Your browser doesn't support HTML5 audio.</p>
+							</audio>
+							<div className="player">
+								<div className="controls">
+									<div className="play-pause"></div>
+									<div className="scrubber">
+										<div className="progress"></div>
+										<div className="loaded"></div>
+									</div>
+									<div className="time">
+										<span className="current">0:00</span>
+										<span className="duration">0:00</span>
+									</div>
+								</div>
+							</div>
 						</div>
 										
 				
@@ -331,7 +347,7 @@ const History = () => {
 
 		</div> {/* end container */}
 			</div>		
-<h1 className="mt-[55vh] text-center text-6xl font-bold">Timeline</h1>
+<h1 className="mt-[8vh] text-center text-6xl font-bold">Timeline</h1>
 	<h1 className="text-center mt-[2vh] text-3xl lg:text-6xl font-bold">Rettungsanker Freiburg</h1>
 		<div className="flex justify-center">
 			<h1 className="border w-2/3 text-base lg:w-1/3 text-center mt-[2vh] lg:text-xl font-bold">Oben rechts zeigt sich ein Lautsprechersymbol- Drücken Sie es und hören Sie "... auf der Reeperbahn Nachts um halb Eins !" <br />
