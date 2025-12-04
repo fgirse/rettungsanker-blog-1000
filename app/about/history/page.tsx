@@ -209,7 +209,7 @@ const History = () => {
 								<div className="column">
 									<div className="c125">
 										<span className="date">2018</span>
-										<span className="txt">Der Retungsanker hat sich in der Freiburger<br/><br/>Knepipenszene voll etabliert</span>
+										<span className="txt">Der Rettungsanker hat sich in der FreiburgerKnepipenszene voll etabliert</span>
 										<span className="thumb"><a href="#extended_text1" data-rel="prettyPhoto" title=""><Image src="/images/read_more.png" width={30} height={30} alt="" className="readmore" title="READ MORE" /></a></span>
 
 										<div id="extended_text1" className="hidden">	{/* SAMPLE OF HIDDEN DIV WITH EXTENDED CONTENT */}
@@ -223,26 +223,26 @@ const History = () => {
 								<div className="column">
 									<div className="c125">
 										<span className="date">SEPTEMBER 2019</span>
-										<span className="txt">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+										<span className="txt">Der Rettungsanker-Freiburg feiert sein zweijähriges Bestehen!</span>
 										<span className="date"><br/>NOVEMBER 2019</span>
-										<span className="txt">Duis aute irure dolor in voluptate velit esse.</span>
+										<span className="txt">Volker Schneider wird zum Jahresende den Rettungsanker verlassen.</span>
 									</div>
 								</div>
 								
 								{/* MILESTONE SAMPLE 4 */}
 								<div className="column">
 									<div className="c125">
-										<span className="date">2020 - 20 YEARS<br/>ANNIVERSARY VIDEO</span>
-										<span className="thumb"><a href="http://vimeo.com/24492485" data-rel="prettyPhoto" title="20 Years Anniversary Video" className="video_rollover"><Image src="/images/video_sample_thumb.png" width={30} height={30} alt="" /></a></span>
-										<span className="thumb_description">Short video description</span>
+										<span className="date">2020 - JANUAR<br/>NEUE LEITUNG DES RETTUNGSANKERS-FREIBURG !</span>
+										<span className="thumb"><a href="http://vimeo.com/24492485" data-rel="prettyPhoto" title="20 Years Anniversary Video" className="video_rollover"><Image src="/Assets/Img/portraitmick.png" width={30} height={30} alt="" /></a></span>
+										<span className="thumb_description">Michel Schreck</span>
 									</div>
 								</div>
 								
 								{/* MILESTONE SAMPLE 5 */}
 								<div className="column">
 									<div className="c150">
-										<span className="date">2021</span>
-										<span className="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+										<span className="date">SEPTEMBER 2021</span>
+										<span className="txt">DerRettungsanker-Freiburg feiert sein 4-jähriges Bestehen!</span>
 										<span className="big_link"><a href="images/gallery_sample_02.jpg" data-rel="prettyPhoto[sample_gallery]" title="Gallery sample 01"> IMAGE GALLERY</a></span>
 										
 										<div className="hidden">	{/* SAMPLE OF HIDDEN GALLERY ITEMS */}
@@ -256,8 +256,8 @@ const History = () => {
 								{/* MILESTONE SAMPLE 6 */}
 								<div className="column">
 									<div className="c125">
-										<span className="date">2022 - WPA PARTNERS</span>
-										<span className="txt">Sample of external links:</span>
+										<span className="date">SEPTEMBER 2022</span>
+										<span className="txt">Externe Links:</span>
 										<span className="link"><br/><a href="http://themeforest.net/user/pezflash" target="_blank">www.envato.com</a></span>
 										<span className="link"><a href="http://themeforest.net/user/pezflash" target="_blank">www.themeforest.net</a></span>
 										<span className="link"><a href="http://themeforest.net/user/pezflash" target="_blank">www.codecanyon.net</a></span>
@@ -267,9 +267,9 @@ const History = () => {
 								{/* MILESTONE SAMPLE 7 */}
 								<div className="column">
 									<div className="c225">
-										<span className="date">2023 - WIDE COLUMN SAMPLE</span>
-										<span><Image src="/images/logos.png" alt="Logos" width={50} height={50} /></span>
-										<span className="txt">Ut enim ad minim veniam, quis nostrud exercit ullamco. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span>	
+										<span className="date">2023 - NEUES LOGO -</span>
+										<span><Image src="/Assets/Img/LogoNeu.png" alt="Logos" width={50} height={50} /></span>
+										<span className="txt">Das Logo zeigt das alte Logo des Rettungsankers im oberen Drittel. Im unteren Drittel ist stilistisch die Freiburger Silhouette bei Nacht angedeutet. "DEIN TREFF" Symbol für die Philosophie: Treffpunkt für jung + alt.</span>
 										<span className="thumb"><a href="#extended_text2" data-rel="prettyPhoto" title=""><Image src="/images/read_more.png" alt="" width={30} height={30} className="readmore" title="READ MORE" /></a></span>
 										
 										<div id="extended_text2" className="hidden">	{/* SAMPLE OF HIDDEN DIV WITH EXTENDED CONTENT */}
@@ -282,8 +282,22 @@ const History = () => {
 								{/* MILESTONE SAMPLE 8 */}
 								<div className="column">
 									<div className="c125">
-										<span className="date">2024 - PRESENT</span>
-										<span className="thumb"><a href="images/gallery_sample_01.jpg" data-rel="prettyPhoto[sample_gallery2]" title="10 Years Anniversary Video" className="image_rollover"><Image src="/images/image_sample_thumb.png" width={30} height={30} alt="" /></a></span>
+										<span className="date">2024 - SEPTEMBER </span>
+										<span className="thumb"><a href="images/gallery_sample_01.jpg" data-rel="prettyPhoto[sample_gallery2]" title="5 Years Anniversary Video" className="image_rollover"><Image src="/images/image_sample_thumb.png" width={30} height={30} alt="" /></a></span>
+										<span className="thumb_description">Image description</span>
+										
+										<div className="hidden">	{/* SAMPLE OF HIDDEN GALLERY ITEMS */}
+											<a href="/images/gallery_sample_02.jpg" data-rel="prettyPhoto[sample_gallery2]" title="Gallery sample 02"></a>
+											<a href="/images/gallery_sample_03.jpg" data-rel="prettyPhoto[sample_gallery2]" title="Gallery sample 03"></a>
+										</div>
+									</div>
+								</div>
+
+								{/* MILESTONE SAMPLE 9 */}
+								<div className="column">
+									<div className="c125">
+										<span className="date">2025 - SEPTEMBER </span>
+										<span className="thumb"><a href="images/gallery_sample_01.jpg" data-rel="prettyPhoto[sample_gallery2]" title="5 Jahre Rettungsanker Geburtstags- Video" className="image_rollover"><Image src="/images/image_sample_thumb.png" width={30} height={30} alt="" /></a></span>
 										<span className="thumb_description">Image description</span>
 										
 										<div className="hidden">	{/* SAMPLE OF HIDDEN GALLERY ITEMS */}
@@ -317,10 +331,12 @@ const History = () => {
 
 		</div> {/* end container */}
 			</div>		
-<h1 className="mt-[55vh] text-center lg:mt-[60vh] text-6xl font-bold">Timeline</h1>
+<h1 className="mt-[55vh] text-center text-6xl font-bold">Timeline</h1>
 	<h1 className="text-center mt-[2vh] text-3xl lg:text-6xl font-bold">Rettungsanker Freiburg</h1>
 		<div className="flex justify-center">
-			<h1 className="border w-2/3 text-base lg:w-96 text-center mt-[2vh] lg:text-xl font-bold">Oben rechts zeigt sich ein Lautsprechersymbol- Drücken Sie es und hören Sie "....aufder Reeperbahn Nachts um halb Eins !"</h1>
+			<h1 className="border w-2/3 text-base lg:w-1/3 text-center mt-[2vh] lg:text-xl font-bold">Oben rechts zeigt sich ein Lautsprechersymbol- Drücken Sie es und hören Sie "... auf der Reeperbahn Nachts um halb Eins !" <br />
+			Bewege in der Zeitleiste mit der Maus ◀️▶️
+			</h1>
 		</div>
 
 
