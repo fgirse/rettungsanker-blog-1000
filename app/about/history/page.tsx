@@ -131,10 +131,11 @@ const History = () => {
     return (
     <>
 
-		<section className='width-[100vw] h-screen'>
-		
+		<section className='width-[95vw] lg:width-[100vw] h-screen overflow-x-hidden'>
+			<div className=" flex flex-col items-center justify-center">
+
 		{/* DEMO CONTAINER (THIS SHOULD BE YOUR DESTINATION DIV) */}
-		<div className="container">
+		<div className="mt-12 container w-[95vw] lg:w-[100vw]">
 			
 			{/* PRELOAD */}
 			<div className="preload">
@@ -314,15 +315,16 @@ const History = () => {
 			
 			</div> {/* end timeline container */}
 
-		</div> {/* end container */}		
-<h1 className="mt-[55vh] text-center lg:mt-[40vh] text-6xl font-bold">Timeline</h1>
-	<h1 className="text-center mt-[2vh] text-6xl font-bold">Rettungsanker Freiburg</h1>
+		</div> {/* end container */}
+			</div>		
+<h1 className="mt-[55vh] text-center lg:mt-[60vh] text-6xl font-bold">Timeline</h1>
+	<h1 className="text-center mt-[2vh] text-3xl lg:text-6xl font-bold">Rettungsanker Freiburg</h1>
 		<div className="flex justify-center">
-			<h1 className="border w-96 text-center mt-[2vh] text-xl font-bold">Oben rechts zeigt sich ein Lautsprechersymbol- Drücken Sie es und hören Sie "....aufder Reeperbahn Nachts um halb Eins !"</h1>
+			<h1 className="border w-2/3 text-base lg:w-96 text-center mt-[2vh] lg:text-xl font-bold">Oben rechts zeigt sich ein Lautsprechersymbol- Drücken Sie es und hören Sie "....aufder Reeperbahn Nachts um halb Eins !"</h1>
 		</div>
 
 
-
+		
 	
 	</section>
 </>

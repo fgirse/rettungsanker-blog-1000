@@ -12,7 +12,7 @@ export default function Component() {
       </div>
       <Dropdown
         className="bg-yellow-500 z-50 "
-        label={<span className="w-[7vw] lg:ext-3xl uppercase">über uns</span>}
+        label={<span className="w-[6vw] lg:text-3xl uppercase">über uns</span>}
       >
         <Link href="/about/team">
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>
