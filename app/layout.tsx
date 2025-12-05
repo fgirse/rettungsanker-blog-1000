@@ -25,6 +25,7 @@ const architectsDaughter = Architects_Daughter({
 export const metadata: Metadata = {
   title: 'Rettungsanker-Freiburg',
   description: 'Die Kiezkneipe in Freiburg',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   icons: {
     icon: '/Assets/Svg/image1.svg',
     shortcut:'/favicon-16x16.png',
