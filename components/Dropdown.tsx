@@ -10,10 +10,11 @@ export default function Component() {
       <div className="">
         <Image src={Bulleye} alt="" width={80} height={80} />
       </div>
-      <Dropdown
-        className="bg-yellow-500 z-50 "
-        label={<span className="w-[6vw] lg:text-3xl uppercase">über uns</span>}
-      >
+      <div suppressHydrationWarning>
+        <Dropdown
+          className="bg-yellow-500 z-50 "
+          label={<span className="w-[6vw] lg:text-3xl uppercase">über uns</span>}
+        >
         <Link href="/about/team">
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>
         </Link>
@@ -24,6 +25,7 @@ export default function Component() {
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiInfoDuotone}>&nbsp;Impressum</DropdownItem>
         </Link>
       </Dropdown>
+      </div>
     </div>
   );
 }

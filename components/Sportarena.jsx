@@ -23,20 +23,21 @@ const SportArena = () => (
     >
       <motion.div
         variants={fadeIn("right", "tween", 0.2, 1)}
-        className="flex-1 flex justify-center flex-col"
+        className="flex-1 flex justify-center items-center flex-col"
       >
         <TypingText title="| Sportarena" />
-        <h1 className=" headingA text-yellow-500 text-[2.33rem] lg:text-9xl">
+        <h1 className=" text-center headingA text-yellow-500 text-[2.33rem] lg:text-9xl">
           Sportarena
         </h1>
         <div className="mt-12 flex flex-wrap items-center justify-between md:flex md:flex-row gap-6">
-          <div>
+          <div className="" >
             <Marquee />
-
+          <div className="flex flex-col items-center">
             <h1 className="text-white text-[2.33rem]">SC Freiburg Info</h1>
             <h1 className="text-white text-[1.33rem]">
               Zahlen-Fakten-Punkte-Tore
             </h1>
+            </div>
           </div>
           <div className="">
             <Modale16 />
@@ -55,7 +56,7 @@ const SportArena = () => (
         <Image
           src={Fussball}
           alt="get-started"
-          className="md:w-60 md:h-60 w-[60%] h-[60%] object-contain"
+          className="-mt-60 md:w-60 md:h-60 w-[60%] h-[60%] object-contain"
         />
       </motion.div>
     </motion.div>

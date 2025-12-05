@@ -11,7 +11,7 @@ import Image from 'next/image';
 import Crowdparty from '@/public/Assets/Img/Crowdparty.png';
 
 const Event = () => (
-  <section id="section-events" className={`${styles.paddings} relative z-10`}>
+  <section id="section-events" className={`relative z-10`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -26,16 +26,16 @@ const Event = () => (
         <Image
           src={Crowdparty}
           alt="event-party"
-          className="w-[90%] h-[90%] object-contain"
+          className="w-[80%] h-[80%] object-contain"
         />
       </motion.div>
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] text-yellow-400 flex justify-center flex-col"
+        className="flex-[0.75] text-yellow-400 flex items-center justify-center flex-col"
       >
         <TypingText title="|Dein Event" />
-        <h1 className='headingA text-yellow-500 text-[3rem]'>dein event</h1>
-        <h1 className="text-[2rem]">privater oder geschäftlicher Event?</h1>
+        <h1 className='text-center headingA text-yellow-500 text-[3rem]'>dein event</h1>
+        <h1 className="text-center text-[1.33rem]">privater oder geschäftlicher Event?</h1>
         <div className="mb-[5vw] mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
           {startingFeatures.map((feature, index) => (
             <div

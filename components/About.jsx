@@ -45,7 +45,7 @@ const About = () => (
           />
         </div>
 
-        <p className="-mt-12 text-[1.33rem] px-2 text-gray-300 md:text-[1.33rem] lg:text-[1.66rem]">
+        <p className="w-[90vw] -mt-12 text-[1.33rem] px-5 text-gray-300 md:text-[1.33rem] lg:text-[1.66rem]">
           {" "}
           In Hommage an eine typische Kiez-Kneipe auf St.Pauli, haben wir im
           Herzen von Freiburg ein Lokal eröffnet, welches es so südlich der Elbe
@@ -68,9 +68,9 @@ const About = () => (
             alt="Portrait"
             className=" mt-5 rounded-full portraitMick"
           />
-          <p className="text-gray-300 text-[1.0rem] md:text-[1.33rem] lg:text-[1.66rem]">
-            {" "}
-            Michael Schreck und das Team des Rettungsankers
+          <p className="text-gray-300 text-[1.2rem] md:text-[1.33rem] lg:text-[1.66rem]">
+            
+            Michael Schreck <br/>und<br/> das Team des Rettungsankers
           </p>
         </div>
       </motion.div>

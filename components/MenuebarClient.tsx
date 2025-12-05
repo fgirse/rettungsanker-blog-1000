@@ -23,8 +23,8 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
   };
 
   return (
-    <header>
-      <nav className=" border-gray-200 px-4 lg:px-6 py-2.5 lg:py-10 dark:bg-yellow-900 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[16vh]">
+    <header suppressHydrationWarning>
+      <nav suppressHydrationWarning className=" border-gray-200 px-4 lg:px-6 py-2.5 lg:py-10 dark:bg-yellow-900 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[16vh]">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-auto max-w-screen-xl gap-4">
           {/* Logo and Primary Menu */}
           <div className="flex justify-between items-center w-full lg:w-auto">
