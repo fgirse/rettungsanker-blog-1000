@@ -55,8 +55,8 @@ export default function RootLayout({
       signUpUrl={signUpUrl}
       appearance={{ baseTheme: neobrutalism }} 
     >
-       <html lang='en' suppressHydrationWarning>
-        <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable}`}>
+       <html lang='en' suppressHydrationWarning className="overflow-x-hidden">
+        <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable} overflow-x-hidden`}>
           <ClerkLoading>
             <div className=" text-2xl">
               LOADING...
@@ -70,7 +70,7 @@ export default function RootLayout({
               <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
                 <InfoBar /> 
               </Suspense>
-              <main className="flex flex-col w-[100vw] overflow-x-hidden">
+              <main className="flex flex-col w-full overflow-x-hidden">
                 {children}
               </main> 
 
