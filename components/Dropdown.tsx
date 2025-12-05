@@ -7,13 +7,11 @@ import Bulleye from "@/public/Assets/Svg/Bulleye.svg";
 export default function Component() {
   return (
     <div className=" flex items-center gap-4">
-      <div className="">
-        <Image src={Bulleye} alt="" width={80} height={80} />
-      </div>
+   
       <div suppressHydrationWarning>
         <Dropdown
           className="bg-yellow-500 z-50 "
-          label={<span className="w-[6vw] lg:text-3xl uppercase">über uns</span>}
+          label={<span className=" text-3xl lg:w-[7vw] lg:text-3xl uppercase">über uns</span>}
         >
         <Link href="/about/team">
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>

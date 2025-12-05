@@ -13,7 +13,7 @@ const Wohin = () => (
       Wohin ?
     </h1>
     <div className="flex flex-col justify-center items-center">
-      <h1 className="mb-[3vh] text-[1.33rem] text-white md:w-[33vw] md:text-3xl">
+      <h1 className="px-5 mb-[3vh] text-[1.33rem] text-white md:w-[33vw] md:text-3xl">
         Sie finden die genaue Lage unseres Rettungsankers in der
         Kartenillustration der Altstadt Freiburg oder ganz profesionelle in
         Open-Street-Map

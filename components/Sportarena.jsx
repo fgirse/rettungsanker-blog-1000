@@ -12,7 +12,7 @@ import Image from "next/image";
 const SportArena = () => (
   <section
     id="section-sportarena"
-    className={`${styles.paddings} relative w-[100vw] z-10 bg-sportarena flex flex-col justify-beetween top-20`}
+    className={`${styles.paddings} relative w-[100vw] z-10 bg-sportarena flex flex-col justify-beetween top-20 `}
   >
     <motion.div
       variants={staggerContainer}
@@ -39,7 +39,7 @@ const SportArena = () => (
             </h1>
             </div>
           </div>
-          <div className="">
+          <div className="flex flex-col items-center">
             <Modale16 />
             <h1 className="text-center text-white text-[2.33rem]">
               Die Bundesliga Saison 2025/2026

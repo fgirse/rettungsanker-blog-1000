@@ -144,7 +144,9 @@ export default function Footer() {
             >
               Rettungsanker-Freiburg
             </a>
-            <Image src={LogoNeu} alt="LogoNeu" width={100} height={100} />
+            <div className="flex justify-center mt-12">
+              <Image src={LogoNeu} alt="LogoNeu" width={130} />
+            </div>
           </div>
         </div>
       </div>

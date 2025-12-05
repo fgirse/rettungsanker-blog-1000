@@ -24,16 +24,15 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
 
   return (
     <header suppressHydrationWarning>
-      <nav suppressHydrationWarning className=" border-gray-200 px-4 lg:px-6 py-2.5 lg:py-10 dark:bg-yellow-900 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[16vh]">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-auto max-w-screen-xl gap-4">
+      <nav suppressHydrationWarning className=" border-gray-200 px-4 lg:px-6 py-2.5 lg:py-12 dark:bg-slate-800 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[16vh]">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-auto max-w-screen-5xl gap-x-1">
           {/* Logo and Primary Menu */}
-          <div className="flex justify-between items-center w-full lg:w-auto">
+          <div className="flex justify-between items-center lg:w-[100vw]">
             <Link href="/" className="flex items-center">
-            <div className="relative top-2 left-2">
+            <div className="lg:mr-[2vw]">
               <Image
                 src={LogoNeu}
-                width={120}
-                height={90}
+                width={140}
                 className=""
                 alt="Rettungsanker-Logo"
               />
@@ -41,7 +40,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
             </Link>
 
             {/* Menu Items - Main Row */}
-            <ul className="hidden lg:flex flex-row items-center space-x-4 font-medium">
+            <ul className="hidden lg:flex flex-row items-center justify-center space-x-3 font-medium">
               <li>
                 <div className="flex items-center">
                   <Image
@@ -112,33 +111,14 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/wohin"
-                    className="block mr-3 w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-3 w-[8vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     wohin?
                   </Link>
                 </div>
               </li>
               {/* Handmade arrow with NEW indicator */}
-                  <div className=" rotate-[-20deg]">
 
-                    <Image
-
-
-                      src={Arrow}
-                      alt="Arrow"
-                      width={80}
-                      height={100}
-                      className="animate-bounce"
-
-
-                    />
-
-
-
-                    <span className=" top-24 lg:translate-x- lg:translate-y-5 absolute lg:top-12 bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full rotate-[18deg]">
-                      NEU
-                    </span>
-                  </div>
           
               <li className="">
                 <div className="flex items-center relative group">
@@ -197,7 +177,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           </div>
 
           {/* Auth Buttons - Right Side */}
-          <div className="relative lg:left-[12vw] flex items-end gap-4 w-full lg:w-auto">
+          <div className="mt-5 flex items-center gap-4 w-full lg:w-auto">
             {!userId ? (
               <>
                 <Link href="/sign-in" className="flex-1 lg:flex-none">
@@ -213,7 +193,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
               </>
             ) : (
               <>
-                <h1 className="px-1 text-xs border rounded text-white lg:text-xs">
+                <h1 className="w-20 px-1 text-xs border rounded text-white lg:text-xs">
                   Hallo {user?.firstName} !
                 </h1>
                 <Link className=" lg:flex-none" href="/dashboard/create-post">
@@ -268,13 +248,22 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
+                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
                   >
                     Start
                   </Link>
                 </div>
               </li>
+              <div className="flex items-center">
+                <Image
+                    src={Bulleye}
+                    alt="Bulleye"
+                    width={80}
+                    height={80}
+                    className=""
+                  />
               <Dropdown />
+              </div>
               <li>
                 <div className="flex items-center">
                   <Image
@@ -286,7 +275,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/drinks"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
+                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
                   >
                     Angebot
                   </Link>
@@ -303,7 +292,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/sportarena"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
+                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
                   >
                     sportarena
                   </Link>
@@ -320,7 +309,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/wohin"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
+                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
                   >
                     wohin ?
                   </Link>
@@ -337,23 +326,11 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/client"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
+                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
                   >
                     blog
                   </Link>
-                  {/* Handmade arrow with NEW indicator */}
-                  <div className="ml-2 rotate-[140deg] translate-x-[16vw]">
-                    <Image
-                      src={Arrow}
-                      alt="Arrow"
-                      width={60}
-                      height={80}
-                      className="animate-bounce"
-                    />
-                    <span className="absolute top-[-20vw] right-28 bg-lime-500 text-white text-2xl font-bold px-2 py-0.5 rounded-full rotate-[-140deg]">
-                      {"NEW"}
-                    </span>
-                  </div>
+
                 </div>
               </li>
             </ul>

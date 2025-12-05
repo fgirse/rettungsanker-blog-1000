@@ -58,7 +58,7 @@ export default function Example() {
   return (
     <section
       id="section-team"
-      className="relative mb-44 top-[25vh] w-[86vw] bg-linear-to-b from-[#1A232E] to-[#1A232E] lg:bg-size-[100vw_15vh] lg:bg-center lg:bg-no-repeat"
+      className="relative mb-[30vh] top-[25vh] w-[86vw] bg-linear-to-b from-[#1A232E] to-[#1A232E] lg:bg-size-[100vw_15vh] lg:bg-center lg:bg-no-repeat"
     >
       <div className="py- mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8 lg:py-20">
         <div className="space-y-5 sm:space-y-1">
