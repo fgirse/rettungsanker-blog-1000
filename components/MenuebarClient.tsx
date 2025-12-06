@@ -40,7 +40,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
             </Link>
 
             {/* Menu Items - Main Row */}
-            <ul className="hidden lg:flex flex-row items-center justify-center space-x-3 font-medium">
+            <ul className="hidden lg:flex flex-row items-center justify-start space-x-3 font-medium">
               <li>
                 <div className="flex items-center">
                   <Image

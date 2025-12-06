@@ -165,12 +165,12 @@ const History = () => {
 						{/* VIEWPORT - IMAGES */}
 						<div className="viewport">
 							<div className="images">
-								<Image src="/images/hero.png" alt="" width={300} height={200} />
-								<Image src="/images/content_img_1.png" alt="" width={300} height={200} />
-								<Image src="/images/content_img_2.png" alt="" width={300} height={200} />
-								<Image src="/images/content_img_4.png" alt="" width={300} height={200} />
-								<Image src="/images/content_img_5.png" alt="" width={300} height={200} />
-								<Image src="/images/content_img_6.jpg" alt="" width={300} height={200} />
+								<Image src="/Assets/Svg/2017.svg" alt="2017" width={200} height={100} />
+								<Image src="/Assets/Img/Hero.png" alt="Hero" width={300} height={200} />
+								<Image src="/Assets/content_img_2.png" alt="" width={300} height={200} />
+								<Image src="/Assets/content_img_4.png" alt="" width={300} height={200} />
+								<Image src="/Assets/content_img_5.png" alt="" width={300} height={200} />
+								<Image src="/Assets/content_img_6.jpg" alt="" width={300} height={200} />
 							</div>
 						</div>
 						
