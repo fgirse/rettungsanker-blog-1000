@@ -131,9 +131,12 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/client"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400  xl:text-2xl 2xl:text-3xl  lg:text-sm lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400  xl:text-2xl 2xl:text-3xl  lg:text-sm lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70 relative"
                   >
                     blog
+                    <span className="absolute -top-2 -right-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
+                      neu
+                    </span>
                   </Link>
                   
                 </div>
@@ -177,7 +180,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           </div>
 
           {/* Auth Buttons - Right Side */}
-          <div className="mt-5 flex items-center gap-4 w-full lg:w-auto">
+          <div className="mt-5 mr-7 flex items-center gap-4 w-full lg:w-auto">
             {!userId ? (
               <>
                 <Link href="/sign-in" className="flex-1 lg:flex-none">
@@ -193,7 +196,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
               </>
             ) : (
               <>
-                <h1 className="w-16 px-1 text-[0.5rem] border rounded text-white lg:text-[0.5rem]">
+                <h1 className="w-16 px-1 text-[0.5rem] border rounded text-white lg:text-[0.7rem]">
                   Hallo {user?.firstName} !
                 </h1>
                 <Link className=" lg:flex-none" href="/dashboard/create-post">
@@ -326,9 +329,12 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/client"
-                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70"
+                    className="block text-3xl  border-b px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 relative"
                   >
                     blog
+                    <span className="absolute -top-2 -right-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
+                      neu
+                    </span>
                   </Link>
 
                 </div>
