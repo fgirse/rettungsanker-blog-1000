@@ -193,7 +193,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
               </>
             ) : (
               <>
-                <h1 className="w-20 px-1 text-xs border rounded text-white lg:text-xs">
+                <h1 className="w-16 px-1 text-[0.5rem] border rounded text-white lg:text-[0.5rem]">
                   Hallo {user?.firstName} !
                 </h1>
                 <Link className=" lg:flex-none" href="/dashboard/create-post">

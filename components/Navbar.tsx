@@ -51,3 +51,4 @@ export function Component() {
     </Navbar>
   );
 }
+export default Component;
