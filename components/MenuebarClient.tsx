@@ -52,7 +52,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/"
-                    className="block mr-5 w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-5 w-[6vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     Start
                   </Link>
@@ -77,7 +77,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/drinks"
-                    className="block mr-16 w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-16 w-[6vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     Angebot
                   </Link>
@@ -94,7 +94,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/sportarena"
-                    className="block mr-20 w-[9vw] text-sm px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-lg xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-20 w-[8vw] text-sm px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-lg xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     sportarena
                   </Link>
@@ -111,7 +111,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/wohin"
-                    className="block mr-3 w-[8vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-3 w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     wohin?
                   </Link>
