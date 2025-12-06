@@ -12,7 +12,7 @@ import Image from "next/image";
 const SportArena = () => (
   <section
     id="section-sportarena"
-    className={`${styles.paddings} relative w-[100vw] z-10 bg-sportarena flex flex-col justify-beetween top-20 `}
+    className={`${styles.paddings} relative w-full z-10 bg-sportarena flex flex-col justify-beetween top-20 `}
   >
     <motion.div
       variants={staggerContainer}

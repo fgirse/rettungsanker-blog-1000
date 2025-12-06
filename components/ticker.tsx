@@ -3,9 +3,11 @@ import MyComponent from "./bundesliga-marquee";
 import Marquee from "react-fast-marquee";
 
 const App = () => (
-  <Marquee>
-    <MyComponent />
-  </Marquee>
+  <div className="w-full overflow-hidden">
+    <Marquee>
+      <MyComponent />
+    </Marquee>
+  </div>
 );
 
 export default App;
