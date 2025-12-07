@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
-import Navigation from "@/components/Menuebar";
+import Navigation from "@/components/Navbar";
 import { neobrutalism } from "@clerk/themes";
 import InfoBar from "@/components/InfoBar";
 import { Bowlby_One, Architects_Daughter } from "next/font/google";

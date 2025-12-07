@@ -11,10 +11,11 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
+import BottomNavigation from "./BottomNavigation";
 
 export function Component() {
   return (
-    <Navbar fluid rounded>
+    <><Navbar fluid rounded>
       <NavbarBrand href="https://flowbite-react.com">
         <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
@@ -23,32 +24,29 @@ export function Component() {
         <Dropdown
           arrowIcon={false}
           inline
-          label={
-            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-          }
+          label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />}
         >
           <DropdownHeader>
             <span className="block text-sm">Bonnie Green</span>
             <span className="block truncate text-sm font-medium">name@flowbite.com</span>
           </DropdownHeader>
-          <DropdownItem>Dashboard</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Earnings</DropdownItem>
+          <DropdownItem href="/team">Team</DropdownItem>
+          <DropdownItem href="/history">Geschichte</DropdownItem>
+          <DropdownItem href="/impressum">Impressum</DropdownItem>
           <DropdownDivider />
           <DropdownItem>Sign out</DropdownItem>
         </Dropdown>
         <NavbarToggle />
       </div>
       <NavbarCollapse>
-        <NavbarLink href="#" active>
+        <NavbarLink href="/" active>
           Home
         </NavbarLink>
-        <NavbarLink href="#">About</NavbarLink>
-        <NavbarLink href="#">Services</NavbarLink>
-        <NavbarLink href="#">Pricing</NavbarLink>
-        <NavbarLink href="#">Contact</NavbarLink>
+        <NavbarLink href="/drinks">angebot</NavbarLink>
+        <NavbarLink href="/sportarena">sportarena</NavbarLink>
+        <NavbarLink href="/wohin">Wohin?</NavbarLink>
       </NavbarCollapse>
-    </Navbar>
+    </Navbar><BottomNavigation /></>          
   );
 }
 export default Component;

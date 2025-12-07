@@ -180,57 +180,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           </div>
 
           {/* Auth Buttons - Right Side */}
-          <div className="mt-5 mr-24 flex items-center gap-4 w-full lg:w-auto">
-            {!userId ? (
-              <>
-                <Link href="/sign-in" className="flex-1 lg:flex-none">
-                  <div className="uppercase bg-slate-400 text-center py-1 px-1 text-lg border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
-                    anmelden
-                  </div>
-                </Link>
-                <Link href="/sign-up" className="flex-1 lg:flex-none">
-                  <div className="uppercase bg-slate-600 text-center py-1 px-1 text-lg border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
-                    registrieren
-                  </div>
-                </Link>
-              </>
-            ) : (
-              <>
-                <h1 className="w-16 px-1 text-[0.5rem] border rounded text-white lg:text-[0.7rem]">
-                  Hallo {user?.firstName} !
-                </h1>
-                <Link className=" lg:flex-none" href="/dashboard/create-post">
-                  <div className="bg-white text-center py-1 text-lg border shadow-xl rounded-full cursor-pointer hover:bg-amber-500">
-                    <svg
-                      className="text-gray-800 dark:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 12h14m-7 7V5"
-                      />
-                    </svg>
-                  </div>
-                </Link>
-                <Link className="flex-1 lg:flex-none" href="/profile">
-                  <div className="uppercase bg-slate-500 text-center py-1 text-lg border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
-                    Profile
-                  </div>
-                </Link>
-                <div className="flex items-center" suppressHydrationWarning>
-                  <UserButton />
-                </div>
-              </>
-            )}
-          </div>
+         
         </div>
 
         {/* Mobile Menu */}
