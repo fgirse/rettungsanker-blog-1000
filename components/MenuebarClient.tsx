@@ -180,7 +180,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           </div>
 
           {/* Auth Buttons - Right Side */}
-          <div className="mt-5 mr-7 flex items-center gap-4 w-full lg:w-auto">
+          <div className="mt-5 mr-24 flex items-center gap-4 w-full lg:w-auto">
             {!userId ? (
               <>
                 <Link href="/sign-in" className="flex-1 lg:flex-none">
