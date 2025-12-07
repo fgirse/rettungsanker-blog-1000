@@ -12,12 +12,16 @@ import {
   NavbarToggle,
 } from "flowbite-react";
 import BottomNavigation from "./BottomNavigation";
+import LogoNeu from '../public/Assets/Img/LogoNeu.png';
+import Image from "next/image";
 
 export function Component() {
   return (
     <><Navbar fluid rounded>
       <NavbarBrand href="https://flowbite-react.com">
-        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+      <div className="">  
+        <Image src={LogoNeu} className="" alt="Rettungsanker LogoNeu" width={130} height={40} />
+
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
       </NavbarBrand>
       <div className="flex md:order-2">
@@ -42,7 +46,7 @@ export function Component() {
         <NavbarLink href="/" active>
           Home
         </NavbarLink>
-        <NavbarLink href="/drinks">angebot</NavbarLink>
+        <NavbarLink className="rounded-r-full uppercase text-3xl font-bowlby" href="/drinks">angebot</NavbarLink>
         <NavbarLink href="/sportarena">sportarena</NavbarLink>
         <NavbarLink href="/wohin">Wohin?</NavbarLink>
       </NavbarCollapse>
