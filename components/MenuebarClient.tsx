@@ -29,7 +29,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           {/* Logo and Primary Menu */}
           <div className="flex justify-between lg:justify-center items-center lg:w-[100vw]">
             <Link href="/" className="flex items-center">
-            <div className="relative lg:mr-[2vw]">
+            <div className="relative left-5  lg:top-[3vh] top-[2vh] lg:left-[5vw]">
               <Image
                 src={LogoNeu}
                 width={140}
