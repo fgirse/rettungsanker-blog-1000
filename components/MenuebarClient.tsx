@@ -29,10 +29,10 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           {/* Logo and Primary Menu */}
           <div className="flex justify-between lg:justify-center items-center lg:w-[100vw]">
             <Link href="/" className="flex items-center">
-            <div className="relative left-5  lg:top-[3vh] top-[2vh] lg:left-[5vw]">
+            <div className="relative left-5  lg:top-[2vh] top-[1vh] lg:left-[2vw]">
               <Image
                 src={LogoNeu}
-                width={140}
+                width={130}
                 className=""
                 alt="Rettungsanker-Logo"
               />
@@ -52,7 +52,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/"
-                    className="block mr-5 w-[6vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-5 w-[6vw] m:text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     Start
                   </Link>
@@ -77,7 +77,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/drinks"
-                    className="block mr-16 w-[6vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-16 w-[6vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     Angebot
                   </Link>
@@ -94,7 +94,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/sportarena"
-                    className="block mr-20 w-[8vw] text-sm px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-lg xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-20 w-[8vw] text-sm px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-lg xl:text-xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     sportarena
                   </Link>
@@ -111,7 +111,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/wohin"
-                    className="block mr-3 w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
+                    className="block mr-3 w-[7vw] text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400 lg:text-sm xl:text-xl 2xl:text-3xl lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70"
                   >
                     wohin?
                   </Link>
@@ -131,7 +131,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
                   />
                   <Link
                     href="/client"
-                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400  xl:text-2xl 2xl:text-3xl  lg:text-sm lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70 relative"
+                    className="block text-lg px-2 rounded-lg uppercase py-1 text-gray-100 hover:bg-orange-500/70 lg:p-0 dark:text-gray-400  xl:text-xl 2xl:text-3xl  lg:text-sm lg:dark:hover:text-white lg:dark:hover:bg-orange-500/70 relative"
                   >
                     blog
                     <span className="absolute -top-2 -right-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
@@ -147,7 +147,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
             <button
               onClick={toggleMobileMenu}
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-100 rounded-lg lg:hidden hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 lg:text-sm xl:text-2xl 2xl:text-3xl dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-100 rounded-lg lg:hidden hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 lg:text-sm xl:text-xl 2xl:text-3xl dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="mobile-menu-2"
               aria-expanded={isMobileMenuOpen}
             >
