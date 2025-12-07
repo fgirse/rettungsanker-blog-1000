@@ -25,7 +25,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
   return (
     <header suppressHydrationWarning>
       <nav suppressHydrationWarning className=" border-gray-200 px-4 lg:px-6 py-2.5 lg:py-12 dark:bg-slate-800 bg-zinc-900 lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:h-[16vh]">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-auto max-w-screen-5xl gap-x-1">
+        <div className="flex flex-col lg:flex-row lg:justify-centerlg:items-center mx-auto max-w-screen-5xl gap-x-1">
           {/* Logo and Primary Menu */}
           <div className="flex justify-between items-center lg:w-[100vw]">
             <Link href="/" className="flex items-center">
@@ -40,7 +40,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
             </Link>
 
             {/* Menu Items - Main Row */}
-            <ul className="hidden lg:flex flex-row items-center justify-start space-x-3 font-medium">
+            <ul className="hidden lg:flex flex-row items-center justify-start space-x-1 font-medium">
               <li>
                 <div className="flex items-center">
                   <Image
