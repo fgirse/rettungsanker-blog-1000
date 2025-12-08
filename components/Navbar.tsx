@@ -85,7 +85,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
         </div>
 
         {/* Right side - Auth buttons and toggle */}
-        <div className="flex items-center gap-2 lg:gap-3 xl:gap-4">
+        <div className="flex items-center gap-2 lg:gap-3 xl:gap-12">
           {/* Desktop Auth Buttons - visible on lg and above */}
           {!userId && (
             <div className="hidden lg:flex items-center gap-2">
@@ -131,7 +131,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
           <Link href="/wohin" className="uppercase text-gray-50 hover:bg-orange-400 px-2 sm:px-3 py-1.5 sm:py-2 rounded block text-sm sm:text-base font-medium">wohin?</Link>
           <Link href="/client" className="uppercase text-gray-50 hover:bg-orange-400 px-2 sm:px-3 py-1.5 sm:py-2 rounded block text-sm sm:text-base font-medium relative">
             blog
-            <span className="absolute top-0 sm:top-1 -right-6 sm:-right-8 inline-flex items-center justify-center px-1 sm:px-2 py-0.5 text-xs font-bold leading-none text-white bg-red-500 rounded-full">
+            <span className="absolute top-0 sm:top-1 -right-6 sm:-right-4 inline-flex items-center justify-center px-1 sm:px-2 py-0.5 text-xs font-bold leading-none text-white bg-red-500 rounded-full">
               neu
             </span>
           </Link>
