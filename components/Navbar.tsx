@@ -1,4 +1,7 @@
-
+"use client";
+import { useState } from "react"; 
+import Link from "next/link";
+import { UserButton, useUser } from "@clerk/nextjs"; 
 import {
   Avatar,
   Dropdown,
@@ -11,46 +14,213 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
+
+import Image from "next/image";     
+import LogoNeu from "../public/Assets/Img/LogoNeu.png";
+import Bulleye from "../public/Assets/Svg/Bulleye.svg";
 import BottomNavigation from "./BottomNavigation";
-import LogoNeu from '../public/Assets/Img/LogoNeu.png';
-import Image from "next/image";
+
+interface MenuebarClientProps {
+  userId: string | null;
+}
+
+const MenuebarClient = ({ userId }: MenuebarClientProps) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { user } = useUser();
+
+  return (
+    <>
+      <Navbar fluid rounded className="bg-slate-800 lg:py-10 flex items-center justify-between">
+        <NavbarBrand href="">
+          <Image src={LogoNeu} className="mr-3 h-6 sm:h-9" alt="LogoNeu" width={40} height={40} />
+        </NavbarBrand>
+        
+        {/* Menu Items - Always visible, proper structure */}
+        <div className="hidden lg:flex items-center gap-4 flex-1 px-4">
+          <div className="flex items-center gap-2">
+            <Image src={Bulleye} className="w-6 h-6" alt="Bulleye" width={40} height={40} />
+            <Link href="/" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded font-bowlby">
+              Home
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={Bulleye} className="w-6 h-6" alt="Bulleye" width={40} height={40} />
+            <Link href="/about" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded font-bowlby">
+              über uns
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={Bulleye} className="w-6 h-6" alt="Bulleye" width={40} height={40} />
+            <Link href="/drinks" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded font-bowlby">
+              angebot
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={Bulleye} className="w-6 h-6" alt="Bulleye" width={40} height={40} />
+            <Link href="/sportarena" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded font-bowlby">
+              sportarena
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={Bulleye} className="w-6 h-6" alt="Bulleye" width={40} height={40} />
+            <Link href="/wohin" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded font-bowlby">
+              wohin?
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={Bulleye} className="w-6 h-6" alt="Bulleye" width={40} height={40} />
+            <Link href="/client" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded font-bowlby">
+              blog
+            </Link>
+          </div>
+        </div>
+
+        {/* Right side - Auth buttons and toggle */}
+        <div className="flex items-center gap-3 lg:gap-4">
+          {/* Desktop Auth Buttons - visible on lg and above */}
+          {!userId && (
+            <div className="hidden lg:flex items-center gap-2">
+              <Link href="/sign-in">
+                <div className="uppercase bg-slate-400 text-center py-1 px-3 text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
+                  anmelden
+                </div>
+              </Link>
+              <Link href="/sign-up">
+                <div className="uppercase bg-slate-600 text-center py-1 px-3 text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
+                  registrieren
+                </div>
+              </Link>
+            </div>
+          )}
+          
+          {/* Custom Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden inline-flex items-center justify-center p-2 text-gray-50 rounded-lg hover:bg-slate-700 focus:outline-none"
+            aria-label="Toggle navigation menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path>
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
+              </svg>
+            )}
+          </button>
+        </div>
+      </Navbar>
+
+      {/* Mobile Menu - Main menu items only */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-slate-800 px-4 py-4 flex flex-col gap-3 pb-20">
+          <Link href="/" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded block">Home</Link>
+          <Link href="/about" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded block">über uns</Link>
+          <Link href="/drinks" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded block">angebot</Link>
+          <Link href="/sportarena" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded block">sportarena</Link>
+          <Link href="/wohin" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded block">wohin?</Link>
+          <Link href="/client" className="uppercase text-gray-50 hover:bg-orange-400 px-3 py-2 rounded block">blog</Link>
+        </div>
+      )}
+
+      {/* Bottom Menu for Mobile and Tablet - Auth Buttons and Profile */}
+      <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-slate-800 border-t border-gray-600 px-4 py-3 flex items-center justify-between gap-2 z-50">
+        {!userId ? (
+          <>
+            <Link href="/sign-in" className="flex-1">
+              <div className="uppercase bg-slate-400 text-center py-2 px-2 text-xs border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
+                anmelden
+              </div>
+            </Link>
+            <Link href="/sign-up" className="flex-1">
+              <div className="uppercase bg-slate-600 text-center py-2 px-2 text-xs border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
+                registrieren
+              </div>
+            </Link>
+          </>
+        ) : (
+          <>
+            <div className="flex-1">
+              <h1 className="text-xs text-white text-center truncate">
+                {user?.firstName}
+              </h1>
+            </div>
+            <Link href="/dashboard/create-post" className="flex-1">
+              <div className="bg-white text-center py-2 px-2 border shadow-xl rounded-full cursor-pointer hover:bg-amber-500">
+                <svg
+                  className="text-gray-800 w-5 h-5 mx-auto"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 12h14m-7 7V5"
+                  />
+                </svg>
+              </div>
+            </Link>
+            <Link href="/profile" className="flex-1">
+              <div className="uppercase bg-slate-500 text-center py-2 px-2 text-xs border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
+                Profile
+              </div>
+            </Link>
+            <div className="flex-1 flex justify-center" suppressHydrationWarning>
+              <UserButton />
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Desktop User Profile Section - visible on lg and above when logged in */}
+      {userId && (
+        <div className="hidden lg:flex items-center gap-4 px-4 ml-4 border-l border-gray-600">
+          <h1 className="text-xs text-white">
+            Hallo {user?.firstName} !
+          </h1>
+          <Link href="/dashboard/create-post">
+            <div className="bg-white text-center py-1 px-2 border shadow-xl rounded-full cursor-pointer hover:bg-amber-500">
+              <svg
+                className="text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 12h14m-7 7V5"
+                />
+              </svg>
+            </div>
+          </Link>
+          <Link href="/profile">
+            <div className="uppercase bg-slate-500 text-center py-1 px-3 text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500">
+              Profile
+            </div>
+          </Link>
+          <div suppressHydrationWarning>
+            <UserButton />
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 export function Component() {
-  return (
-    <><Navbar fluid rounded>
-      <NavbarBrand href="https://flowbite-react.com">
-      <div className="">  
-        <Image src={LogoNeu} className="" alt="Rettungsanker LogoNeu" width={130} height={40} />
-
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-      </NavbarBrand>
-      <div className="flex md:order-2">
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />}
-        >
-          <DropdownHeader>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
-          </DropdownHeader>
-          <DropdownItem href="/team">Team</DropdownItem>
-          <DropdownItem href="/history">Geschichte</DropdownItem>
-          <DropdownItem href="/impressum">Impressum</DropdownItem>
-          <DropdownDivider />
-          <DropdownItem>Sign out</DropdownItem>
-        </Dropdown>
-        <NavbarToggle />
-      </div>
-      <NavbarCollapse>
-        <NavbarLink href="/" active>
-          Home
-        </NavbarLink>
-        <NavbarLink className="rounded-r-full uppercase text-3xl font-bowlby" href="/drinks">angebot</NavbarLink>
-        <NavbarLink href="/sportarena">sportarena</NavbarLink>
-        <NavbarLink href="/wohin">Wohin?</NavbarLink>
-      </NavbarCollapse>
-    </Navbar><BottomNavigation /></>          
-  );
+  const { user } = useUser();
+  return <MenuebarClient userId={user?.id ?? null} />;
 }
+
 export default Component;
