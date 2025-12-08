@@ -30,7 +30,7 @@ const MenuebarClient = ({ userId }: MenuebarClientProps) => {
 
   return (
     <>
-      <Navbar fluid rounded className="bg-slate-800 py-3 md:py-5 lg:py-8 xl:py-10 2xl:py-12 flex items-center justify-between">
+      <Navbar fluid rounded className="bg-slate-800 py-3 md:py-5 lg:bg-[url('/Assets/Svg/Wood4.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:py-8 xl:py-10 2xl:py-12 flex items-center justify-between">
         <NavbarBrand href="">
           <Image 
             src={LogoNeu} 
