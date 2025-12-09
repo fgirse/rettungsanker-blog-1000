@@ -43,7 +43,7 @@ export default function NavbarClient({ userId }: NavbarClientProps) {
           </div>
           <div className="flex items-center gap-1 lg:gap-2">
             <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
-            <DropdownMenu/>
+            <DropdownMenu />
           </div>
           <div className="flex items-center gap-1 lg:gap-2">
             <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
