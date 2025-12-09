@@ -53,6 +53,8 @@ export default function RootLayout({
       publishableKey={publishableKey}
       signInUrl={signInUrl}
       signUpUrl={signUpUrl}
+      signInFallbackRedirectUrl="/"
+      signUpFallbackRedirectUrl="/"
       appearance={{ baseTheme: neobrutalism }} 
     >
        <html lang='en' suppressHydrationWarning className="overflow-x-hidden">
