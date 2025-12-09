@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react"; 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { UserButton, useUser } from "@clerk/nextjs"; 
 import {
     Dropdown,
@@ -20,6 +21,7 @@ interface NavbarClientProps {
 export default function NavbarClient({ userId }: NavbarClientProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user } = useUser();
+  const router = useRouter();
 
   return (
     <div>
@@ -79,16 +81,18 @@ export default function NavbarClient({ userId }: NavbarClientProps) {
           {/* Desktop Auth Buttons - visible on lg and above */}
           {!userId && (
             <div className="hidden lg:flex items-center gap-2">
-              <Link href="/sign-in">
-                <div className="uppercase bg-slate-400 text-center py-1 px-2 lg:px-3 text-xs lg:text-sm xl:text-base border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium">
-                  anmelden
-                </div>
-              </Link>
-              <Link href="/sign-up">
-                <div className="uppercase bg-slate-600 text-center py-1 px-2 lg:px-3 text-xs lg:text-sm xl:text-base border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium">
-                  registrieren
-                </div>
-              </Link>
+              <button
+                onClick={() => router.push('/sign-in')}
+                className="uppercase bg-slate-400 text-center py-1 px-2 lg:px-3 text-xs lg:text-sm xl:text-base border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium"
+              >
+                anmelden
+              </button>
+              <button
+                onClick={() => router.push('/sign-up')}
+                className="uppercase bg-slate-600 text-center py-1 px-2 lg:px-3 text-xs lg:text-sm xl:text-base border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium"
+              >
+                registrieren
+              </button>
             </div>
           )}
 
@@ -153,16 +157,18 @@ export default function NavbarClient({ userId }: NavbarClientProps) {
             <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-slate-800 border-t border-gray-600 px-2 sm:px-3 md:px-4 py-2 sm:py-3 flex items-center justify-between gap-1 sm:gap-2 md:gap-3 z-50">
               {!userId ? (
                 <>
-                  <Link href="/sign-in" className="flex-1">
-                    <div className="uppercase bg-slate-400 text-center py-1.5 sm:py-2 px-1 sm:px-2 text-xs sm:text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium">
-                      anmelden
-                    </div>
-                  </Link>
-                  <Link href="/sign-up" className="flex-1">
-                    <div className="uppercase bg-slate-600 text-center py-1.5 sm:py-2 px-1 sm:px-2 text-xs sm:text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium">
-                      registrieren
-                    </div>
-                  </Link>
+                  <button
+                    onClick={() => router.push('/sign-in')}
+                    className="flex-1 uppercase bg-slate-400 text-center py-1.5 sm:py-2 px-1 sm:px-2 text-xs sm:text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium"
+                  >
+                    anmelden
+                  </button>
+                  <button
+                    onClick={() => router.push('/sign-up')}
+                    className="flex-1 uppercase bg-slate-600 text-center py-1.5 sm:py-2 px-1 sm:px-2 text-xs sm:text-sm border shadow-xl rounded-lg cursor-pointer hover:bg-amber-500 font-medium"
+                  >
+                    registrieren
+                  </button>
                 </>
               ) : (
                 <>
@@ -185,7 +191,8 @@ export default function NavbarClient({ userId }: NavbarClientProps) {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth="2"
-                          d="M5 12h14m-7 7V5" />
+                          d="M5 12h14m-7 7V5"
+                        />
                       </svg>
                     </div>
                   </Link>
