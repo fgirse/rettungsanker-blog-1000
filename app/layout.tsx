@@ -38,13 +38,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || undefined;
+  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   const signInUrl = process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL || "/sign-in";
   const signUpUrl = process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL || "/sign-up";
 
   if (!publishableKey) {
-    console.warn(
-      "Missing NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY. If you haven't set it in .env.local, set it and restart the dev server."
+    console.error(
+      "Missing NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY environment variable"
     );
   }
 
@@ -53,9 +53,11 @@ export default function RootLayout({
       publishableKey={publishableKey}
       signInUrl={signInUrl}
       signUpUrl={signUpUrl}
+      afterSignInUrl="/"
+      afterSignUpUrl="/"
       signInFallbackRedirectUrl="/"
       signUpFallbackRedirectUrl="/"
-      appearance={{ baseTheme: neobrutalism }} 
+      appearance={{ baseTheme: neobrutalism }}
     >
        <html lang='en' suppressHydrationWarning className="overflow-x-hidden">
         <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable} overflow-x-hidden lg:pb-0 pb-24`}>

@@ -3,11 +3,19 @@
  * This component provides a sign-in interface for users, allowing them to authenticate with the application.
  */
 import { SignIn } from "@clerk/nextjs";
+import { Suspense } from "react";
 
-export default function Page() {
+export default function SignInPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-slate-900">
-      <SignIn afterSignInUrl="/" redirectUrl="/" />
-    </div>
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen bg-slate-900">Loading...</div>}>
+      <div className="flex items-center justify-center min-h-screen bg-slate-900">
+        <SignIn 
+          afterSignInUrl="/" 
+          redirectUrl="/"
+          routing="path"
+          path="/sign-in"
+        />
+      </div>
+    </Suspense>
   );
 }
