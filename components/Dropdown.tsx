@@ -11,7 +11,7 @@ export default function Component() {
       <div suppressHydrationWarning>
         <Dropdown
           className="bg-yellow-500 z-50 "
-          label={<span className=" text-3xl lg:w-[7vw] lg:text-2xl font-bowlby uppercase">über uns</span>}
+          label={<span className=" text-xl lg:w-[7vw] lg:text-2xl font-bowlby uppercase">über uns</span>}
         >
         <Link href="/about/team">
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>
