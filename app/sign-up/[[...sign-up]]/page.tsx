@@ -3,19 +3,19 @@
  * This component provides a sign-up form for users to create an account.
  */
 import { SignUp } from "@clerk/nextjs";
-import { Suspense } from "react";
+
+export const metadata = {
+  title: "Sign Up",
+  description: "Create an account at Rettungsanker",
+};
 
 export default function SignUpPage() {
   return (
-    <Suspense fallback={<div className="flex items-center justify-center min-h-screen bg-slate-900">Loading...</div>}>
-      <div className="flex items-center justify-center min-h-screen bg-slate-900">
-        <SignUp 
-          afterSignUpUrl="/" 
-          redirectUrl="/"
-          routing="path"
-          path="/sign-up"
-        />
-      </div>
-    </Suspense>
+    <div className="flex items-center justify-center min-h-screen bg-slate-900">
+      <SignUp 
+        afterSignUpUrl="/" 
+        redirectUrl="/"
+      />
+    </div>
   );
 }
