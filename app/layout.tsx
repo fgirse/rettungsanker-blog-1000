@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
-import Navigation from "@/components/Navbar";
+import Navigation from "@/components/NavbarClient";
 import { neobrutalism } from "@clerk/themes";
 import InfoBar from "@/components/InfoBar";
 import { Bowlby_One, Architects_Daughter } from "next/font/google";
@@ -65,7 +65,7 @@ export default function RootLayout({
         
           
               <Suspense fallback={<div className="h-24 bg-gray-100"></div>}>
-                <Navigation />
+                <Navigation userId={null} />
               </Suspense>
               <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
                 <InfoBar /> 
