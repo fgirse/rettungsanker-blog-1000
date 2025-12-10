@@ -62,24 +62,25 @@ export default function RootLayout({
        <html lang='en' suppressHydrationWarning className="overflow-x-hidden">
         <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable} overflow-x-hidden lg:pb-0 pb-24`}>
           <ClerkLoading>
-            <div className=" text-2xl">
-              LOADING...
+            <div className="flex items-center justify-center w-full h-screen text-2xl bg-slate-900">
+              Loading...
             </div>
           </ClerkLoading>
-        
           
-              <Suspense fallback={<div className="h-24 bg-gray-100"></div>}>
-                <Navigation userId={null} />
-              </Suspense>
-              <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
-                <InfoBar /> 
-              </Suspense>
-              <main className="flex flex-col w-full overflow-x-hidden">
-                {children}
-              </main> 
+          <ClerkLoaded>
+            <Suspense fallback={<div className="h-24 bg-gray-100"></div>}>
+              <Navigation userId={null} />
+            </Suspense>
+            <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
+              <InfoBar /> 
+            </Suspense>
+            <main className="flex flex-col w-full overflow-x-hidden">
+              {children}
+            </main> 
 
-                 <ScrollToTopButton />
+            <ScrollToTopButton />
             <Footer />
+          </ClerkLoaded>
         
         </body>
       </html>
