@@ -3,7 +3,6 @@
  * This component provides a sign-up form for users to create an account.
  */
 import { SignUp } from "@clerk/nextjs";
-import { ClerkLoaded } from "@clerk/nextjs";
 
 export const metadata = {
   title: "Sign Up",
@@ -12,13 +11,11 @@ export const metadata = {
 
 export default function SignUpPage() {
   return (
-    <ClerkLoaded>
-      <div className="flex items-center justify-center min-h-screen bg-slate-900">
-        <SignUp 
-          afterSignUpUrl="/" 
-          redirectUrl="/"
-        />
-      </div>
-    </ClerkLoaded>
+    <div className="flex items-center justify-center min-h-screen bg-slate-900">
+      <SignUp 
+        afterSignUpUrl="/" 
+        redirectUrl="/"
+      />
+    </div>
   );
 }
