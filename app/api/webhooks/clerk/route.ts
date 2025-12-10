@@ -4,8 +4,9 @@ import { WebhookEvent } from '@clerk/nextjs/server';
 import { createOrUpdateUser, deleteUser } from '@/lib/actions/user';
 import { clerkClient } from '@clerk/nextjs/server';
 
-// Retry configuration
-const METADATA_RETRY_COUNT = 3;
+// Retry configuration for metadata updates
+// Increased to handle production delays and network fluctuations
+const METADATA_RETRY_COUNT = 5;
 const METADATA_RETRY_DELAY_MS = 1000;
 
 async function updateClerkMetadataWithRetry(
