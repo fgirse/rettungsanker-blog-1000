@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
-import Navigation from "@/components/NavbarClient";
+import { ClerkProvider } from "@clerk/nextjs";
 import { neobrutalism } from "@clerk/themes";
-import InfoBar from "@/components/InfoBar";
 import { Bowlby_One, Architects_Daughter } from "next/font/google";
-import Footer from "@/components/Footer";
-import { Suspense } from "react";
-import ScrollToTopButton from "@/components/BackToTop/ScrollToTop";
-import { Scroll } from "lucide-react";
+import { Suspense, lazy } from "react";
+
+// Lazy load components that are not critical
+const Navigation = lazy(() => import("@/components/NavbarClient"));
+const InfoBar = lazy(() => import("@/components/InfoBar"));
+const Footer = lazy(() => import("@/components/Footer"));
+const ScrollToTopButton = lazy(() => import("@/components/BackToTop/ScrollToTop"));
 
 const bowlbyOne = Bowlby_One({
   weight: "400",
@@ -76,11 +77,14 @@ export default function RootLayout({
             {children}
           </main> 
 
-          <ScrollToTopButton />
-          <Footer />
+          <Suspense fallback={null}>
+            <ScrollToTopButton />
+          </Suspense>
+          <Suspense fallback={<footer className="h-40 bg-yellow-800"></footer>}>
+            <Footer />
+          </Suspense>
         </body>
       </html>
     </ClerkProvider>
-
-);
+  );
 }
