@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import Navigation from "@/components/NavbarClient";
@@ -22,10 +22,15 @@ const architectsDaughter = Architects_Daughter({
   variable: "--font-architects",
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: 'Rettungsanker-Freiburg',
   description: 'Die Kiezkneipe in Freiburg',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   icons: {
     icon: '/Assets/Svg/image1.svg',
     shortcut:'/favicon-16x16.png',
