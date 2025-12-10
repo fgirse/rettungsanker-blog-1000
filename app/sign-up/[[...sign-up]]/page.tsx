@@ -9,13 +9,24 @@ export const metadata = {
   description: "Create an account at Rettungsanker",
 };
 
+// Mark this as a dynamic page to ensure proper rendering in production
+export const dynamic = 'force-dynamic';
+
 export default function SignUpPage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-slate-900">
-      <SignUp 
-        afterSignUpUrl="/" 
-        redirectUrl="/"
-      />
+      <div className="w-full max-w-md">
+        <SignUp 
+          afterSignUpUrl="/" 
+          redirectUrl="/"
+          appearance={{
+            elements: {
+              rootBox: "w-full",
+              card: "w-full shadow-lg",
+            },
+          }}
+        />
+      </div>
     </div>
   );
 }
