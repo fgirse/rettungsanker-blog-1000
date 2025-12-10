@@ -10,8 +10,8 @@ export default function SignUpPage() {
     <div className="flex items-center justify-center min-h-screen bg-slate-900">
       <div className="w-full max-w-md">
         <SignUp 
-          afterSignUpUrl="/" 
-          redirectUrl="/"
+          fallbackRedirectUrl="/"
+          forceRedirectUrl="/"
           appearance={{
             elements: {
               rootBox: "w-full",
