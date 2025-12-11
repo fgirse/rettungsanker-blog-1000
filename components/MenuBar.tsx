@@ -11,7 +11,7 @@ import React from "react";
 const Navbar = async () => {
   const { userId } = await auth();
   return (
-    <div className="bg-cyan-950 rounded-b-xl">
+    <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
       <ul className="flex justify-between py-4 px-6">
         <div>
           <Link href="/">
@@ -27,16 +27,16 @@ const Navbar = async () => {
           {!userId ? (
             <>
               <Link href="/sign-in">
-                <li>Login</li>
+                <li>Anmeldung</li>
               </Link>
-              <Link href="/sign-up">
-                <li>Sign Up</li>
+              <Link href="/sign-up" className="bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
+                <li>Registrierung</li>
               </Link>
             </>
           ) : (
             <>
-              <Link href="/profile">
-                <li>Profile</li>
+              <Link href="/profile" className="bg-slate-600 p-2 rounded-lg border hover:bg-orange-400">
+                <li>Profil</li>
               </Link>
               <li className="flex items-center">
                 <UserButton />
