@@ -15,12 +15,12 @@ import Link from "next/link";
 
 export default function MenuBar() {
   return (
-    <Navbar fluid rounded className="bg-red-400 py-[3vh]">
+    <Navbar fluid rounded className="bg-red-400 py-[3vh] lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-contain lg:bg-center lg:bg-no-repeat">
       <NavbarBrand as={Link} href="/">
       <Image src={LogoNeu} width={120} height={120} className="mr- h-9 sm:h-12" alt="RettungsankerLogo" />
         {/*<span className="self-center whitespace-nowrap text-gray-50 text-xl font-semibold dark:text-white">Flowbite React</span>*/}
       </NavbarBrand>
-      <NavbarToggle className="text-gray-50"/>
+      <NavbarToggle className="text-gray-50 hover:bg-orange-400"/>
       <NavbarCollapse>
         <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
         <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
