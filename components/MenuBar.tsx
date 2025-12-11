@@ -19,23 +19,35 @@ const Navbar = async () => {
           </Link>
         </div>
         <div className="flex items-center">
+             <Link href="/about">
+            <li>über uns</li>
+          </Link>
+             <Link href="/drinks">
+            <li>Angebot</li>
+          </Link>
+             <Link href="/sportarena">
+            <li>sportarena</li>
+          </Link>
+             <Link href="/wohin">
+            <li>wohin ?</li>
+          </Link>
           <Link href="/client">
-            <li>Client Page</li>
+            <li>Blog Page</li>
           </Link>
         </div>
         <div className="flex gap-6 items-center">
           {!userId ? (
             <>
-              <Link href="/sign-in">
+              <Link href="/sign-in" className="uppercase bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
                 <li>Anmeldung</li>
               </Link>
-              <Link href="/sign-up" className="bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
+              <Link href="/sign-up" className="uppercase bg-slate-500 p-2 rounded-lg border hover:bg-orange-400">
                 <li>Registrierung</li>
               </Link>
             </>
           ) : (
             <>
-              <Link href="/profile" className="bg-slate-600 p-2 rounded-lg border hover:bg-orange-400">
+              <Link href="/profile" className="uppercasebg-slate-600 p-2 rounded-lg border hover:bg-orange-400">
                 <li>Profil</li>
               </Link>
               <li className="flex items-center">
