@@ -17,7 +17,10 @@ const Navbar = async () => {
       <ul className="flex justify-between py-4 px-6">
         <div>
           <Link href="/">
-            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Start</li>
+           <div className="flex items-center">    
+             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Start</li>
+           </div>
           </Link>
         </div>
         <div className="flex items-center justify-start">
@@ -26,18 +29,27 @@ const Navbar = async () => {
           </Link>
              <Link href="/drinks">
              <div className="flex items-center">    
-             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-20 lg:h-20 inline-block mr-1" />
+             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
              </div>
             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Angebot</li>
           </Link>
              <Link href="/sportarena">
+             <div className="flex items-center">    
+             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+             </div>
             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">sportarena</li>
           </Link>
              <Link href="/wohin">
+             <div className="flex items-center">
+               <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+             </div>
             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">wohin ?</li>
           </Link>
           <Link href="/client">
+          <div className="flex items-center">
+            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Blog Page</li>
+          </div>
           </Link>
         </div>
         <div className="flex gap-6 items-center">
