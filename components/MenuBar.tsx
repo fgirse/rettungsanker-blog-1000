@@ -5,45 +5,51 @@
  * logging out or accessing their profile.
  */
 
-
-
-"use client";
-
-
 import { UserButton, useAuth } from "@clerk/nextjs";
-import Link from "next/link";
 import React from "react";
-import { Button, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 import Image from "next/image";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
 import LogoNeu from "../public/Assets/Img/LogoNeu.png";
-
-
+import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import Link from "next/link";
 
 export default function MenuBar() {
   return (
-    <Navbar fluid rounded>
-      <NavbarBrand href="https://flowbite-react.com">
-        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
+    <Navbar fluid rounded className="bg-red-400 py-[3vh]">
+      <NavbarBrand as={Link} href="/">
+      <Image src={LogoNeu} width={120} height={120} className="mr- h-9 sm:h-12" alt="RettungsankerLogo" />
+        {/*<span className="self-center whitespace-nowrap text-gray-50 text-xl font-semibold dark:text-white">Flowbite React</span>*/}
       </NavbarBrand>
-      <div className="flex md:order-2">
-        <Button>Get started</Button>
-        <NavbarToggle />
-      </div>
+      <NavbarToggle className="text-gray-50"/>
       <NavbarCollapse>
-        <NavbarLink href="#" active>
-          Home
-        </NavbarLink>
-        <NavbarLink href="#">About</NavbarLink>
-        <NavbarLink href="#">Services</NavbarLink>
-        <NavbarLink href="#">Pricing</NavbarLink>
-        <NavbarLink href="#">Contact</NavbarLink>
+        <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
+        <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
+        <NavbarLink className="uppercase text-3xl hover:bg-orange-400 lg:text-xl xl:text-2xl  font-bowlby text-white" href="/" active>Home</NavbarLink>
+        </div>
+       <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
+        <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
+        <NavbarLink className="uppercase text-3xl hover:bg-orange-400 lg:text-xl xl:text-2xl  font-bowlby text-white" href="/about" active>über uns</NavbarLink>
+        </div>
+        <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
+        <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
+        <NavbarLink className="uppercase text-3xl hover:bg-orange-400 lg:text-xl xl:text-2xl  font-bowlby text-white" href="/drinks" active>angebot</NavbarLink>
+        </div>
+        <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
+        <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
+        <NavbarLink className="uppercase mb-3 text-3xl hover:bg-orange-400 lg:text-xl xl:text-2xl  font-bowlby text-white" href="/sportarena" active>sportarena</NavbarLink>
+        </div>
+        <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
+        <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
+        <NavbarLink className="uppercase text-3xl hover:bg-orange-400 lg:text-xl xl:text-2xl  font-bowlby text-white" href="/wohin" active>wohin?</NavbarLink>
+        </div>
+        <div className="mb-3 flex items-center gap-2 lg:gap-5 lg:mr-5 ">
+        <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={50} height={50} />
+        <NavbarLink className="uppercase text-3xl hover:bg-orange-400 lg:text-xl xl:text-2xl  font-bowlby text-white" href="/client" active>blog</NavbarLink>
+        </div>
       </NavbarCollapse>
     </Navbar>
   );
 }
-
 
 
 {/*const MenuBar = () => {
