@@ -14,25 +14,25 @@ const Navbar = async () => {
     <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
       <ul className="flex justify-between py-4 px-6">
         <div>
-          <Link href="/" className="font-bowlby uppercase px-1 py-1text-xl font-bold rounded-lg hover:bg-orange-400 ">
-            <li>Home</li>
+          <Link href="/">
+            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">Home</li>
           </Link>
         </div>
         <div className="flex items-center">
              <Link href="/about">
-            <li>über uns</li>
+            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">über uns</li>
           </Link>
              <Link href="/drinks">
-            <li>Angebot</li>
+            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">Angebot</li>
           </Link>
              <Link href="/sportarena">
-            <li>sportarena</li>
+            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">sportarena</li>
           </Link>
              <Link href="/wohin">
-            <li>wohin ?</li>
+            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">wohin ?</li>
           </Link>
           <Link href="/client">
-            <li>Blog Page</li>
+            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">Blog Page</li>
           </Link>
         </div>
         <div className="flex gap-6 items-center">
