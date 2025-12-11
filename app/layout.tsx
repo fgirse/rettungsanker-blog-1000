@@ -6,7 +6,7 @@ import { Bowlby_One, Architects_Daughter } from "next/font/google";
 import { Suspense, lazy } from "react";
 
 // Lazy load components that are not critical
-const Navigation = lazy(() => import("@/components/NavbarClient"));
+const Navigation = lazy(() => import("@/components/MenuBar"));
 const InfoBar = lazy(() => import("@/components/InfoBar"));
 const Footer = lazy(() => import("@/components/Footer"));
 const ScrollToTopButton = lazy(() => import("@/components/BackToTop/ScrollToTop"));
@@ -61,7 +61,7 @@ export default function RootLayout({
        <html lang='en' suppressHydrationWarning className="overflow-x-hidden">
         <body className={` ${bowlbyOne.variable} ${architectsDaughter.variable} overflow-x-hidden lg:pb-0 pb-24`}>
           <Suspense fallback={<div className="h-24 bg-gray-100"></div>}>
-            <Navigation userId={null} />
+            <Navigation />
           </Suspense>
           <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
             <InfoBar /> 

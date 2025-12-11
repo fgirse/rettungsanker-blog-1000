@@ -1,53 +1,40 @@
 'use client';
 
-/**
- * Sign-In Page
- * 
- * Uses Clerk's SignIn component for authentication.
- * Marked as 'use client' because SignIn requires client-side interactivity.
- * 
- * If the form doesn't appear:
- * 1. Check browser console (F12) for errors
- * 2. Verify NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is set in environment
- * 3. Check Clerk Dashboard that your domain is whitelisted
- */
-import { SignIn } from "@clerk/nextjs";
-import { useEffect, useState } from "react";
+import { SignIn } from '@clerk/nextjs';
+import { useAuth } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function SignInPage() {
+  const { isLoaded, userId } = useAuth();
+  const router = useRouter();
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Check if Clerk is loaded
-    const checkClerk = () => {
-      if (typeof window !== 'undefined' && (window as any).Clerk) {
-        setIsReady(true);
-        console.log("✓ Clerk loaded successfully");
-      } else {
-        console.warn("⚠ Clerk not yet loaded, waiting...");
-        setTimeout(checkClerk, 100);
+    // Ensure Clerk is fully loaded before showing UI
+    if (isLoaded) {
+      setIsReady(true);
+      // If user is already signed in, redirect to home
+      if (userId) {
+        router.push('/');
       }
-    };
-    
-    checkClerk();
-  }, []);
+    }
+  }, [isLoaded, userId, router]);
+
+  if (!isReady) {
+    return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
+  }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-slate-900">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-cyan-950 to-blue-900">
       <div className="w-full max-w-md">
-        {!isReady && (
-          <div className="text-center text-gray-300 animate-pulse">
-            <p>Loading authentication...</p>
-          </div>
-        )}
         <SignIn 
           appearance={{
             elements: {
-              rootBox: "w-full",
-              card: "w-full shadow-lg",
+              rootBox: "mx-auto",
+              card: "bg-white rounded-lg shadow-lg",
             },
           }}
-          fallbackRedirectUrl="/"
         />
       </div>
     </div>
