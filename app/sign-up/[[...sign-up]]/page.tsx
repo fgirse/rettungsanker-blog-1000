@@ -4,12 +4,15 @@
  */
 import { SignUp } from "@clerk/nextjs";
 
-export default function Page() {
+// Mark this page as dynamic since it uses catch-all route [[...sign-up]]
+export const dynamic = "force-dynamic";
+
+export default function SignUpPage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-slate-900">
       <div className="w-full max-w-md">
         <SignUp 
-          fallbackRedirectUrl="/"
+          redirectUrl="/"
           appearance={{
             elements: {
               rootBox: "w-full",
