@@ -7,6 +7,8 @@ import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import Bulleye from "../public/Assets/Svg/Bulleye.svg";
 
 const Navbar = async () => {
   const { userId } = await auth();
@@ -15,24 +17,25 @@ const Navbar = async () => {
       <ul className="flex justify-between py-4 px-6">
         <div>
           <Link href="/">
-            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">Home</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Start</li>
           </Link>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center justify-start">
              <Link href="/about">
-            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">über uns</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">über uns</li>
           </Link>
              <Link href="/drinks">
-            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">Angebot</li>
+             <Image src={Bulleye} alt="Bulleye" className="w-4 h-4 inline-block mr-1" />
+            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Angebot</li>
           </Link>
              <Link href="/sportarena">
-            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">sportarena</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">sportarena</li>
           </Link>
              <Link href="/wohin">
-            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">wohin ?</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">wohin ?</li>
           </Link>
           <Link href="/client">
-            <li className="font-bowlby uppercase px-1 py-1 text-xl font-bold rounded-lg hover:bg-orange-400">Blog Page</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Blog Page</li>
           </Link>
         </div>
         <div className="flex gap-6 items-center">
