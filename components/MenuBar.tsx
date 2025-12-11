@@ -26,37 +26,85 @@ export default function MenuBar() {
         <Image src={LogoNeu} width={120} height={120} className="mr-3 h-6 sm:h-9" alt="RettungsankerLogo" />
       </NavbarBrand>
 
-      <div className="flex items-center lg:hidden">
+      <div className="flex items-center gap-3 lg:hidden ml-auto">
         <NavbarToggle className="text-white hover:bg-orange-400" />
       </div>
 
-      <NavbarCollapse className="gap-3 flex-row items-center">
-        <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
+      {/* Desktop Navigation - Always visible */}
+      <div className="hidden lg:flex items-center gap-3">
+        <div className="flex items-center gap-2 lg:gap-5">
+          <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
+          <Link className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white no-underline" href="/">Home</Link>
+        </div>
+        <div className="flex items-center gap-2 lg:gap-5">
+          <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
+          <Link className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white no-underline" href="/about">über uns</Link>
+        </div>
+        <div className="flex items-center gap-2 lg:gap-5">
+          <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
+          <Link className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white no-underline" href="/drinks">angebot</Link>
+        </div>
+        <div className="flex items-center gap-2 lg:gap-5">
+          <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
+          <Link className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white no-underline" href="/sportarena">sportarena</Link>
+        </div>
+        <div className="flex items-center gap-2 lg:gap-5">
+          <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
+          <Link className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white no-underline" href="/wohin">wohin?</Link>
+        </div>
+        <div className="flex items-center gap-2 lg:gap-5">
+          <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
+          <Link className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white no-underline" href="/client">blog</Link>
+        </div>
+
+        {/* Auth buttons for desktop */}
+        {!userId ? (
+          <>
+            <Link className="text-white bg-slate-400 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline" href="/sign-in">
+              Anmelden
+            </Link>
+            <Link className="text-white bg-slate-600 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline" href="/sign-up">
+              Registrieren
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link className="text-white no-underline" href="/profile">
+              Profile
+            </Link>
+            <UserButton />
+          </>
+        )}
+      </div>
+
+      {/* Mobile Navigation - Collapsible */}
+      <NavbarCollapse className="lg:hidden">
+        <div className="flex items-center gap-2 lg:gap-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/">Home</NavbarLink>
         </div>
-        <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
+        <div className="flex items-center gap-2 lg:gap-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/about">über uns</NavbarLink>
         </div>
-        <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
+        <div className="flex items-center gap-2 lg:gap-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/drinks">angebot</NavbarLink>
         </div>
-        <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
+        <div className="flex items-center gap-2 lg:gap-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/sportarena">sportarena</NavbarLink>
         </div>
-        <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
+        <div className="flex items-center gap-2 lg:gap-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/wohin">wohin?</NavbarLink>
         </div>
-        <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
+        <div className="flex items-center gap-2 lg:gap-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/client">blog</NavbarLink>
         </div>
 
-        {/* Auth buttons for mobile and desktop */}
+        {/* Auth buttons for mobile */}
         {!userId ? (
           <>
             <Link className="text-white bg-slate-400 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline text-center" href="/sign-in">
