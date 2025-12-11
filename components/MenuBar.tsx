@@ -14,7 +14,7 @@ const Navbar = async () => {
     <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
       <ul className="flex justify-between py-4 px-6">
         <div>
-          <Link href="/">
+          <Link href="/" className="font-bowlby uppercase px-1 py-1text-xl font-bold rounded-lg hover:bg-orange-400 ">
             <li>Home</li>
           </Link>
         </div>
