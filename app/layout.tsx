@@ -45,24 +45,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-  const signInUrl = process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL || "/sign-in";
-  const signUpUrl = process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL || "/sign-up";
 
   if (!publishableKey) {
     console.error(
-      "Missing NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY environment variable"
+      "CRITICAL: Missing NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY environment variable. " +
+      "Authentication will not work. Check Vercel environment variables."
     );
   }
 
   return (
     <ClerkProvider
-      publishableKey={publishableKey}
-      signInUrl={signInUrl}
-      signUpUrl={signUpUrl}
-      afterSignInUrl="/"
-      afterSignUpUrl="/"
-      signInFallbackRedirectUrl="/"
-      signUpFallbackRedirectUrl="/"
+      publishableKey={publishableKey || ""}
       appearance={{ baseTheme: neobrutalism }}
     >
        <html lang='en' suppressHydrationWarning className="overflow-x-hidden">
