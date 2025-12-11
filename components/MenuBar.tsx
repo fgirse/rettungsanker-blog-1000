@@ -19,15 +19,16 @@ export default function MenuBar() {
   const { userId } = useAuth();
 
   return (
-    <Navbar fluid rounded className="py-[4vh] bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
-      <div className="flex items-center justify-between w-full">
-        <NavbarBrand as={Link} href="/" className="relative left-[2vw]">
-          <Image src={LogoNeu} width={120} height={120} className="mr-3 h-6 sm:h-9" alt="RettungsankerLogo" />
-        </NavbarBrand>
+    <Navbar fluid rounded className="py-[4vh] bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-contain lg:bg-center lg:bg-no-repeat">
+      <NavbarBrand as={Link} href="/" className="relative left-[2vw]">
+        <Image src={LogoNeu} width={120} height={120} className="mr-3 h-6 sm:h-9" alt="RettungsankerLogo" />
+      </NavbarBrand>
+     
+      <div className="flex items-center lg:hidden">
         <NavbarToggle className="text-white hover:bg-orange-400" />
       </div>
-     
-      <NavbarCollapse className="gap-3">
+
+      <NavbarCollapse className="gap-3 flex-row items-center">
         <div className="flex items-center gap-2 lg:gap-5 lg:mr-5">
           <Image src={Bulleye} className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" alt="Bulleye" width={40} height={40} />
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/">Home</NavbarLink>
@@ -53,46 +54,25 @@ export default function MenuBar() {
           <NavbarLink as={Link} className="uppercase hover:bg-orange-400 lg:text-xl xl:text-2xl font-bowlby text-white" href="/client">blog</NavbarLink>
         </div>
 
-        {/* Auth buttons for mobile */}
+        {/* Auth buttons for mobile and desktop */}
         {!userId ? (
-          <div className="flex gap-2 mt-4 flex-col lg:hidden">
+          <>
             <Link className="text-white bg-slate-400 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline text-center" href="/sign-in">
               Anmelden
             </Link>
             <Link className="text-white bg-slate-600 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline text-center" href="/sign-up">
               Registrieren
             </Link>
-          </div>
+          </>
         ) : (
-          <div className="flex items-center gap-4 mt-4 lg:hidden">
+          <>
             <Link className="text-white no-underline" href="/profile">
               Profile
             </Link>
             <UserButton />
-          </div>
+          </>
         )}
       </NavbarCollapse>
-     
-      {/* Auth buttons for desktop */}
-      <div className="hidden lg:flex gap-6 items-center">
-        {!userId ? (
-          <>
-            <Link className="text-white bg-slate-400 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline" href="/sign-in">
-              Anmelden
-            </Link>
-            <Link className="text-white bg-slate-600 border px-2 py-1 rounded-lg hover:bg-orange-500 no-underline" href="/sign-up">
-              Registrieren
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link className="text-white no-underline" href="/profile">
-              Profile
-            </Link>
-            <UserButton />
-          </>
-        )}
-      </div>
     </Navbar>
   );
 }
