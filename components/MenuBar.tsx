@@ -76,7 +76,7 @@ export default function MenuBar() {
         )}
       </NavbarCollapse>
     </Navbar>
-    <BottomNavigation />
+    <BottomNavigation userId={null} />
   </>
   );
 }
