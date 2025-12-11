@@ -25,7 +25,9 @@ const Navbar = async () => {
             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">über uns</li>
           </Link>
              <Link href="/drinks">
-             <Image src={Bulleye} alt="Bulleye" className="w-4 h-4 inline-block mr-1" />
+             <div className="flex items-center">    
+             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-20 lg:h-20 inline-block mr-1" />
+             </div>
             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Angebot</li>
           </Link>
              <Link href="/sportarena">
