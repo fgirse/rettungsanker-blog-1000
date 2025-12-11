@@ -14,41 +14,44 @@ const Navbar = async () => {
   const { userId } = await auth();
   return (
     <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
-      <ul className="flex justify-between py-4 px-6">
+      <ul className="flex justify-center py-4 px-6">
         <div>
           <Link href="/">
            <div className="flex items-center">    
              <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-             <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Start</li>
+             <li className="font-bowlby uppercase px-1 py-1 lg-[0.6rem] font-bold rounded-lg hover:bg-orange-400">Start</li>
            </div>
           </Link>
         </div>
         <div className="flex items-center justify-start">
              <Link href="/about">
-            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">über uns</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg-[0.6rem] font-bold rounded-lg hover:bg-orange-400">über uns</li>
           </Link>
              <Link href="/drinks">
              <div className="flex items-center">    
              <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-             </div>
-            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Angebot</li>
+             
+            <li className="font-bowlby uppercase px-1 py-1 lg-[0.6rem] font-bold rounded-lg hover:bg-orange-400">Angebot</li>
+            </div>
           </Link>
              <Link href="/sportarena">
              <div className="flex items-center">    
              <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-             </div>
-            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">sportarena</li>
+             
+            <li className="font-bowlby uppercase px-1 py-1 lg-[0.6rem] font-bold rounded-lg hover:bg-orange-400">sportarena</li>
+          </div>
           </Link>
              <Link href="/wohin">
              <div className="flex items-center">
                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-             </div>
-            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">wohin ?</li>
+           
+            <li className="font-bowlby uppercase px-1 py-1 lg-[0.6rem] font-bold rounded-lg hover:bg-orange-400">wohin ?</li>
+              </div>
           </Link>
           <Link href="/client">
           <div className="flex items-center">
             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-            <li className="font-bowlby uppercase px-1 py-1 lg:text-sm font-bold rounded-lg hover:bg-orange-400">Blog Page</li>
+            <li className="font-bowlby uppercase px-1 py-1 lg-[0.6rem] font-bold rounded-lg hover:bg-orange-400">Blog Page</li>
           </div>
           </Link>
         </div>
