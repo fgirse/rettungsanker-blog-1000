@@ -65,15 +65,15 @@ const Navbar = async () => {
       </div>
 
       {/* Mobile & Tablet Navigation */}
-      <div className="lg:hidden bg-cyan-950 rounded-b-xl">
+      <div className="lg:hidden bg-cyan-950 ">
         <OffCanvasMenu />
-        <div className="flex justify-center items-center py-4 px-4">
+        <div className="flex justify-center items-center py-7 px-4">
           <span className="font-bowlby uppercase text-sm font-bold text-white">Menu</span>
         </div>
       </div>
 
       {/* Mobile & Tablet Bottom Navigation (Auth Buttons) */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-cyan-950 border-t border-orange-400 rounded-t-xl">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-red-600/50 border-t border-orange-400 rounded-t-xl">
         <div className="flex justify-center items-center py-3 px-4">
           <AuthButtons userId={userId} />
         </div>
