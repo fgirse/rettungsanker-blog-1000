@@ -15,7 +15,8 @@ const Navbar = async () => {
   const { userId } = await auth();
   return (
     <>
-      <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
+      {/* Desktop Navigation */}
+      <div className="hidden lg:block bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
         <div className="flex justify-between items-center py-4 px-6 gap-x-4">
           <ul className="flex justify-center items-center gap-4">
             <li>
@@ -61,6 +62,62 @@ const Navbar = async () => {
           <AuthButtons userId={userId} />
         </div>
       </div>
+
+      {/* Mobile & Tablet Navigation */}
+      <div className="lg:hidden bg-cyan-950 rounded-b-xl">
+        <div className="flex justify-between items-center py-4 px-4 gap-x-2">
+          <ul className="flex justify-start items-center gap-2 flex-wrap">
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
+                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/">start</Link>
+              </div>
+            </li>
+
+            <li>
+              <Dropdown />
+            </li>
+
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
+                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/drinks">angebot</Link>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
+                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/sportarena">sportarena</Link>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
+                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
+                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/client">blog</Link>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Mobile & Tablet Bottom Navigation (Auth Buttons) */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-cyan-950 border-t border-orange-400 rounded-t-xl">
+        <div className="flex justify-center items-center py-3 px-4">
+          <AuthButtons userId={userId} />
+        </div>
+      </div>
+
+      {/* Spacer for mobile bottom nav */}
+      <div className="lg:hidden h-24"></div>
     </>
   );
 };
