@@ -8,6 +8,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
+import LogoNeu from "../public/Assets/Img/LogoNeu.png";
 import Dropdown from "@/components/Dropdown";
 import AuthButtons from "@/components/AuthButtons";
 import OffCanvasMenu from "@/components/OffCanvasMenu";
@@ -65,10 +66,18 @@ const Navbar = async () => {
       </div>
 
       {/* Mobile & Tablet Navigation */}
-      <div className="lg:hidden bg-cyan-950 ">
-        <OffCanvasMenu />
-        <div className="flex justify-center items-center py-7 px-4">
-          <span className="font-bowlby uppercase text-sm font-bold text-white">Menu</span>
+      <div className="lg:hidden bg-red-700">
+        <div className="flex justify-between items-center py-3 px-4">
+          <Link href="/" className="flex items-center">
+            <Image 
+              src={LogoNeu} 
+              alt="Logo" 
+              width={120} 
+              height={40}
+              className="h-10 w-auto"
+            />
+          </Link>
+          <OffCanvasMenu />
         </div>
       </div>
 
