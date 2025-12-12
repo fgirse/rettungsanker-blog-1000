@@ -10,6 +10,7 @@ import Image from "next/image";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
 import Dropdown from "@/components/Dropdown";
 import AuthButtons from "@/components/AuthButtons";
+import OffCanvasMenu from "@/components/OffCanvasMenu";
 
 const Navbar = async () => {
   const { userId } = await auth();
@@ -65,47 +66,9 @@ const Navbar = async () => {
 
       {/* Mobile & Tablet Navigation */}
       <div className="lg:hidden bg-cyan-950 rounded-b-xl">
-        <div className="flex justify-between items-center py-4 px-4 gap-x-2">
-          <ul className="flex justify-start items-center gap-2 flex-wrap">
-            <li>
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
-                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/">start</Link>
-              </div>
-            </li>
-
-            <li>
-              <Dropdown />
-            </li>
-
-            <li>
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
-                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/drinks">angebot</Link>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
-                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/sportarena">sportarena</Link>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
-                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 inline-block mr-1" />
-                <Link className="font-bowlby uppercase px-1 py-1 text-xs font-bold rounded-lg hover:bg-orange-400" href="/client">blog</Link>
-              </div>
-            </li>
-          </ul>
+        <OffCanvasMenu />
+        <div className="flex justify-center items-center py-4 px-4">
+          <span className="font-bowlby uppercase text-sm font-bold text-white">Menu</span>
         </div>
       </div>
 
