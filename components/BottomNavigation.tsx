@@ -42,7 +42,7 @@ export default function BottomNavigation({ userId }: NavbarClientProps) {
     <>
     {/* Bottom Menu for Mobile and Tablet - Auth Buttons and Profile */}
 
-            <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-slate-800 border-t border-gray-600 px-2 sm:px-3 md:px-4 py-2 sm:py-3 flex items-center justify-between gap-1 sm:gap-2 md:gap-3 z-50">
+            <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-red-600/50 border-t border-gray-100 px-2 sm:px-3 md:px-4 py-2 sm:py-3 flex items-center justify-between gap-1 sm:gap-2 md:gap-3 z-70">
 
               {!userId ? (
 

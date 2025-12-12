@@ -11,7 +11,7 @@ export default function Component() {
    
      
         <Dropdown
-          className="bg-yellow-500 z-[100] "
+          className="bg-yellow-500 z-[120] "
           label={<span className=" text-xl lg:w-[7vw] lg:text-[0.66rem] font-bowlby uppercase">über uns</span>}
         >
         <Link href="/about/team">
