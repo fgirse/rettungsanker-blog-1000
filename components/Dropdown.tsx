@@ -5,12 +5,12 @@ import { PiSailboatDuotone, PiCastleTurretDuotone, PiInfoDuotone  } from "react-
 
 export default function Component() {
   return (
-    <div className=" flex items-center gap-4">
+    
    
-      <div suppressHydrationWarning>
+     
         <Dropdown
           className="bg-yellow-500 z-50 "
-          label={<span className=" text-xl lg:w-[5vw] lg:text-[0.66rem] font-bowlby uppercase">über uns</span>}
+          label={<span className=" text-xl lg:w-[7vw] lg:text-[0.66rem] font-bowlby uppercase">über uns</span>}
         >
         <Link href="/about/team">
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>
@@ -22,7 +22,7 @@ export default function Component() {
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiInfoDuotone}>&nbsp;Impressum</DropdownItem>
         </Link>
       </Dropdown>
-      </div>
-    </div>
+      
+    
   );
 }

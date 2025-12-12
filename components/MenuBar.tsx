@@ -16,70 +16,70 @@ const Navbar = async () => {
   return (
     <>
       <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
-        <ul className="flex justify-center py-4 px-6">
-          <li>
-            <div className="flex items-center">
-            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/">start</Link>
+        <div className="flex justify-between items-center py-4 px-6 gap-x-4">
+          <ul className="flex justify-center items-center gap-4">
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+                <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/">start</Link>
               </div>
-          </li>
+            </li>
 
-        
-            <Dropdown/>
-          
+            <li>
+              <Dropdown />
+            </li>
 
-          <li>
-            <div className="flex items-center">
-            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/drinks">angebot</Link>
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+                <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/drinks">angebot</Link>
               </div>
-          </li>
+            </li>
 
-          <li>
-            <div className="flex items-center">
-              <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-              <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/sportarena">sportarena</Link>
-            </div>
-          </li>
-
-          <li>
-            <div className="flex items-center">
-            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+                <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/sportarena">sportarena</Link>
               </div>
-            
-              
-          </li>
+            </li>
 
-          <li>
-           <div className="flex items-center">
-            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/client">blog</Link>
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+                <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
               </div>
-          </li>
-        </ul>
-      </div>
+            </li>
 
-      <div className="flex gap-x-2 items-center">
-        {!userId ? (
-          <>
-            <Link href="/sign-in" className="uppercase bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
-              Anmeldung
-            </Link>
-            <Link href="/sign-up" className="uppercase bg-slate-500 p-2 rounded-lg border hover:bg-orange-400">
-              Registrierung
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400">
-              Profil
-            </Link>
-            <div className="flex items-center">
-              <UserButton />
-            </div>
-          </>
-        )}
+            <li>
+              <div className="flex items-center">
+                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+                <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/client">blog</Link>
+              </div>
+            </li>
+          </ul>
+
+          <div className="flex gap-x-2 items-center">
+            {!userId ? (
+              <>
+                <Link href="/sign-in" className="uppercase bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
+                  Anmeldung
+                </Link>
+                <Link href="/sign-up" className="uppercase bg-slate-500 p-2 rounded-lg border hover:bg-orange-400">
+                  Registrierung
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400">
+                  Profil
+                </Link>
+                <div className="flex items-center">
+                  <UserButton />
+                </div>
+              </>
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
