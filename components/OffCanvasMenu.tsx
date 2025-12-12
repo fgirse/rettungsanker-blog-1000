@@ -23,7 +23,7 @@ export default function OffCanvasMenu() {
       {/* Menu Toggle Button */}
       <button
         onClick={toggleMenu}
-        className="lg:hidden fixed top-4 left-4 z-40 bg-orange-400 hover:bg-orange-500 p-2 rounded-lg"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-orange-400 hover:bg-orange-500 p-2 rounded-lg"
         aria-label="Toggle menu"
       >
         {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -32,14 +32,14 @@ export default function OffCanvasMenu() {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={closeMenu}
         ></div>
       )}
 
       {/* Off-Canvas Menu */}
       <div
-        className={`lg:hidden fixed top-0 left-0 h-full w-64 bg-cyan-950 shadow-lg transform transition-transform duration-300 ease-in-out z-40 overflow-y-auto ${
+        className={`lg:hidden fixed top-0 left-0 h-full w-64 bg-cyan-950 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -48,7 +48,7 @@ export default function OffCanvasMenu() {
             <li>
               <Link
                 href="/"
-                className="flex items-center gap-2 font-bowlby uppercase text-sm font-bold rounded-lg hover:bg-orange-400 p-2"
+                className="flex items-center gap-2 font-bowlby uppercase text-[1.66rem] font-bold rounded-lg hover:bg-orange-400 p-2"
                 onClick={closeMenu}
               >
                 <Image
@@ -56,7 +56,7 @@ export default function OffCanvasMenu() {
                   alt="Bulleye"
                   width={24}
                   height={24}
-                  className="w-4 h-4"
+                  className="w-6 h-6"
                 />
                 <span>Start</span>
               </Link>
@@ -71,7 +71,7 @@ export default function OffCanvasMenu() {
             <li>
               <Link
                 href="/drinks"
-                className="flex items-center gap-2 font-bowlby uppercase text-sm font-bold rounded-lg hover:bg-orange-400 p-2"
+                className="flex items-center gap-2 font-bowlby uppercase text-[1.66rem] font-bold rounded-lg hover:bg-orange-400 p-2"
                 onClick={closeMenu}
               >
                 <Image
@@ -79,7 +79,7 @@ export default function OffCanvasMenu() {
                   alt="Bulleye"
                   width={24}
                   height={24}
-                  className="w-4 h-4"
+                  className="w-6 h-6"
                 />
                 <span>Angebot</span>
               </Link>
@@ -88,7 +88,7 @@ export default function OffCanvasMenu() {
             <li>
               <Link
                 href="/sportarena"
-                className="flex items-center gap-2 font-bowlby uppercase text-sm font-bold rounded-lg hover:bg-orange-400 p-2"
+                className="flex items-center gap-2 font-bowlby uppercase text-[1.66rem] font-bold rounded-lg hover:bg-orange-400 p-2"
                 onClick={closeMenu}
               >
                 <Image
@@ -96,7 +96,7 @@ export default function OffCanvasMenu() {
                   alt="Bulleye"
                   width={24}
                   height={24}
-                  className="w-4 h-4"
+                  className="w-6 h-6"
                 />
                 <span>Sportarena</span>
               </Link>
@@ -105,7 +105,7 @@ export default function OffCanvasMenu() {
             <li>
               <Link
                 href="/wohin"
-                className="flex items-center gap-2 font-bowlby uppercase text-sm font-bold rounded-lg hover:bg-orange-400 p-2"
+                className="flex items-center gap-2 font-bowlby uppercase text-[1.66rem] font-bold rounded-lg hover:bg-orange-400 p-2"
                 onClick={closeMenu}
               >
                 <Image
@@ -113,7 +113,7 @@ export default function OffCanvasMenu() {
                   alt="Bulleye"
                   width={24}
                   height={24}
-                  className="w-4 h-4"
+                  className="w-6 h-6"
                 />
                 <span>Wohin?</span>
               </Link>
@@ -122,7 +122,7 @@ export default function OffCanvasMenu() {
             <li>
               <Link
                 href="/client"
-                className="flex items-center gap-2 font-bowlby uppercase text-sm font-bold rounded-lg hover:bg-orange-400 p-2"
+                className="flex items-center gap-2 font-bowlby uppercase text-[1.66rem] font-bold rounded-lg hover:bg-orange-400 p-2"
                 onClick={closeMenu}
               >
                 <Image
@@ -130,7 +130,7 @@ export default function OffCanvasMenu() {
                   alt="Bulleye"
                   width={24}
                   height={24}
-                  className="w-4 h-4"
+                  className="w-6 h-6"
                 />
                 <span>Blog</span>
               </Link>

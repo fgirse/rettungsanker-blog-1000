@@ -22,6 +22,7 @@ export default function AuthButtons({ userId }: AuthButtonsProps) {
         </>
       ) : (
         <>
+        <h1 className="text-white lg:text-xs text-xs font-bold">Hallo {userId}</h1>
           <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400 lg:text-base text-sm font-bold">
             Profil
           </Link>
