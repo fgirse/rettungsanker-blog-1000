@@ -50,12 +50,12 @@ const Navbar = async () => {
           </li>
 
           <li>
-            <Link href="/wohin">
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">wohin ?</span>
+            <div className="flex items-center">
+            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
               </div>
-            </Link>
+            
+              
           </li>
 
           <li>
@@ -69,7 +69,7 @@ const Navbar = async () => {
         </ul>
       </div>
 
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-x-2 items-center">
         {!userId ? (
           <>
             <Link href="/sign-in" className="uppercase bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
