@@ -10,7 +10,6 @@ import React from "react";
 import Image from "next/image";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
 import Dropdown from "@/components/Dropdown";
-import { PiSailboatDuotone, PiCastleTurretDuotone, PiInfoDuotone } from "react-icons/pi";
 
 const Navbar = async () => {
   const { userId } = await auth();
@@ -19,52 +18,44 @@ const Navbar = async () => {
       <div className="bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
         <ul className="flex justify-center py-4 px-6">
           <li>
-            <Link href="/">
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">Start</span>
+            <div className="flex items-center">
+            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/">start</Link>
               </div>
-            </Link>
           </li>
 
-          <li className="flex items-center justify-start">
+        
             <Dropdown/>
+          
+
+          <li>
+            <div className="flex items-center">
+            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/drinks">angebot</Link>
+              </div>
           </li>
 
           <li>
-            <Link href="/drinks">
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">Angebot</span>
-              </div>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/sportarena">
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">sportarena</span>
-              </div>
-            </Link>
+            <div className="flex items-center">
+              <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+              <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/sportarena">sportarena</Link>
+            </div>
           </li>
 
           <li>
             <div className="flex items-center">
             <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
+            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/wohin">wohin ?</Link>
               </div>
             
               
           </li>
 
           <li>
-            <Link href="/client">
-              <div className="flex items-center">
-                <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">Blog Page</span>
+           <div className="flex items-center">
+            <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
+            <Link className="font-bowlby uppercase px-1 py-1 lg:text-[0.66rem] font-bold rounded-lg hover:bg-orange-400" href="/client">blog</Link>
               </div>
-            </Link>
           </li>
         </ul>
       </div>
