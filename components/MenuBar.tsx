@@ -9,7 +9,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
-import { Dropdown, DropdownItem } from "flowbite-react";
+import Dropdown from "@/components/Dropdown";
 import { PiSailboatDuotone, PiCastleTurretDuotone, PiInfoDuotone } from "react-icons/pi";
 
 const Navbar = async () => {
@@ -22,35 +22,20 @@ const Navbar = async () => {
             <Link href="/">
               <div className="flex items-center">
                 <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg-[0.333rem] font-bold rounded-lg hover:bg-orange-400">Start</span>
+                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">Start</span>
               </div>
             </Link>
           </li>
 
           <li className="flex items-center justify-start">
-            <div suppressHydrationWarning>
-              <Dropdown
-                className="bg-yellow-500 z-50"
-                label={<span className="text-xl lg:w-[7vw] lg:text-xl font-bowlby uppercase">über uns</span>}
-              >
-                <Link href="/about/team">
-                  <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>
-                </Link>
-                <Link href="/about/history">
-                  <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiCastleTurretDuotone}>&nbsp;Geschichte</DropdownItem>
-                </Link>
-                <Link href="/impressum">
-                  <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiInfoDuotone}>&nbsp;Impressum</DropdownItem>
-                </Link>
-              </Dropdown>
-            </div>
+            <Dropdown/>
           </li>
 
           <li>
             <Link href="/drinks">
               <div className="flex items-center">
                 <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg-[0.333rem] font-bold rounded-lg hover:bg-orange-400">Angebot</span>
+                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">Angebot</span>
               </div>
             </Link>
           </li>
@@ -59,7 +44,7 @@ const Navbar = async () => {
             <Link href="/sportarena">
               <div className="flex items-center">
                 <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg-[0.333rem] font-bold rounded-lg hover:bg-orange-400">sportarena</span>
+                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">sportarena</span>
               </div>
             </Link>
           </li>
@@ -68,7 +53,7 @@ const Navbar = async () => {
             <Link href="/wohin">
               <div className="flex items-center">
                 <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg-[0.333rem] font-bold rounded-lg hover:bg-orange-400">wohin ?</span>
+                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">wohin ?</span>
               </div>
             </Link>
           </li>
@@ -77,7 +62,7 @@ const Navbar = async () => {
             <Link href="/client">
               <div className="flex items-center">
                 <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-4 h-4 lg:w-12 lg:h-12 inline-block mr-2" />
-                <span className="font-bowlby uppercase px-1 py-1 lg-[0.333rem] font-bold rounded-lg hover:bg-orange-400">Blog Page</span>
+                <span className="font-bowlby uppercase px-1 py-1 lg:text-[0.33rem] font-bold rounded-lg hover:bg-orange-400">Blog Page</span>
               </div>
             </Link>
           </li>

@@ -1,8 +1,7 @@
 import { Dropdown, DropdownItem } from "flowbite-react";
 import Link from "next/link";
 import { PiSailboatDuotone, PiCastleTurretDuotone, PiInfoDuotone  } from "react-icons/pi";
-import Image from "next/image";
-import Bulleye from "@/public/Assets/Svg/Bulleye.svg";
+
 
 export default function Component() {
   return (
