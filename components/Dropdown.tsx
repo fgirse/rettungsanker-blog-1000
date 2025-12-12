@@ -1,3 +1,5 @@
+"use client";
+
 import { Dropdown, DropdownItem } from "flowbite-react";
 import Link from "next/link";
 import { PiSailboatDuotone, PiCastleTurretDuotone, PiInfoDuotone  } from "react-icons/pi";
