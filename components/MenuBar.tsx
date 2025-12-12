@@ -3,13 +3,13 @@
  * This component allows users to interact with their account, such as
  * logging out or accessing their profile.
  */
-import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
 import Dropdown from "@/components/Dropdown";
+import AuthButtons from "@/components/AuthButtons";
 
 const Navbar = async () => {
   const { userId } = await auth();
@@ -58,27 +58,7 @@ const Navbar = async () => {
             </li>
           </ul>
 
-          <div className="flex gap-x-2 items-center">
-            {!userId ? (
-              <>
-                <Link href="/sign-in" className="uppercase bg-slate-400 p-2 rounded-lg border hover:bg-orange-400">
-                  Anmeldung
-                </Link>
-                <Link href="/sign-up" className="uppercase bg-slate-500 p-2 rounded-lg border hover:bg-orange-400">
-                  Registrierung
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400">
-                  Profil
-                </Link>
-                <div className="flex items-center">
-                  <UserButton />
-                </div>
-              </>
-            )}
-          </div>
+          <AuthButtons userId={userId} />
         </div>
       </div>
     </>
