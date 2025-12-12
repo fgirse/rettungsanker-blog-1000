@@ -23,7 +23,7 @@ export default function OffCanvasMenu() {
       {/* Menu Toggle Button */}
       <button
         onClick={toggleMenu}
-        className="lg:hidden fixed top-4 right-4 z-50 bg-stone-200 hover:bg-orange-500 p-2 rounded-lg"
+        className="lg:hidden fixed top-4 right-4 z-50 bg-stone-700 hover:bg-orange-500 p-2 rounded-lg"
         aria-label="Toggle menu"
       >
         {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
