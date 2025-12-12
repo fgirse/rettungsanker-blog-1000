@@ -18,7 +18,7 @@ const Navbar = async () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <div className="hidden lg:block bg-cyan-950 rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
+      <div className="hidden lg:block rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
         <div className="flex justify-between items-center py-4 px-6 gap-x-4">
           <ul className="flex justify-center items-center gap-4">
             <li>
@@ -66,7 +66,7 @@ const Navbar = async () => {
       </div>
 
       {/* Mobile & Tablet Navigation */}
-      <div className="lg:hidden bg-red-700">
+      <div className="lg:hidden bg-red-800">
         <div className="flex justify-between items-center py-3 px-4">
           <Link href="/" className="flex items-center">
             <Image 
@@ -82,7 +82,7 @@ const Navbar = async () => {
       </div>
 
       {/* Mobile & Tablet Bottom Navigation (Auth Buttons) */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-red-600/50 border-t border-orange-400 rounded-t-xl">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600/50 border-t border-orange-400 rounded-t-xl">
         <div className="flex justify-center items-center py-3 px-4">
           <AuthButtons userId={userId} />
         </div>
