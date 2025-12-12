@@ -11,8 +11,8 @@ export default function Component() {
    
      
         <Dropdown
-          className="bg-yellow-500 z-[120] "
-          label={<span className=" text-xl lg:w-[7vw] lg:text-[0.66rem] font-bowlby uppercase">über uns</span>}
+          className="bg-yellow-500 z-[120]"
+          label={<span className="text-sm lg:text-xl lg:w-[7vw] lg:text-[0.66rem] font-bowlby uppercase">über uns</span>}
         >
         <Link href="/about/team">
           <DropdownItem className="text-xl hover:bg-yellow-600 text-white" icon={PiSailboatDuotone}>&nbsp;Team</DropdownItem>
