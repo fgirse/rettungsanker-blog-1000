@@ -45,7 +45,7 @@ export default function OffCanvasMenu() {
 
       {/* Off-Canvas Menu */}
       <div
-        className={`lg:hidden fixed top-0 left-0 h-full w-64 bg-red-700/70 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
+        className={`lg:hidden fixed top-0 left-0 h-full w-[66vw] bg-red-700/70 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -64,7 +64,7 @@ export default function OffCanvasMenu() {
                   height={24}
                   className="w-9 h-9"
                 />
-                <span>Start</span>
+                <span className="font-bowlby">start</span>
               </Link>
             </li>
 
@@ -87,7 +87,7 @@ export default function OffCanvasMenu() {
                   height={24}
                   className="w-9 h-9"
                 />
-                <span>Angebot</span>
+                <span className="font-bowlby">angebot</span>
               </Link>
             </li>
 
@@ -104,7 +104,7 @@ export default function OffCanvasMenu() {
                   height={24}
                   className="w-9 h-9"
                 />
-                <span>Sportarena</span>
+                <span className="font-bowlby">sportarena</span>
               </Link>
             </li>
 
@@ -121,7 +121,7 @@ export default function OffCanvasMenu() {
                   height={24}
                   className="w-9 h-9"
                 />
-                <span>Wohin?</span>
+                <span className="font-bowlby">wohin?</span>
               </Link>
             </li>
 
@@ -138,7 +138,7 @@ export default function OffCanvasMenu() {
                   height={24}
                   className="w-9 h-9"
                 />
-                <span>Blog</span>
+                <span className="font-bowlby">blog</span>
               </Link>
             </li>
           </ul>
