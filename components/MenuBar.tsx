@@ -19,7 +19,7 @@ const Navbar = async () => {
     <>
       {/* Desktop Navigation */}
       <div className="hidden lg:block rounded-b-xl lg:bg-[url('/Assets/Svg/Wood3.svg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
-        <div className="flex justify-between items-center py-4 px-6 gap-x-4">
+        <div className="flex justify-between items-center py-5 px-6 gap-x-4">
           <ul className="flex justify-center items-center gap-4">
             <li>
               <div className="flex items-center">
