@@ -66,7 +66,7 @@ const Navbar = async () => {
       </div>
 
       {/* Mobile & Tablet Navigation */}
-      <div className="lg:hidden bg-red-800">
+      <div className="lg:hidden bg-red-900">
         <div className="flex justify-between items-center py-3 px-4">
           <Link href="/" className="flex items-center">
             <Image 
@@ -82,7 +82,7 @@ const Navbar = async () => {
       </div>
 
       {/* Mobile & Tablet Bottom Navigation (Auth Buttons) */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600/50 border-t border-orange-400 rounded-t-xl">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-700/80 border-t border-gray-100 rounded-t-xl">
         <div className="flex justify-center items-center py-3 px-4">
           <AuthButtons userId={userId} />
         </div>

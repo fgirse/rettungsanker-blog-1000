@@ -45,7 +45,7 @@ export default function OffCanvasMenu() {
 
       {/* Off-Canvas Menu */}
       <div
-        className={`lg:hidden fixed top-0 left-0 h-full w-[66vw] bg-red-700/70 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
+        className={`lg:hidden fixed top-0 left-0 h-full w-[66vw] bg-yellow-700/80 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
