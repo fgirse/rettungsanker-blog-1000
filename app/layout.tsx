@@ -70,7 +70,7 @@ export default function RootLayout({
             <InfoBar />
           </Suspense>
 
-          <main className="flex flex-col w-full overflow-x-hidden">{children}</main>
+          <main className="">{children}</main>
 
           <ScrollToTopButton />
           <Footer />
