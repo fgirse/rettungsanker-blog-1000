@@ -89,7 +89,7 @@ const Navbar = async () => {
       </div>
 
       {/* Spacer for mobile bottom nav */}
-      <div className="lg:hidden h-2"></div>
+      <div className="lg:hidden h-24"></div>
     </>
   );
 };
