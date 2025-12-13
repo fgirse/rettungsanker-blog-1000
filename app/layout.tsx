@@ -56,7 +56,7 @@ export default function RootLayout({
     >
       <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
         <body
-          className={`${bowlbyOne.variable} ${architectsDaughter.variable} overflow-x-hidden lg:pb-0`}
+          className={`${bowlbyOne.variable} ${architectsDaughter.variable} overflow-x-hidden lg:pb-0 pb-24`}
         >
           <ClerkLoading>
             <div className="text-2xl">LOADING...</div>
