@@ -13,7 +13,7 @@ export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
-    <div className=" bg-black flex flex-col min-h-screen items-center justify-center  font-sans dark:bg-black">
+    <div className=" bg-black flex flex-col min-h-screen items-center font-sans dark:bg-black">
       <Hero />
       <About />
       <Bento />
