@@ -1,9 +1,11 @@
 "use client"
 
+import React from "react"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import Image from "next/image"
 import Logo from "@/public/Assets/Img/LogoNeu.png";
+import MarqueeCooperateComp from "./MarqueeCooperateComp";
 
 export default function AnimatedLogo() {
   const logoRef = useRef<HTMLDivElement>(null)
@@ -76,6 +78,9 @@ export default function AnimatedLogo() {
       >
         kiezkneipe
       </h1>
+      <div className="mt-[28vh] lg:mt-[12vh] mb-52">
+        <MarqueeCooperateComp />
+      </div>
     </div>
   )
 }

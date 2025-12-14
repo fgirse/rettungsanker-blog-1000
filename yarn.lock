@@ -192,6 +192,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+  version: 7.28.4
+  resolution: "@babel/runtime@npm:7.28.4"
+  checksum: 10c0/792ce7af9750fb9b93879cc9d1db175701c4689da890e6ced242ea0207c9da411ccf16dc04e689cc01158b28d7898c40d75598f4559109f761c12ce01e959bf7
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.27.2":
   version: 7.27.2
   resolution: "@babel/template@npm:7.27.2"
@@ -373,6 +380,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@devnomic/marquee@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@devnomic/marquee@npm:1.0.3"
+  dependencies:
+    clsx: "npm:^2.1.0"
+    tailwind-merge: "npm:^2.2.0"
+  peerDependencies:
+    "@types/react": ^18.2.47
+    "@types/react-dom": ^18.2.18
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/74c5096c59bca2a769e5281d26ae1b9a54a2f3886f3a4f1cccbd923c1cf0c359b267c5f5ff5393da2e0397380bbac4fd8340e56ee7abbe555c7a2cf056a480c0
+  languageName: node
+  linkType: hard
+
 "@emnapi/core@npm:^1.4.3":
   version: 1.7.1
   resolution: "@emnapi/core@npm:1.7.1"
@@ -465,10 +487,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.1":
-  version: 9.39.1
-  resolution: "@eslint/js@npm:9.39.1"
-  checksum: 10c0/6f7f26f8cdb7ad6327bbf9741973b6278eb946f18f70e35406e88194b0d5c522d0547a34a02f2a208eec95c5d1388cdf7ccb20039efd2e4cb6655615247a50f1
+"@eslint/js@npm:9.39.2":
+  version: 9.39.2
+  resolution: "@eslint/js@npm:9.39.2"
+  checksum: 10c0/00f51c52b04ac79faebfaa65a9652b2093b9c924e945479f1f3945473f78aee83cbc76c8d70bbffbf06f7024626575b16d97b66eab16182e1d0d39daff2f26f5
   languageName: node
   linkType: hard
 
@@ -1967,19 +1989,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.5.7":
-  version: 15.5.7
-  resolution: "@next/env@npm:15.5.7"
-  checksum: 10c0/f92d99e5fa3516c6b7699abafd9bd813f5c1889dd257ab098f1b71f93137f5e4f49792e22f6dddf8a59efcb134e8e84277c983ff88607b2a42aac651bfde78ea
+"@next/env@npm:15.5.9":
+  version: 15.5.9
+  resolution: "@next/env@npm:15.5.9"
+  checksum: 10c0/92c4e29d81a8e78c33c2da179648a4f478a9a6852966192e079007b19ec9955e72530d5ca7df55ea0efeccbf5b1c9d0efcaf80433e26af89c6478193e1d088f1
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.0.8":
-  version: 16.0.8
-  resolution: "@next/eslint-plugin-next@npm:16.0.8"
+"@next/eslint-plugin-next@npm:16.0.10":
+  version: 16.0.10
+  resolution: "@next/eslint-plugin-next@npm:16.0.10"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10c0/36e06c68e9e665fcb65faadffe8b34952dc15348fe0a2e123f6f96d08435286497ff56dbc2e0c2e5deb7f821fbd5e7317565dedd28a7f150bb3fae59fcfb78c0
+  checksum: 10c0/fc9836536deacb095c442c67c22d963871c24e47d07721c2d08511cc8fa422b5aa19bf84dbd0d90b1b37783727e710d2cb6e16e0fd0d1ad4eee35f34cdf78785
   languageName: node
   linkType: hard
 
@@ -2257,6 +2279,414 @@ __metadata:
   version: 2.11.8
   resolution: "@popperjs/core@npm:2.11.8"
   checksum: 10c0/4681e682abc006d25eb380d0cf3efc7557043f53b6aea7a5057d0d1e7df849a00e281cd8ea79c902a35a414d7919621fc2ba293ecec05f413598e0b23d5a1e63
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-draggable-common@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "@progress/kendo-draggable-common@npm:0.2.3"
+  dependencies:
+    tslib: "npm:^1.7.0"
+  checksum: 10c0/18fb1be4478075a0995fd59a965ffc09e6a003e369421f0bcac2a72139612aa65bdaa090123e92bc0497d68afd564ec90c72e1ca9255c848a5af1de12cb29d97
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-intl@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@progress/kendo-intl@npm:3.1.2"
+  checksum: 10c0/453c74abe315fc1355e26eaed87cf61d941cb7aee7cf586483b2f0a778fe3c428e6f789b91e7c55c618c9afc0c8d0daec7b0a27397de5910ddfd40191fd59270
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-licensing@npm:^1.7.3":
+  version: 1.7.3
+  resolution: "@progress/kendo-licensing@npm:1.7.3"
+  dependencies:
+    glob: "npm:^10.5.0"
+    jsonwebtoken: "npm:^9.0.3"
+  bin:
+    kendo-ui-license: bin/kendo-ui-license.js
+  checksum: 10c0/87528b9236e37a0e1bf6b1acde09bbd97f263c5c8f1ee46f1a41db3dba548ac026edd944f1fb90b70e3108de64467c1a7569c93358efb7629b444c7cdecb8a79
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-popup-common@npm:^1.9.5":
+  version: 1.9.5
+  resolution: "@progress/kendo-popup-common@npm:1.9.5"
+  checksum: 10c0/da2d37bf3a3b169cc020410fee824e1b791a5ef3ba29b61cac07ef19376464a1c262a0e28307e357d1ff9daddb780ac36a68afcb25def3cf494a553ab4c3914e
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-animation@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-animation@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-transition-group: ^4.4.2
+  checksum: 10c0/d6e7caccf8ad130edae4ef686b0c2a77244aaceca3d99999f623d1b1f65a7a8362b26a10026559ce0ecf66cbe199bed369868453c8e961b0f2083a03aed0abe0
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-buttons@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-buttons@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    "@progress/kendo-webspeech-common": ^1.0.1
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/139cb99e0b9d53fd24c95c47234d3936227068378b47b30d10e5bed94c2292991cc27c923b60ea25859eb795d3b951f24ca961ae335e1ca37e4648e1a4c55842
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-common@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-common@npm:13.1.0"
+  dependencies:
+    "@progress/kendo-draggable-common": "npm:^0.2.3"
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/cfaca933456a336ce98e1028cd532fdaccce34f966044646624937aff67d7ddd9288f89496d38013531148fdc7d3be5ff1853bd9eca113c2b38af10ad4894afa
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-data-tools@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-data-tools@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-data-query": ^1.0.0
+    "@progress/kendo-drawing": ^1.21.2
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-animation": 13.1.0
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-dateinputs": 13.1.0
+    "@progress/kendo-react-dropdowns": 13.1.0
+    "@progress/kendo-react-inputs": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/7a36977419a44ca8ea1d6e39e1d827e74242120bbdcc703fc379ba3402966648d3a940c99a16e67ae2d6aeb7d196784833cb0b1f51e12276083cf4867b783eaa
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-dateinputs@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-dateinputs@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-date-math": ^1.4.0
+    "@progress/kendo-dateinputs-common": ^0.4.7
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-labels": 13.1.0
+    "@progress/kendo-react-layout": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/eb8d0332d0728acef4fa2dc262b0f4bd417ac534099a6679e5eba57c4d008145a137e5a77c29efb4d6bf5b4d36f5dd355816d6000c36d55a5a31459cf0641c74
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-dialogs@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-dialogs@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/1de7feabd766f2888ef9943f08d86af0bd56c96fa08088b62576f4ffbdcc2b06008fb8c2b3e9dacee297aab183532fa7223a58db8d25008604e14172390ef31f
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-dropdowns@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-dropdowns@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-inputs": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-labels": 13.1.0
+    "@progress/kendo-react-layout": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-react-treeview": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/9c4a7019c76289104f2ba6c88f955e16852ef70631f0e380c6cb532940055d3ca86fbc5af996a79da30b079aec9b21b5b60ea7684917e3adc4ee8c04b0d3ff20
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-grid@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-grid@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-data-query": ^1.0.0
+    "@progress/kendo-drawing": ^1.21.2
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-animation": 13.1.0
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-conversational-ui": 13.1.0
+    "@progress/kendo-react-data-tools": 13.1.0
+    "@progress/kendo-react-dateinputs": 13.1.0
+    "@progress/kendo-react-dialogs": 13.1.0
+    "@progress/kendo-react-dropdowns": 13.1.0
+    "@progress/kendo-react-form": 13.1.0
+    "@progress/kendo-react-indicators": 13.1.0
+    "@progress/kendo-react-inputs": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-labels": 13.1.0
+    "@progress/kendo-react-layout": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    axios: ^1.12.2
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/43cfb232c6efa17d74bac1543f0fe5e6ef7ca7dc621f0bbab1b22c27711db78f2315b44fbeda7efebbad8b436ef58350a72b02f09979cc1a6b9a2904af438d97
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-indicators@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-indicators@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/6655579e020fe8be91c95cbba0bb7cc0620230bbcd3c9228b38f0a8fdcf301e41fcfdf4d0a95bf3b7f3e9a0bde8dd886d0b9f994bab6b4a6813750d43f9d71b0
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-inputs@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-inputs@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-drawing": ^1.21.2
+    "@progress/kendo-inputs-common": ^3.1.0
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-animation": 13.1.0
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-dialogs": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-labels": 13.1.0
+    "@progress/kendo-react-layout": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/689826b8a9bd70f7ab6c596134cb1dd1268d42795768406973c9c13361276bcfeb72543e32849ffe9754c6ce005ea8da7958c1f5d0b4f2e4109352333b296d9c
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-intl@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-intl@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-intl": ^3.1.1
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/6cb2a647a45a0bbb40692c4ba1f730ff2986fbdd817c299adf03ec46f00b0024a5389595d6f24a167323627f65c848ffc07870a8e92104d9f4a6f945f3f759be
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-labels@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-labels@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/2fd4ddf189536b33199597f7f609c92a863e0ce50a56d0aef84c16023d6d76d5e777ef5b5210fa87d6687d1213efaf3e2c50f2073e489bb7c1bcfaabf400f452
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-layout@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-layout@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-animation": 13.1.0
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-react-progressbars": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/999b6c66d906da162b3d0acb0f450867f6c75b42f40184dbc05a86e1b99be5c4ada9146d8107d8ccfb3b7c206a65f6e3891817cfe7d36a993d1c265a67e74164
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-listbox@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-listbox@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-buttons": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-intl": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/364bc7d01a5d36ebd3a5d8c24fe6d4b45e884e787701af8f973c3505cdc6e8481bba324434c4579f41bdebca656764251577e088a5ee182076d2651b1ebe60e9
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-notification@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-notification@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/bbe2c50e62fdfb5996a6124cbe59f600c25847fb396ac4cffb49235c9f981acd7d96b26c39957bcf787e0ec7b01f460e70dfaf481240a2c370a1c6ef470a6c83
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-popup@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-popup@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-popup-common": ^1.9.5
+    "@progress/kendo-react-common": 13.1.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/211a006b3f441e15d7883daee1ef30a9b5a94983bd7579e98508a583b40fb27d1ff9799a1caa19aaa3f782b5727c3bcd047e458c2a670ea6e248f1b887078124
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-progressbars@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-progressbars@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-animation": 13.1.0
+    "@progress/kendo-react-common": 13.1.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/ab3c8e193257c852863f5d2d2c1f0d5fcbc5edaf8a115c8c8a71b86bc69edeb5d792fa65b14a539a4cff3b3517fb3d07092e440012989d0fbd1749718e760fa6
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-tooltip@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "@progress/kendo-react-tooltip@npm:13.1.0"
+  dependencies:
+    prop-types: "npm:^15.6.0"
+  peerDependencies:
+    "@progress/kendo-licensing": ^1.7.2
+    "@progress/kendo-react-common": 13.1.0
+    "@progress/kendo-react-popup": 13.1.0
+    "@progress/kendo-svg-icons": ^4.0.0
+    react: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^16.8.2 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/2b3ce2440534f61f84b20ba168a8a4fe22e0d6db303a6ee542583b76c4b71528c063c65314cab3a111a51267e950a3e4fb43c390affb94b0a08f7631958f9db4
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-svg-icons@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@progress/kendo-svg-icons@npm:4.5.0"
+  checksum: 10c0/4f57ec75a6d48d5c571e7cd661d340f297e7edd8c1b1ebf3a3b11a156069be1be3efde56a6a0b23e8eb362a15c4697959b2d476229083d77113c962ab9f34317
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-theme-core@npm:12.3.0":
+  version: 12.3.0
+  resolution: "@progress/kendo-theme-core@npm:12.3.0"
+  checksum: 10c0/dfc8d5901591af40a32a814c492997bd9c3d1a3d4422ec8d5262c7bd636f6765cdddf1f80ae89f528044440718079e06eca0e8c706d64c848c23072a26f916fd
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-theme-default@npm:^12.3.0":
+  version: 12.3.0
+  resolution: "@progress/kendo-theme-default@npm:12.3.0"
+  dependencies:
+    "@progress/kendo-svg-icons": "npm:^4.5.0"
+    "@progress/kendo-theme-core": "npm:12.3.0"
+    "@progress/kendo-theme-utils": "npm:12.3.0"
+  checksum: 10c0/8805e62c683136d7d8baa49c32d84da188b09e30b43790b254257bf791c66031fbbb84faef6123bd5c24fed3836655619f9f64351cb655d22e74d2bebe6a99ca
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-theme-utils@npm:12.3.0":
+  version: 12.3.0
+  resolution: "@progress/kendo-theme-utils@npm:12.3.0"
+  dependencies:
+    "@progress/kendo-theme-core": "npm:12.3.0"
+  checksum: 10c0/5cd212a0df9cac1cb6195e49fc9a9c02028e31dc85a6ff471daf557bcc6e6e985bc4ddb94956663615a5026baa1075cd159b7ff816850d504feebde923cf0f39
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-webspeech-common@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@progress/kendo-webspeech-common@npm:1.0.1"
+  checksum: 10c0/333a833f466fecb0be783ed286b39905ad3d7a4aca182085292c8b11c19777b25b166ed95f3cee2ce6709a4b7329a164fc4a2b6172be15a56052a51e914756c5
   languageName: node
   linkType: hard
 
@@ -3202,20 +3632,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 25.0.0
-  resolution: "@types/node@npm:25.0.0"
+  version: 25.0.2
+  resolution: "@types/node@npm:25.0.2"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/5a10d6f873ad326e46fac923ea4305b7fea3de0cf7e11c835d1fdc99d4b4d0f3f108035432ec1732f505c97d367b9abf618ecbdfb02a75a5306665ecce2a81a6
+  checksum: 10c0/12c4044bf2e46ba3d313ddf6256ee3c88e336a62d129fe788eeab8ff2631b3df51eb31ade4cdc04552fbe51e285f0663c49b60c78acd31da2b9f2c86a84347e3
   languageName: node
   linkType: hard
 
 "@types/node@npm:^20":
-  version: 20.19.26
-  resolution: "@types/node@npm:20.19.26"
+  version: 20.19.27
+  resolution: "@types/node@npm:20.19.27"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/68e7d92dd2b7bddff9dffabb9c740e655906ceac428dcf070915cdcae720579e4d72261c55ed7eccbfa907a75cbb1ff3a9148ea49878a07a72d5dd6c9e06d9d7
+  checksum: 10c0/7599c24d80465c1aa6e29b53581fc20ad8862ff33e6eef31d05c1c706868476ee57319c89b802ea972dd4d64ce86d18020aa5344f851fb59b730ea509a63300f
   languageName: node
   linkType: hard
 
@@ -3232,6 +3662,15 @@ __metadata:
   peerDependencies:
     "@types/react": ^18.0.0
   checksum: 10c0/8bd309e2c3d1604a28a736a24f96cbadf6c05d5288cfef8883b74f4054c961b6b3a5e997fd5686e492be903c8f3380dba5ec017eff3906b1256529cd2d39603e
+  languageName: node
+  linkType: hard
+
+"@types/react-transition-group@npm:^4":
+  version: 4.4.12
+  resolution: "@types/react-transition-group@npm:4.4.12"
+  peerDependencies:
+    "@types/react": "*"
+  checksum: 10c0/0441b8b47c69312c89ec0760ba477ba1a0808a10ceef8dc1c64b1013ed78517332c30f18681b0ec0b53542731f1ed015169fed1d127cc91222638ed955478ec7
   languageName: node
   linkType: hard
 
@@ -3962,11 +4401,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.9.0":
-  version: 2.9.6
-  resolution: "baseline-browser-mapping@npm:2.9.6"
+  version: 2.9.7
+  resolution: "baseline-browser-mapping@npm:2.9.7"
   bin:
     baseline-browser-mapping: dist/cli.js
-  checksum: 10c0/9d9bae544342c02200e0a489d4caf3611a2a517d0d7a8c97e1dd7d640ac18d2784710bf08375b5951fb9034bd18d902b50797d90218a33b88e6244ae917f881f
+  checksum: 10c0/500af82926d71d23fab20bcf821eb27deeaad45d1a01bd33d2dea7aab6114149068fa0d42bb9c5c18657e996b6e8063b84612c8fb8ac8ba6c6c6028fa4930ed1
   languageName: node
   linkType: hard
 
@@ -4077,6 +4516,13 @@ __metadata:
   version: 6.10.4
   resolution: "bson@npm:6.10.4"
   checksum: 10c0/6c6819ce642516901349f42c5d9d131d5a4e84352a3859c814d4abf6b2b9249e3685b57fc4cf7b5737fb5c71252f65900a41826c1429815a93e43f0f5bb3c173
+  languageName: node
+  linkType: hard
+
+"buffer-equal-constant-time@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "buffer-equal-constant-time@npm:1.0.1"
+  checksum: 10c0/fb2294e64d23c573d0dd1f1e7a466c3e978fe94a4e0f8183937912ca374619773bef8e2aceb854129d2efecbbc515bbd0cc78d2734a3e3031edb0888531bbc8e
   languageName: node
   linkType: hard
 
@@ -4276,7 +4722,32 @@ __metadata:
   dependencies:
     "@clerk/nextjs": "npm:^6.35.5"
     "@clerk/themes": "npm:^2.4.39"
+    "@devnomic/marquee": "npm:^1.0.3"
     "@headlessui/react": "npm:^2.2.9"
+    "@progress/kendo-intl": "npm:^3.1.2"
+    "@progress/kendo-licensing": "npm:^1.7.3"
+    "@progress/kendo-popup-common": "npm:^1.9.5"
+    "@progress/kendo-react-animation": "npm:^13.1.0"
+    "@progress/kendo-react-buttons": "npm:^13.1.0"
+    "@progress/kendo-react-common": "npm:^13.1.0"
+    "@progress/kendo-react-data-tools": "npm:^13.1.0"
+    "@progress/kendo-react-dateinputs": "npm:^13.1.0"
+    "@progress/kendo-react-dialogs": "npm:^13.1.0"
+    "@progress/kendo-react-dropdowns": "npm:^13.1.0"
+    "@progress/kendo-react-grid": "npm:^13.1.0"
+    "@progress/kendo-react-indicators": "npm:^13.1.0"
+    "@progress/kendo-react-inputs": "npm:^13.1.0"
+    "@progress/kendo-react-intl": "npm:^13.1.0"
+    "@progress/kendo-react-labels": "npm:^13.1.0"
+    "@progress/kendo-react-layout": "npm:^13.1.0"
+    "@progress/kendo-react-listbox": "npm:^13.1.0"
+    "@progress/kendo-react-notification": "npm:^13.1.0"
+    "@progress/kendo-react-popup": "npm:^13.1.0"
+    "@progress/kendo-react-progressbars": "npm:^13.1.0"
+    "@progress/kendo-react-tooltip": "npm:^13.1.0"
+    "@progress/kendo-svg-icons": "npm:^4.5.0"
+    "@progress/kendo-theme-default": "npm:^12.3.0"
+    "@progress/kendo-webspeech-common": "npm:^1.0.1"
     "@radix-ui/react-collapsible": "npm:^1.1.12"
     "@radix-ui/react-dialog": "npm:^1.1.15"
     "@radix-ui/react-dropdown-menu": "npm:^2.1.16"
@@ -4286,6 +4757,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@types/react-transition-group": "npm:^4"
     class-variance-authority: "npm:^0.7.1"
     cloudinary: "npm:^2.8.0"
     clsx: "npm:^2.1.1"
@@ -4312,6 +4784,7 @@ __metadata:
     react-icons: "npm:^5.3.0"
     react-leaflet: "npm:^5.0.0"
     react-quill-new: "npm:^3.3.3"
+    react-transition-group: "npm:^4.4.5"
     sass: "npm:^1.94.2"
     svix: "npm:^1.39.0"
     tailwind-merge: "npm:^3.4.0"
@@ -4364,7 +4837,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^2.0.0, clsx@npm:^2.1.1":
+"clsx@npm:^2.0.0, clsx@npm:^2.1.0, clsx@npm:^2.1.1":
   version: 2.1.1
   resolution: "clsx@npm:2.1.1"
   checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
@@ -4505,7 +4978,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.2.2":
+"csstype@npm:^3.0.2, csstype@npm:^3.2.2":
   version: 3.2.3
   resolution: "csstype@npm:3.2.3"
   checksum: 10c0/cd29c51e70fa822f1cecd8641a1445bed7063697469d35633b516e60fe8c1bde04b08f6c5b6022136bb669b64c63d4173af54864510fbb4ee23281801841a3ce
@@ -4741,6 +5214,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-helpers@npm:^5.0.1":
+  version: 5.2.1
+  resolution: "dom-helpers@npm:5.2.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.8.7"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/f735074d66dd759b36b158fa26e9d00c9388ee0e8c9b16af941c38f014a37fc80782de83afefd621681b19ac0501034b4f1c4a3bff5caa1b8667f0212b5e124c
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^17.2.3":
   version: 17.2.3
   resolution: "dotenv@npm:17.2.3"
@@ -4770,6 +5253,15 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10c0/26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
+  languageName: node
+  linkType: hard
+
+"ecdsa-sig-formatter@npm:1.0.11":
+  version: 1.0.11
+  resolution: "ecdsa-sig-formatter@npm:1.0.11"
+  dependencies:
+    safe-buffer: "npm:^5.0.1"
+  checksum: 10c0/ebfbf19d4b8be938f4dd4a83b8788385da353d63307ede301a9252f9f7f88672e76f2191618fd8edfc2f24679236064176fab0b78131b161ee73daa37125408c
   languageName: node
   linkType: hard
 
@@ -4865,9 +5357,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-abstract@npm:^1.17.5, es-abstract@npm:^1.23.2, es-abstract@npm:^1.23.3, es-abstract@npm:^1.23.5, es-abstract@npm:^1.23.6, es-abstract@npm:^1.23.9, es-abstract@npm:^1.24.0":
-  version: 1.24.0
-  resolution: "es-abstract@npm:1.24.0"
+"es-abstract@npm:^1.17.5, es-abstract@npm:^1.23.2, es-abstract@npm:^1.23.3, es-abstract@npm:^1.23.5, es-abstract@npm:^1.23.6, es-abstract@npm:^1.23.9, es-abstract@npm:^1.24.0, es-abstract@npm:^1.24.1":
+  version: 1.24.1
+  resolution: "es-abstract@npm:1.24.1"
   dependencies:
     array-buffer-byte-length: "npm:^1.0.2"
     arraybuffer.prototype.slice: "npm:^1.0.4"
@@ -4923,7 +5415,7 @@ __metadata:
     typed-array-length: "npm:^1.0.7"
     unbox-primitive: "npm:^1.1.0"
     which-typed-array: "npm:^1.1.19"
-  checksum: 10c0/b256e897be32df5d382786ce8cce29a1dd8c97efbab77a26609bd70f2ed29fbcfc7a31758cb07488d532e7ccccdfca76c1118f2afe5a424cdc05ca007867c318
+  checksum: 10c0/fca062ef8b5daacf743732167d319a212d45cb655b0bb540821d38d715416ae15b04b84fc86da9e2c89135aa7b337337b6c867f84dcde698d75d55688d5d765c
   languageName: node
   linkType: hard
 
@@ -4942,26 +5434,26 @@ __metadata:
   linkType: hard
 
 "es-iterator-helpers@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "es-iterator-helpers@npm:1.2.1"
+  version: 1.2.2
+  resolution: "es-iterator-helpers@npm:1.2.2"
   dependencies:
     call-bind: "npm:^1.0.8"
-    call-bound: "npm:^1.0.3"
+    call-bound: "npm:^1.0.4"
     define-properties: "npm:^1.2.1"
-    es-abstract: "npm:^1.23.6"
+    es-abstract: "npm:^1.24.1"
     es-errors: "npm:^1.3.0"
-    es-set-tostringtag: "npm:^2.0.3"
+    es-set-tostringtag: "npm:^2.1.0"
     function-bind: "npm:^1.1.2"
-    get-intrinsic: "npm:^1.2.6"
+    get-intrinsic: "npm:^1.3.0"
     globalthis: "npm:^1.0.4"
     gopd: "npm:^1.2.0"
     has-property-descriptors: "npm:^1.0.2"
     has-proto: "npm:^1.2.0"
     has-symbols: "npm:^1.1.0"
     internal-slot: "npm:^1.1.0"
-    iterator.prototype: "npm:^1.1.4"
+    iterator.prototype: "npm:^1.1.5"
     safe-array-concat: "npm:^1.1.3"
-  checksum: 10c0/97e3125ca472d82d8aceea11b790397648b52c26d8768ea1c1ee6309ef45a8755bb63225a43f3150c7591cffc17caf5752459f1e70d583b4184370a8f04ebd2f
+  checksum: 10c0/1ced8abf845a45e660dd77b5f3a64358421df70e4a0bd1897d5ddfefffed8409a6a2ca21241b9367e639df9eca74abc1c678b3020bffe6bee1f1826393658ddb
   languageName: node
   linkType: hard
 
@@ -4974,7 +5466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-set-tostringtag@npm:^2.0.3, es-set-tostringtag@npm:^2.1.0":
+"es-set-tostringtag@npm:^2.1.0":
   version: 2.1.0
   resolution: "es-set-tostringtag@npm:2.1.0"
   dependencies:
@@ -5046,10 +5538,10 @@ __metadata:
   linkType: hard
 
 "eslint-config-next@npm:^16.0.4":
-  version: 16.0.8
-  resolution: "eslint-config-next@npm:16.0.8"
+  version: 16.0.10
+  resolution: "eslint-config-next@npm:16.0.10"
   dependencies:
-    "@next/eslint-plugin-next": "npm:16.0.8"
+    "@next/eslint-plugin-next": "npm:16.0.10"
     eslint-import-resolver-node: "npm:^0.3.6"
     eslint-import-resolver-typescript: "npm:^3.5.2"
     eslint-plugin-import: "npm:^2.32.0"
@@ -5064,7 +5556,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/0aa69d1564e30d269251fa4fa7f4219db6e87685c61411ed35f21cc15c96397a5bf39b2c77205e1561d4cecda61e6c34db54e3d20c32a9a8173377b7ef66b8cd
+  checksum: 10c0/9a5650c91dfdf6853822e1d2062e1c4d10cee76187cf7723de87a0e44d3d26877a29af55cd2d453ccb8bc46708fa7261db786e852e0c51d9a8a80058c33b009d
   languageName: node
   linkType: hard
 
@@ -5237,8 +5729,8 @@ __metadata:
   linkType: hard
 
 "eslint@npm:^9":
-  version: 9.39.1
-  resolution: "eslint@npm:9.39.1"
+  version: 9.39.2
+  resolution: "eslint@npm:9.39.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.1"
@@ -5246,7 +5738,7 @@ __metadata:
     "@eslint/config-helpers": "npm:^0.4.2"
     "@eslint/core": "npm:^0.17.0"
     "@eslint/eslintrc": "npm:^3.3.1"
-    "@eslint/js": "npm:9.39.1"
+    "@eslint/js": "npm:9.39.2"
     "@eslint/plugin-kit": "npm:^0.4.1"
     "@humanfs/node": "npm:^0.16.6"
     "@humanwhocodes/module-importer": "npm:^1.0.1"
@@ -5281,7 +5773,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: 10c0/59b2480639404ba24578ca480f973683b87b7aac8aa7e349240474a39067804fd13cd8b9cb22fee074170b8c7c563b57bab703ec0f0d3f81ea017e5d2cad299d
+  checksum: 10c0/bb88ca8fd16bb7e1ac3e13804c54d41c583214460c0faa7b3e7c574e69c5600c7122295500fb4b0c06067831111db740931e98da1340329527658e1cf80073d3
   languageName: node
   linkType: hard
 
@@ -5961,7 +6453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.4.2":
+"glob@npm:^10.4.2, glob@npm:^10.5.0":
   version: 10.5.0
   resolution: "glob@npm:10.5.0"
   dependencies:
@@ -6027,9 +6519,9 @@ __metadata:
   linkType: hard
 
 "gsap@npm:^3.13.0":
-  version: 3.14.1
-  resolution: "gsap@npm:3.14.1"
-  checksum: 10c0/c8f5e15773350a812847d83e44f0e696f5600a1a4e8f25d4c264d80cdb6ab4b0d2d887174fe592a1a3bf03a65b4a6e3337f4d646f31763effdce6209e3d3e576
+  version: 3.14.2
+  resolution: "gsap@npm:3.14.2"
+  checksum: 10c0/8f7d93d58d43c23a8de22630539364fac270e0d1dd8b8747064275dcc177e9c3c944a2eb54a10684e2902011dad0ba9ca3eb5c2a0a3bdb815d4f5401f14519e6
   languageName: node
   linkType: hard
 
@@ -6191,11 +6683,11 @@ __metadata:
   linkType: hard
 
 "iconv-lite@npm:^0.7.0, iconv-lite@npm:~0.7.0":
-  version: 0.7.0
-  resolution: "iconv-lite@npm:0.7.0"
+  version: 0.7.1
+  resolution: "iconv-lite@npm:0.7.1"
   dependencies:
     safer-buffer: "npm:>= 2.1.2 < 3.0.0"
-  checksum: 10c0/2382400469071c55b6746c531eed5fa4d033e5db6690b7331fb2a5f59a30d7a9782932e92253db26df33c1cf46fa200a3fbe524a2a7c62037c762283f188ec2f
+  checksum: 10c0/f5c9e2bddd7101a71b07a381ace44ebdc65ca76a10be0e9e64d372b511132acc4ee41b830962f438840d492cd6f9e08c237289f760d6a7fed754e61cffcb6757
   languageName: node
   linkType: hard
 
@@ -6649,7 +7141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iterator.prototype@npm:^1.1.4":
+"iterator.prototype@npm:^1.1.5":
   version: 1.1.5
   resolution: "iterator.prototype@npm:1.1.5"
   dependencies:
@@ -6791,6 +7283,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonwebtoken@npm:^9.0.3":
+  version: 9.0.3
+  resolution: "jsonwebtoken@npm:9.0.3"
+  dependencies:
+    jws: "npm:^4.0.1"
+    lodash.includes: "npm:^4.3.0"
+    lodash.isboolean: "npm:^3.0.3"
+    lodash.isinteger: "npm:^4.0.4"
+    lodash.isnumber: "npm:^3.0.3"
+    lodash.isplainobject: "npm:^4.0.6"
+    lodash.isstring: "npm:^4.0.1"
+    lodash.once: "npm:^4.0.0"
+    ms: "npm:^2.1.1"
+    semver: "npm:^7.5.4"
+  checksum: 10c0/6ca7f1e54886ea3bde7146a5a22b53847c46e25453c7f7307a69818b9a6ad48c390b2e59d5690fcfd03c529b01960060cc4bb0c686991d6edae2285dfd30f4ba
+  languageName: node
+  linkType: hard
+
 "jsx-ast-utils@npm:^2.4.1 || ^3.0.0, jsx-ast-utils@npm:^3.3.5":
   version: 3.3.5
   resolution: "jsx-ast-utils@npm:3.3.5"
@@ -6800,6 +7310,27 @@ __metadata:
     object.assign: "npm:^4.1.4"
     object.values: "npm:^1.1.6"
   checksum: 10c0/a32679e9cb55469cb6d8bbc863f7d631b2c98b7fc7bf172629261751a6e7bc8da6ae374ddb74d5fbd8b06cf0eb4572287b259813d92b36e384024ed35e4c13e1
+  languageName: node
+  linkType: hard
+
+"jwa@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "jwa@npm:2.0.1"
+  dependencies:
+    buffer-equal-constant-time: "npm:^1.0.1"
+    ecdsa-sig-formatter: "npm:1.0.11"
+    safe-buffer: "npm:^5.0.1"
+  checksum: 10c0/ab3ebc6598e10dc11419d4ed675c9ca714a387481466b10e8a6f3f65d8d9c9237e2826f2505280a739cf4cbcf511cb288eeec22b5c9c63286fc5a2e4f97e78cf
+  languageName: node
+  linkType: hard
+
+"jws@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "jws@npm:4.0.1"
+  dependencies:
+    jwa: "npm:^2.0.1"
+    safe-buffer: "npm:^5.0.1"
+  checksum: 10c0/6be1ed93023aef570ccc5ea8d162b065840f3ef12f0d1bb3114cade844de7a357d5dc558201d9a65101e70885a6fa56b17462f520e6b0d426195510618a154d0
   languageName: node
   linkType: hard
 
@@ -6919,6 +7450,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.includes@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "lodash.includes@npm:4.3.0"
+  checksum: 10c0/7ca498b9b75bf602d04e48c0adb842dfc7d90f77bcb2a91a2b2be34a723ad24bc1c8b3683ec6b2552a90f216c723cdea530ddb11a3320e08fa38265703978f4b
+  languageName: node
+  linkType: hard
+
+"lodash.isboolean@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "lodash.isboolean@npm:3.0.3"
+  checksum: 10c0/0aac604c1ef7e72f9a6b798e5b676606042401dd58e49f051df3cc1e3adb497b3d7695635a5cbec4ae5f66456b951fdabe7d6b387055f13267cde521f10ec7f7
+  languageName: node
+  linkType: hard
+
 "lodash.isequal@npm:^4.5.0":
   version: 4.5.0
   resolution: "lodash.isequal@npm:4.5.0"
@@ -6926,10 +7471,45 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.isinteger@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "lodash.isinteger@npm:4.0.4"
+  checksum: 10c0/4c3e023a2373bf65bf366d3b8605b97ec830bca702a926939bcaa53f8e02789b6a176e7f166b082f9365bfec4121bfeb52e86e9040cb8d450e64c858583f61b7
+  languageName: node
+  linkType: hard
+
+"lodash.isnumber@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "lodash.isnumber@npm:3.0.3"
+  checksum: 10c0/2d01530513a1ee4f72dd79528444db4e6360588adcb0e2ff663db2b3f642d4bb3d687051ae1115751ca9082db4fdef675160071226ca6bbf5f0c123dbf0aa12d
+  languageName: node
+  linkType: hard
+
+"lodash.isplainobject@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "lodash.isplainobject@npm:4.0.6"
+  checksum: 10c0/afd70b5c450d1e09f32a737bed06ff85b873ecd3d3d3400458725283e3f2e0bb6bf48e67dbe7a309eb371a822b16a26cca4a63c8c52db3fc7dc9d5f9dd324cbb
+  languageName: node
+  linkType: hard
+
+"lodash.isstring@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.isstring@npm:4.0.1"
+  checksum: 10c0/09eaf980a283f9eef58ef95b30ec7fee61df4d6bf4aba3b5f096869cc58f24c9da17900febc8ffd67819b4e29de29793190e88dc96983db92d84c95fa85d1c92
+  languageName: node
+  linkType: hard
+
 "lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: 10c0/402fa16a1edd7538de5b5903a90228aa48eb5533986ba7fa26606a49db2572bf414ff73a2c9f5d5fd36b31c46a5d5c7e1527749c07cbcf965ccff5fbdf32c506
+  languageName: node
+  linkType: hard
+
+"lodash.once@npm:^4.0.0":
+  version: 4.1.1
+  resolution: "lodash.once@npm:4.1.1"
+  checksum: 10c0/46a9a0a66c45dd812fcc016e46605d85ad599fe87d71a02f6736220554b52ffbe82e79a483ad40f52a8a95755b0d1077fba259da8bfb6694a7abbf4a48f1fc04
   languageName: node
   linkType: hard
 
@@ -7634,10 +8214,10 @@ __metadata:
   linkType: hard
 
 "next@npm:^15.2.3":
-  version: 15.5.7
-  resolution: "next@npm:15.5.7"
+  version: 15.5.9
+  resolution: "next@npm:15.5.9"
   dependencies:
-    "@next/env": "npm:15.5.7"
+    "@next/env": "npm:15.5.9"
     "@next/swc-darwin-arm64": "npm:15.5.7"
     "@next/swc-darwin-x64": "npm:15.5.7"
     "@next/swc-linux-arm64-gnu": "npm:15.5.7"
@@ -7688,7 +8268,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/baf5b9f42416c478702b3894479b3d7862bc4abf18afe0e43b7fc7ed35567b8dc6cb76cd94906505bab9013cb8d0f3370cdc0451c01ec15ae5a638d37b5ba7c7
+  checksum: 10c0/6a120afbc45b96aa14debba6375602d6319093af4e3e8c648cf22b12ffb9db016c889df5e764cf5e0aa414ad60505db4e2095624a19f4b71316561076158651a
   languageName: node
   linkType: hard
 
@@ -8379,7 +8959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8533,13 +9113,13 @@ __metadata:
   linkType: hard
 
 "react-dom@npm:^19.2.0":
-  version: 19.2.1
-  resolution: "react-dom@npm:19.2.1"
+  version: 19.2.3
+  resolution: "react-dom@npm:19.2.3"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.1
-  checksum: 10c0/e56b6b3d72314df580ca800b70a69a21c6372703c8f45d9b5451ca6519faefb2496d76ffa9c5adb94136d2bbf2fd303d0dfc208a2cd77ede3132877471af9470
+    react: ^19.2.3
+  checksum: 10c0/dc43f7ede06f46f3acc16ee83107c925530de9b91d1d0b3824583814746ff4c498ea64fd65cd83aba363205268adff52e2827c582634ae7b15069deaeabc4892
   languageName: node
   linkType: hard
 
@@ -8656,10 +9236,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-transition-group@npm:^4.4.5":
+  version: 4.4.5
+  resolution: "react-transition-group@npm:4.4.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+    dom-helpers: "npm:^5.0.1"
+    loose-envify: "npm:^1.4.0"
+    prop-types: "npm:^15.6.2"
+  peerDependencies:
+    react: ">=16.6.0"
+    react-dom: ">=16.6.0"
+  checksum: 10c0/2ba754ba748faefa15f87c96dfa700d5525054a0141de8c75763aae6734af0740e77e11261a1e8f4ffc08fd9ab78510122e05c21c2d79066c38bb6861a886c82
+  languageName: node
+  linkType: hard
+
 "react@npm:^19.2.0":
-  version: 19.2.1
-  resolution: "react@npm:19.2.1"
-  checksum: 10c0/2b5eaf407abb3db84090434c20d6c5a8e447ab7abcd8fe9eaf1ddc299babcf31284ee9db7ea5671d21c85ac5298bd632fa1a7da1ed78d5b368a537f5e1cd5d62
+  version: 19.2.3
+  resolution: "react@npm:19.2.3"
+  checksum: 10c0/094220b3ba3a76c1b668f972ace1dd15509b157aead1b40391d1c8e657e720c201d9719537375eff08f5e0514748c0319063392a6f000e31303aafc4471f1436
   languageName: node
   linkType: hard
 
@@ -8765,13 +9360,13 @@ __metadata:
   linkType: hard
 
 "resolve-mongodb-srv@npm:^1.1.1":
-  version: 1.1.6
-  resolution: "resolve-mongodb-srv@npm:1.1.6"
+  version: 1.1.7
+  resolution: "resolve-mongodb-srv@npm:1.1.7"
   dependencies:
     whatwg-url: "npm:^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0"
   bin:
     resolve-mongodb-srv: bin/resolve-mongodb-srv.js
-  checksum: 10c0/227b3cd8c15ff265d6e938a1f43f5eb54f5fae39fcd21d0c840fd52bd3a3c4d11abf553fb7f232310959bc219ebfcae859c91f62fba4b57eb878bbf36f695c82
+  checksum: 10c0/e0c1a03395350e19ea7a854ab92d2443b9db614baf36789973e5d5a2f32b6f16a610b644dbdb9b1e26ef80ca057b7040132ec6a4c5d1048c1238b4d181abaebf
   languageName: node
   linkType: hard
 
@@ -9615,6 +10210,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tailwind-merge@npm:^2.2.0":
+  version: 2.6.0
+  resolution: "tailwind-merge@npm:2.6.0"
+  checksum: 10c0/fc8a5535524de9f4dacf1c16ab298581c7bb757d68a95faaf28942b1c555a619bba9d4c6726fe83986e44973b315410c1a5226e5354c30ba82353bd6d2288fa5
+  languageName: node
+  linkType: hard
+
 "tailwind-merge@npm:^3.4.0":
   version: 3.4.0
   resolution: "tailwind-merge@npm:3.4.0"
@@ -9806,6 +10408,13 @@ __metadata:
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^1.7.0":
+  version: 1.14.1
+  resolution: "tslib@npm:1.14.1"
+  checksum: 10c0/69ae09c49eea644bc5ebe1bca4fa4cc2c82b7b3e02f43b84bd891504edf66dbc6b2ec0eef31a957042de2269139e4acff911e6d186a258fb14069cd7f6febce2
   languageName: node
   linkType: hard
 

@@ -6,6 +6,7 @@ import Event from "@/components/Event";
 import Sportarena from "@/components/Sportarena";
 import Team from "@/components/Team";
 import Wohin from "@/components/Wohin";
+import GridLayout from "@/components/GridLayout";
 
 // Mark this page as dynamic since it may fetch data
 export const dynamic = 'force-dynamic';
@@ -16,7 +17,7 @@ export default function Home() {
     <div className=" bg-black flex flex-col min-h-screen items-center font-sans dark:bg-black">
       <Hero />
       <About />
-      <Bento />
+      <GridLayout />
       <Event />
       <Sportarena />
       <Team />
