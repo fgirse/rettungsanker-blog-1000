@@ -70,7 +70,7 @@ export default function RootLayout({
             <InfoBar />
           </Suspense>
 
-          <main className="">{children}</main>
+          <main>{children}</main>
 
           <ScrollToTopButton />
           <Footer />

@@ -7,6 +7,7 @@ import Sportarena from "@/components/Sportarena";
 import Team from "@/components/Team";
 import Wohin from "@/components/Wohin";
 import GridLayout from "@/components/GridLayout";
+import PhotoGallery from "@/components/PhptoGallery";
 
 // Mark this page as dynamic since it may fetch data
 export const dynamic = 'force-dynamic';
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <About />
       <GridLayout />
+      <PhotoGallery />
       <Event />
       <Sportarena />
       <Team />
