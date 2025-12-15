@@ -5,12 +5,12 @@ function imageLink(path: string, width: number, height: number, size: number, ex
 }
 
 const photos = [
-  { src: "/public/Assets/Img/SDX29209-400x267.jpg", alt: "Rettungsanker Eingang", width: 400, height: 267 },
-  { src: "/public/Assets/Img/SDX29268-400x267.jpg", alt: "Bar Bereich", width: 400, height: 267 },
-  { src: "/public/Assets/Img/SDX29325-400x267.jpg", alt: "Theke mit Getränken", width: 400, height: 267 },
-  { src: "/public/Assets/Img/LogoAlt.png", alt: "Logo Rettungsanker alt", width: 200, height: 200 },
-  { src: "/public/Assets/Img/frisch-gezapftes-flens-i-mori-ohlsdorf-1000x1000.webp", alt: "Flens vom Fass", width: 1000, height: 1000 },
-  { src: "/public/Assets/Img/SDX29268-400x267.jpg", alt: "Bar Bereich", width: 400, height: 267 },
+  { src: "/Assets/Img/SDX29209-400x267.jpg", alt: "Rettungsanker Eingang", width: 400, height: 267 },
+  { src: "/Assets/Img/SDX29268-400x267.jpg", alt: "Bar Bereich", width: 400, height: 267 },
+  { src: "/Assets/Img/SDX29325-400x267.jpg", alt: "Theke mit Getränken", width: 400, height: 267 },
+  { src: "/Assets/Img/LogoAlt.png", alt: "Logo Rettungsanker alt", width: 200, height: 200 },
+  { src: "/Assets/Img/frisch-gezapftes-flens-i-mori-ohlsdorf-1000x1000.webp", alt: "Flens vom Fass", width: 1000, height: 1000 },
+  { src: "/Assets/Img/SDX29268-400x267.jpg", alt: "Bar Bereich", width: 400, height: 267 },
 ] as Photo[];
 
 export default photos;
