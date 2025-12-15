@@ -7,7 +7,7 @@ import Sportarena from "@/components/Sportarena";
 import Team from "@/components/Team";
 import Wohin from "@/components/Wohin";
 import GridLayout from "@/components/GridLayout";
-import PhotoGallery from "@/components/PhptoGallery";
+import PhotoGallery from "@/components/PhotoGallery";
 
 // Mark this page as dynamic since it may fetch data
 export const dynamic = 'force-dynamic';
