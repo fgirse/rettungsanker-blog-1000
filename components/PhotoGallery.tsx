@@ -22,7 +22,7 @@ function renderNextImage({ alt = "", title, sizes }: RenderImageProps, { photo, 
     >
       <Image
         fill
-        src={photo}
+        src={typeof photo === "string" ? photo : photo.src}
         alt={alt}
         title={title}
         sizes={sizes}
