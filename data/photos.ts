@@ -12,6 +12,12 @@ const photos = [
   { src: "/Assets/Img/frisch-gezapftes-flens-i-mori-ohlsdorf-1000x1000.webp", alt: "Flens vom Fass", width: 1000, height: 1000 },
   { src: "/Assets/Img/SDX29268-400x267.jpg", alt: "Bar Bereich", width: 400, height: 267 },
   { src:  "/Assets/Img/portraitmick.png", alt: "Portrait Mick", width: 600, height: 800 },
+  { src:  "/Assets/Img/schild.jpg", alt: "RettungsankerSchild.jpg", width: 400, height: 267 },
+  { src:  "/Assets/Img/steuer.jpg", alt: "Steuerboard.jpg", width: 1000, height: 1000 },
+  { src:  "/Assets/Img/theke.jpg", alt: "Theke mit Getränken", width: 400, height: 267 },
+  { src:  "/Assets/Img/adelhausserstrasse.jpg", alt: "Strasse Schilf", width: 400, height: 267 },
+  { src:  "/Assets/Img/Albers_Illu_white.png.jpg", alt: "hansAlbers-Illustration", width: 400, height: 267 },    
+  
 ] as Photo[];
 
 export default photos;
