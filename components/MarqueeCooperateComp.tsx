@@ -10,15 +10,15 @@ function MarqueeCooperateComp() {
     // Use fade props
     return (
         <Marquee fade={true}>
-            <section className ="flex items-center ">
-            <div className="mr-36 py-24 ">
-                <Image src={LogoNeu} alt="LogoNeu" width={200} height={80} />
-            </div>
-            <div className="mr-36 py-24">
-                <Image src={LogoFlens} alt="LogoFlens" width={400} height={300} />
+            <section className ="mt-12 flex items-center justify-center">
+            <div className="mr-36 py-32 ">
+                <Image src={LogoNeu} alt="LogoNeu" width={150} height={80} />
             </div>
             <div className="mr-36 ">
-                <Image src={LogoAstra} alt="LogoAstra" width={200} height={100} />
+                <Image src={LogoFlens} alt="LogoFlens" width={300} height={100} />
+            </div>
+            <div className="mr-36 ">
+                <Image src="/Assets/Img/Astra.webp" alt="LogoAstra" width={150} height={80} />
             </div>
             </section>
         </Marquee>
