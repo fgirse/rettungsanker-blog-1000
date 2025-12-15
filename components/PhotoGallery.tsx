@@ -12,6 +12,8 @@ import "react-photo-album/rows.css";
 import photos from "@/data/photos";
 
 function renderNextImage({ alt = "", title, sizes }: RenderImageProps, { photo, width, height }: RenderImageContext) {
+  const photoSrc = typeof photo === "string" ? photo : photo.src;
+  
   return (
     <div
       style={{
@@ -22,11 +24,12 @@ function renderNextImage({ alt = "", title, sizes }: RenderImageProps, { photo, 
     >
       <Image
         fill
-        src={typeof photo === "string" ? photo : photo.src}
-        alt={alt}
+        src={photoSrc}
+        alt={alt || "Gallery image"}
         title={title}
         sizes={sizes}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
+        quality={85}
       />
     </div>
   );
@@ -34,14 +37,19 @@ function renderNextImage({ alt = "", title, sizes }: RenderImageProps, { photo, 
 
 export default function PhotoGallery() {
   return (
-    <RowsPhotoAlbum
-      photos={photos}
-      render={{ image: renderNextImage }}
-      defaultContainerWidth={1200}
-      sizes={{
-        size: "1168px",
-        sizes: [{ viewport: "(max-width: 1200px)", size: "calc(100vw - 32px)" }],
-      }}
-    />
+    <div className="w-full py-12 px-4 bg-black">
+      <h2 className="text-3xl font-bold text-white text-center mb-8">Galerie</h2>
+      <div className="w-full max-w-6xl mx-auto">
+        <RowsPhotoAlbum
+          photos={photos}
+          render={{ image: renderNextImage }}
+          defaultContainerWidth={1200}
+          sizes={{
+            size: "1168px",
+            sizes: [{ viewport: "(max-width: 1200px)", size: "calc(100vw - 32px)" }],
+          }}
+        />
+      </div>
+    </div>
   );
 }
