@@ -57,7 +57,7 @@ export default function AnimatedLogo() {
 
   return (
     <div className="flex flex-col items-center gap-8">
-      <div ref={logoRef} className="relative top-[35vh] w-[50vw] md:top-[] md:w-[52vw] lg:hidden">
+      <div ref={logoRef} className="relative top-[37vh] w-[50vw] md:top-[] md:w-[52vw] lg:hidden">
         <Image
           src={Logo}
           alt="Rettungsanker Logo"
@@ -78,7 +78,7 @@ export default function AnimatedLogo() {
       >
         kiezkneipe
       </h1>
-      <div className="mt-[39vh] md:mt-[] lg:mt-[6vh] mb-12">
+      <div className="mt-[39vh] md:mt-[] lg:mt-[6vh] mb-24">
         <MarqueeCooperateComp />
       </div>
     </div>

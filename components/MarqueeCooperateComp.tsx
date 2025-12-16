@@ -15,7 +15,7 @@ function MarqueeCooperateComp() {
                 <Image src={LogoNeu} alt="LogoNeu" width={150} height={80} />
             </div>
             <div className="mr-36 ">
-                <Image src={LogoFlens} alt="LogoFlens" width={300} height={100} />
+                <Image src={LogoFlens} alt="LogoFlens" width={250} height={100} />
             </div>
             <div className="mr-36 ">
                 <Image src="/Assets/Img/Astra.webp" alt="LogoAstra" width={150} height={80} />
