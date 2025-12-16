@@ -8,7 +8,7 @@ const Impressum = () => {
 
     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 max-w-6xl w-full">
 
-      <div className="p-12 h-[500px] w-full md:w-1/2 bg-gray-800 mb-4">
+      <div className="p-12 h-[100vh] w-full md:w-1/2 bg-gray-800 mb-60">
         <h1 className='text-3xl text-yellow-600 md:text-4xl lg:text-6xl text-shadow-lg uppercase headingA font-bold mb-4'>Impressum</h1>
 
 <p className='text-gray-100'>Rettungsanker-Freiburg<br />
@@ -35,7 +35,7 @@ Michael Schreck, Staufener-Strasse 78, 79189 Bad Krozingen</p>
 
 <p className='text-gray-100'>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
 </div>
-<div className="h-[500px] bg-red-500 w-full md:w-1/2 flex flex-col items-center">
+<div className="h-[100vh] w-full md:w-1/2 flex flex-col items-center">
 <Image src={LogoNeu} alt="Impressum Image" width={500} height={500} className="rounded-lg shadow-lg mt-8 md:mt-[10vh]" />
 </div>
 </div>

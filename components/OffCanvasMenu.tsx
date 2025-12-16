@@ -45,7 +45,7 @@ export default function OffCanvasMenu() {
 
       {/* Off-Canvas Menu */}
       <div
-        className={`lg:hidden fixed top-0 left-0 h-full w-[66vw] bg-yellow-700/80 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
+        className={`lg:hidden fixed top-0 left-0 h-full w-[75vw] bg-yellow-700/80 shadow-lg transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -70,7 +70,16 @@ export default function OffCanvasMenu() {
 
             <li>
               <div onClick={(e) => e.stopPropagation()}>
+                <div className="flex items-center justify-start gap-0">
+                <Image
+                  src={Bulleye}
+                  alt="Bulleye"
+                  width={24}
+                  height={24}
+                  className="ml-2 w-9 h-9"
+                />
                 <Dropdown />
+                </div>
               </div>
             </li>
 

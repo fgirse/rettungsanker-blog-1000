@@ -14,7 +14,7 @@ function MarqueeCooperateComp() {
             <div className="mr-36 py-32 ">
                 <Image src={LogoNeu} alt="LogoNeu" width={150} height={80} />
             </div>
-            <div className="mr-36 ">
+            <div className="mr-36 mt-2 ">
                 <Image src={LogoFlens} alt="LogoFlens" width={250} height={100} />
             </div>
             <div className="mr-36 ">
