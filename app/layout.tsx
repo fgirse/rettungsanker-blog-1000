@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider, ClerkLoading } from "@clerk/nextjs";
 import { neobrutalism } from "@clerk/themes";
-import Navigation from "@/components/MenuBar";
+import Navigation from "@/components/Navigation";
 import InfoBar from "@/components/InfoBar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/BackToTop/ScrollToTop";
@@ -66,9 +66,7 @@ export default function RootLayout({
             <Navigation />
           </Suspense>
 
-          <Suspense fallback={<div className="h-5 bg-yellow-600"></div>}>
-            <InfoBar />
-          </Suspense>
+      
 
           <main>{children}</main>
 

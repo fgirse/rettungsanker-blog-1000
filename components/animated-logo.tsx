@@ -78,7 +78,7 @@ export default function AnimatedLogo() {
       >
         kiezkneipe
       </h1>
-      <div className="mt-[39vh] md:mt-[] lg:mt-[6vh] mb-24">
+      <div className="mt-[39vh] md:mt-[] lg:mt-[-25vh] mb-24">
         <MarqueeCooperateComp />
       </div>
     </div>

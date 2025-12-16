@@ -6,7 +6,7 @@ import Event from "@/components/Event";
 import Sportarena from "@/components/Sportarena";
 import Team from "@/components/Team";
 import Wohin from "@/components/Wohin";
-import GridLayout from "@/components/GridLayout";
+import GridLayout from "@/components/grid/GridLayout";
 import PhotoGallery from "@/components/PhotoGallery";
 
 // Mark this page as dynamic since it may fetch data
