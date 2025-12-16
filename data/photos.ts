@@ -17,7 +17,11 @@ const photos = [
   { src:  "/Assets/Img/theke.jpg", alt: "Theke mit Getränken", width: 400, height: 267 },
   { src:  "/Assets/Img/adelhausserstrasse.jpg", alt: "Strasse Schilf", width: 400, height: 267 },
   { src:  "/Assets/Img/Albers_Illu_white.png.jpg", alt: "hansAlbers-Illustration", width: 400, height: 267 },    
-  
+  { src: "/Assets/Img/assorted-wine-bottles.png", alt: "Baransicht", width: 400, height:  267 },
+  { src: "/Assets/Img/Hero.png", alt: "Hero Illustration", width: 400, height: 267 },
+  { src: "/Assets/Img/Graffity_StPauli.png", alt: "Graffity", width: 400, height: 267 },
+  { src: "/Assets/Img/hamburgmoin.png", alt: "Hamburg Moin", width: 400, height: 267 },
+  { src: "/Assets/Img/schwabentor-freiburg.avif", alt: "Schwabentor Freiburg", width: 400, height: 267 },
 ] as Photo[];
 
 export default photos;
