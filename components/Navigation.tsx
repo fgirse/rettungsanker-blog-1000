@@ -404,8 +404,8 @@ const MobileMenu = () => {
           >
             <div className="flex items-center justify-between p-6">
               <Logo color="black" />
-              <button onClick={() => setOpen(false)}>
-                <FiX className=" text-4xl text-neutral-950" />
+              <button onClick={() => setOpen(false)} aria-label="Close menu">
+                <FiX className="text-4xl text-neutral-950" />
               </button>
             </div>
             <div className="uppercase text-4xl h-screen overflow-y-scroll bg-slate-100 p-6">
@@ -415,7 +415,6 @@ const MobileMenu = () => {
                   href={l.href}
                   FoldContent={l.component}
                   setMenuOpen={setOpen}
-                  
                 >
                   {l.text}
                 </MobileMenuLink>
