@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import LogoNeu from '../../public/Assets/Img/LogoNeu.png';
+import LogoNeu from '@/public/Assets/Img/LogoNeu.png';
 
 const Impressum = () => {
   return (
