@@ -12,9 +12,11 @@ import {
 } from "framer-motion";
 import useMeasure from "react-use-measure";
 import Image from "next/image";
+import Link from "next/link";
 import LogoNeu from "../public/Assets/Img/LogoNeu.png";
 import Bulleye from "../public/Assets/Svg/Bulleye.svg";
-import AuthButtons from "@/components/AuthButtons";
+import { useUser } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 
 const Navigation = () => {
   return (
@@ -144,9 +146,31 @@ const NavLink = ({
 };
 
 const Auth = () => {
+  const { user, isSignedIn } = useUser();
+
   return (
     <div className="flex items-center gap-3">
-      <AuthButtons userId={undefined} />
+      {!isSignedIn ? (
+        <>
+          <Link href="/sign-in" className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-black">
+            <FaUserCircle />
+            <span>Sign in</span>
+          </Link>
+          <Link href="/sign-up" className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
+            Sign up
+          </Link>
+        </>
+      ) : (
+        <>
+          <h1 className="text-white lg:text-xs text-xs font-bold">Hello, {user?.firstName ?? "User"}</h1>
+          <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400 lg:text-base text-sm font-bold">
+            Profil
+          </Link>
+          <div className="flex items-center">
+            <UserButton />
+          </div>
+        </>
+      )}
     </div>
   );
 };
@@ -158,7 +182,7 @@ const AboutUsContent = () => {
         <div>
           <h2 className="mb-2 text-xl font-semibold text-white">About us</h2>
           <p className="mb-6 max-w-xs text-sm text-neutral-400">
-            Placeholder is the world's leading placeholder company.
+            Alles über n 
           </p>
         </div>
         <a
