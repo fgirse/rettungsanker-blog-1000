@@ -1,14 +1,13 @@
 "use client"
 
 import * as React from 'react';
-
 import { GridLayout, GridLayoutItem } from '@progress/kendo-react-layout';
-
+import './styles.css';
 
 const App = () => {
     return (
       <div>
-        <div className="w-full h-full flex items-center justify-center ">
+        <div className="example-wrapper">
           <div className="page">
             <div className="content">
               <GridLayout
