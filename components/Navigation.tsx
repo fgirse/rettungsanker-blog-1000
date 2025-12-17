@@ -180,7 +180,7 @@ const AboutUsContent = () => {
     <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
       <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-6 lg:col-span-4">
         <div>
-          <h2 className="mb-2 text-xl font-semibold text-white">About us</h2>
+          <h2 className="mb-2 text-xl uppercase font-semibold text-white">über uns</h2>
           <p className="mb-6 max-w-xs text-sm text-neutral-400">
             Alles über n 
           </p>
@@ -194,39 +194,39 @@ const AboutUsContent = () => {
       </div>
       <div className="col-span-12 grid grid-cols-2 grid-rows-2 gap-3 bg-white p-6 lg:col-span-8">
         <a
-          href="#"
+          href="/about/team"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Features</h3>
+          <h3 className="mb-1 font-semibold">Team</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+            Das Team des Rettungsankers stellt sich vor!
           </p>
         </a>
         <a
-          href="#"
+          href="/about/history"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Testimonials</h3>
+          <h3 className="mb-1 font-semibold">Geschichte des Rettungsankers</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+            Timeline der Geschichte des Rettungsankers von der Eröffnung bis heute!
           </p>
         </a>
         <a
-          href="#"
+          href="/about/impressum"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Press</h3>
+          <h3 className="mb-1 font-semibold">Impressum</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+            Alle rechtlichen Info gemäss XXXXXXXXX!
           </p>
         </a>
         <a
-          href="#"
+          href="/about/datenschutz"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Blog</h3>
+          <h3 className="mb-1 font-semibold">Datenschutz</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+            Alles Rechtliche betreffs des Datenschutzes nach DSGVO!
           </p>
         </a>
       </div>
