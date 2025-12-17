@@ -74,14 +74,16 @@ const Logo = ({ color = "white" }: { color?: string }) => {
       <span className="text-xs font-bold lg:text-2xl" style={{ color }}>
         
       </span>
-      <Image src={LogoNeu} alt="LogoNeu" width={100} height={30} />
+      <Link href="/">
+        <Image src={LogoNeu} alt="LogoNeu" width={100} height={30} />
+      </Link>
     </div>
   );
 };
 
 const Links = () => {
   return (
-    <div className=" flex items-center gap-6 text-3xl uppercase">
+    <div className=" flex items-center gap-6 uppercase md:text-xl text-3xl lg:text-[1.33rem]">
       {LINKS.map((l) => (
         <React.Fragment key={l.text}>
           <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-9 h-9 lg:" />
