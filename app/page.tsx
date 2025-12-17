@@ -18,7 +18,12 @@ export default function Home() {
     <div className=" bg-black flex flex-col min-h-screen items-center font-sans dark:bg-black">
       <Hero />
       <About />
-      <GridLayout />
+      <GridLayout article={{
+        date: new Date(),
+        author: "",
+        title: "",
+        minsLength: 0
+      }} position={0} />
       <PhotoGallery />
       <Event />
       <Sportarena />
