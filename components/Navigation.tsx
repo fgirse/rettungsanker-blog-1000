@@ -13,6 +13,8 @@ import {
 import useMeasure from "react-use-measure";
 import Image from "next/image";
 import LogoNeu from "../public/Assets/Img/LogoNeu.png";
+import Bulleye from "../public/Assets/Svg/Bulleye.svg";
+import AuthButtons from "@/components/AuthButtons";
 
 const Navigation = () => {
   return (
@@ -51,11 +53,11 @@ const FlyoutNav = () => {
           : "bg-neutral-950/0 py-6 shadow-none"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+      <div className="mx-auto flex max-w-8xl items-center justify-between lg:h-[8vh]">
         <Logo />
         <div className="hidden gap-6 lg:flex">
           <Links />
-          <CTAs />
+          <Auth />
         </div>
         <MobileMenu />
       </div>
@@ -70,18 +72,22 @@ const Logo = ({ color = "white" }: { color?: string }) => {
       <span className="text-xs font-bold lg:text-2xl" style={{ color }}>
         
       </span>
-      <Image src={LogoNeu} alt="LogoNeu" width={80} height={30} />
+      <Image src={LogoNeu} alt="LogoNeu" width={100} height={30} />
     </div>
   );
 };
 
 const Links = () => {
   return (
-    <div className=" flex items-center gap-6">
+    <div className=" flex items-center gap-6 text-3xl uppercase">
       {LINKS.map((l) => (
-        <NavLink key={l.text} href={l.href} FlyoutContent={l.component}>
-          {l.text}
-        </NavLink>
+        <React.Fragment key={l.text}>
+          <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-9 h-9 lg:" />
+          <NavLink href={l.href} FlyoutContent={l.component} className="font-bowlby">
+            {l.text}
+            <span className="font-bowlby hover:bg-orange-300 text-shadow-lg mr-12" />
+          </NavLink>
+        </React.Fragment>
       ))}
     </div>
   );
@@ -91,10 +97,12 @@ const NavLink = ({
   children,
   href,
   FlyoutContent,
+  className,
 }: {
   children: React.ReactNode;
   href: string;
   FlyoutContent?: React.ElementType;
+  className?: string;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -106,7 +114,7 @@ const NavLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <a href={href} className="relative">
+      <a href={href} className={`relative ${className || ""}`}>
         {children}
         <span
           style={{
@@ -135,16 +143,10 @@ const NavLink = ({
   );
 };
 
-const CTAs = () => {
+const Auth = () => {
   return (
     <div className="flex items-center gap-3">
-      <button className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-black">
-        <FaUserCircle />
-        <span>Sign in</span>
-      </button>
-      <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
-        Schedule a Demo
-      </button>
+      <AuthButtons userId={undefined} />
     </div>
   );
 };
@@ -330,7 +332,7 @@ const MobileMenuLink = ({
     <div className="relative text-neutral-950">
       {FoldContent ? (
         <div
-          className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold"
+          className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-4xl font-semibold"
           onClick={() => setOpen((pv) => !pv)}
         >
           <a
@@ -359,7 +361,7 @@ const MobileMenuLink = ({
             setMenuOpen(false);
           }}
           href="#"
-          className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold"
+          className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-4xl font-bowlby"
         >
           <span>{children}</span>
           <FiArrowRight />
@@ -388,7 +390,7 @@ const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="block lg:hidden">
-      <button onClick={() => setOpen(true)} className="block text-3xl">
+      <button onClick={() => setOpen(true)} className="block text-3xl font-bowlby">
         <FiMenu />
       </button>
       <AnimatePresence>
@@ -398,28 +400,29 @@ const MobileMenu = () => {
             animate={{ x: 0 }}
             exit={{ x: "100vw" }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="fixed left-0 top-0 flex h-screen w-full flex-col bg-white"
+            className="fixed left-0 top-0 flex h-screen w-full flex-col bg-yellow-600"
           >
             <div className="flex items-center justify-between p-6">
               <Logo color="black" />
               <button onClick={() => setOpen(false)}>
-                <FiX className="text-3xl text-neutral-950" />
+                <FiX className=" text-4xl text-neutral-950" />
               </button>
             </div>
-            <div className="h-screen overflow-y-scroll bg-neutral-100 p-6">
+            <div className="uppercase text-4xl h-screen overflow-y-scroll bg-slate-100 p-6">
               {LINKS.map((l) => (
                 <MobileMenuLink
                   key={l.text}
                   href={l.href}
                   FoldContent={l.component}
                   setMenuOpen={setOpen}
+                  
                 >
                   {l.text}
                 </MobileMenuLink>
               ))}
             </div>
             <div className="flex justify-end bg-neutral-950 p-6">
-              <CTAs />
+              <Auth />
             </div>
           </motion.nav>
         )}

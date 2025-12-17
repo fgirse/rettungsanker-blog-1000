@@ -74,11 +74,11 @@ export default function AnimatedLogo() {
       </h1>
       <h1
         ref={textRef2}
-        className="relative top-[52vh] lg:top-[-7vh] headingA text-[10vw] md:text-7xl lg:text-[7vw] text-red-700 text-center tracking-wide mb-12"
+        className="relative top-[52vh] lg:top-[-14vh] headingA text-[10vw] md:text-7xl lg:text-[7vw] text-red-700 text-center tracking-wide mb-12"
       >
         kiezkneipe
       </h1>
-      <div className="mt-[39vh] md:mt-[] lg:mt-[-25vh] mb-24">
+      <div className="mt-[39vh] md:mt-[] lg:mt-[-16vh] mb-36">
         <MarqueeCooperateComp />
       </div>
     </div>

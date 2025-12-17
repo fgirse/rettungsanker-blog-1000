@@ -12,7 +12,7 @@ import Lighthouse from "@/public/Assets/Img/lighthouse3.png";
 const About = () => (
   <section
     id="section-about"
-    className={`${styles.paddings} relative z-10`}
+    className={`${styles.paddings} relative z-10 mt-12`}
     name="hashid"
   >
     <div className="gradient-02 z-0"></div>
