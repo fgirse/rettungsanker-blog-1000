@@ -156,15 +156,15 @@ const Auth = () => {
         <>
           <Link href="/sign-in" className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-black">
             <FaUserCircle />
-            <span>Sign in</span>
+            <span>Anmelden</span>
           </Link>
           <Link href="/sign-up" className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
-            Sign up
+            Registrieren
           </Link>
         </>
       ) : (
         <>
-          <h1 className="text-white lg:text-xs text-xs font-bold">Hello, {user?.firstName ?? "User"}</h1>
+          <h1 className="text-white lg:text-xs text-xs font-bold">Hallo, {user?.firstName ?? "User"}</h1>
           <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400 lg:text-base text-sm font-bold">
             Profil
           </Link>

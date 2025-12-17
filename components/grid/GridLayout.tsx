@@ -1,36 +1,54 @@
 "use client"
 
 import * as React from 'react';
-import { GridLayout, GridLayoutItem } from '@progress/kendo-react-layout';
-import './styles.css';
 
-const App = () => {
-    return (
-      <div>
-        <div className="example-wrapper">
-          <div className="page">
-            <div className="content">
-              <GridLayout
-                rows={[{height: 90}, {height: 90}, {height: 90}, {height: 90}, {height: 90}]}
-                cols={[{width: 90}, {width: 90}, {width: 90}]}
-                gap={{rows: 5, cols: 5}}
-              >
-                <GridLayoutItem className="box rect" col={1} row={1} colSpan={2}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={3} row={1}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={1} row={2}>Box</GridLayoutItem>
-                <GridLayoutItem className="box big" col={2} row={2} colSpan={2} rowSpan={2}>Box</GridLayoutItem>
-                <GridLayoutItem className="box rect" col={1} row={3} rowSpan={2}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={2} row={4}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={3} row={4}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={1} row={5}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={2} row={5}>Box</GridLayoutItem>
-                <GridLayoutItem className="box" col={3} row={5}>Box</GridLayoutItem>
-              </GridLayout>
+type Article = {
+  date: Date;
+  author: string;
+  title: string;
+  minsLength: number;
+};
+
+type GridLayoutArticleHeaderProps = {
+  article: Article;
+  position: number;
+};
+
+const GridLayoutArticleHeader: React.FC<GridLayoutArticleHeaderProps> = ({ article, position }) => {
+    // Handle undefined article
+    if (!article) {
+      return (
+        <div className="article k-d-flex" key={position}>
+          <div className="article-position k-d-inline-flex k-text-primary k-font-weight-bold">{`0${position}`}</div>
+          <div className="article-description k-d-flex-col">
+            <div className="author">No article</div>
+            <div className="title k-font-weight-bold">Loading...</div>
+            <div className="date k-d-flex">
+              <div>N/A</div>
+              <div className="separator">|</div>
+              <div>N/A</div>
             </div>
           </div>
         </div>
+      );
+    }
+
+    const formattedDate = article.date.toLocaleString('en-us', { month: 'short' }) + ' ' + article.date.getDate();
+
+    return (
+    <div className="article k-d-flex" key={position}>
+      <div className="article-position k-d-inline-flex k-text-primary k-font-weight-bold">{`0${position}`}</div>
+      <div className="article-description k-d-flex-col">
+        <div className="author">{article.author}</div>
+        <div className="title k-font-weight-bold">{article.title}</div>
+        <div className="date k-d-flex">
+          <div>{formattedDate}</div>
+          <div className="separator">|</div>
+          <div>{article.minsLength} min read</div>
+        </div>
       </div>
+    </div>
     );
 };
 
-export default App;
+export default GridLayoutArticleHeader;
