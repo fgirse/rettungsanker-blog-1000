@@ -57,7 +57,7 @@ export default function AnimatedLogo() {
 
   return (
     <div className="flex flex-col items-center gap-0">
-      <div ref={logoRef} className="relative top-[46vh] w-[45vw] md:top-[25vh] md:w-[50vw] lg:hidden">
+      <div ref={logoRef} className="relative top-[46vh] w-[45vw] md:top-[25vh] md:w-[44vw] lg:hidden">
         <Image
           src={Logo}
           alt="Rettungsanker Logo"
@@ -68,17 +68,17 @@ export default function AnimatedLogo() {
       </div>
       <h1
         ref={textRef1}
-        className="relative top-[80vh]  headingE text-[38vw] md:top-[44vh] md:text-[35vw] lg:text-[24vw] text-amber-50 text-center tracking-wide lg:top-[20vh] mb-16 lg:mb-12"
+        className="relative top-[80vh]  headingE text-[38vw] md:top-[49vh] md:text-[30vw] lg:text-[24vw] text-amber-50 text-center tracking-wide lg:top-[20vh] mb-16 lg:mb-12"
       >
         die
       </h1>
       <h1
         ref={textRef2}
-        className="relative top-[64vh] md:top-[26vh] lg:top-[-1vh] headingA text-[10vw] md:text-7xl lg:text-[7vw] text-red-700 text-center tracking-wide mb-12"
+        className="relative top-[64vh] md:top-[33vh] lg:top-[-1vh] headingA text-[10vw] md:text-7xl lg:text-[7vw] text-red-700 text-center tracking-wide mb-12"
       >
         kiezkneipe
       </h1>
-      <div className="mt-[50vh] md:mt-[12vh] lg:mt-[-16vh] mb-1">
+      <div className="mt-[50vh] md:mt-[33vh] lg:mt-[-16vh] mb-1">
         <MarqueeCooperateComp />
       </div>
     </div>
