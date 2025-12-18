@@ -5932,6 +5932,7 @@ __metadata:
     next-cloudinary: "npm:^6.17.5"
     next-themes: "npm:^0.4.3"
     payload: "npm:^3.68.5"
+    pnpx: "npm:^0.0.1"
     postcss: "npm:^8"
     react: "npm:^19.2.0"
     react-circular-progressbar: "npm:^2.1.0"
@@ -11019,6 +11020,15 @@ __metadata:
   version: 8.0.0
   resolution: "pluralize@npm:8.0.0"
   checksum: 10c0/2044cfc34b2e8c88b73379ea4a36fc577db04f651c2909041b054c981cd863dd5373ebd030123ab058d194ae615d3a97cfdac653991e499d10caf592e8b3dc33
+  languageName: node
+  linkType: hard
+
+"pnpx@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "pnpx@npm:0.0.1"
+  bin:
+    pnpx: index.js
+  checksum: 10c0/513bd1936466c8b0ba47eef89a5a25d344e4b0cfd72860acd85356b263dca1eb8c5a40e87fc6f3b80d561d0689580d29316f08ce748666cb1fe3e640863ab4c1
   languageName: node
   linkType: hard
 
