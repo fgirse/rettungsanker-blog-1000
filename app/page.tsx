@@ -6,7 +6,7 @@ import Event from "@/components/Event";
 import Sportarena from "@/components/Sportarena";
 import Team from "@/components/Team";
 import Wohin from "@/components/Wohin";
-import GridLayout from "@/components/grid/GridLayout";
+import GridLayout from "@/components/grid/GridLayout"
 import PhotoGallery from "@/components/PhotoGallery";
 
 // Mark this page as dynamic since it may fetch data
@@ -18,12 +18,7 @@ export default function Home() {
     <div className=" bg-black flex flex-col min-h-screen items-center font-sans dark:bg-black">
       <Hero />
       <About />
-      <GridLayout article={{
-        date: new Date(),
-        author: "",
-        title: "",
-        minsLength: 0
-      }} position={0} />
+      <GridLayout />
       <PhotoGallery />
       <Event />
       <Sportarena />
