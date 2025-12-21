@@ -8,6 +8,9 @@ import { SiGithub, SiTiktok, SiYoutube } from "react-icons/si";
 import Image from "next/image";
 import LogoAlt from "@/public/Assets/Img/LogoAlt.png";
 import Flens from "@/public/Assets/Img/frisch-gezapftes-flens.webp";
+import Wine from "@/public/Assets/Img/bottles03.png";
+import Cocktail from "@/public/Assets/Svg/Cocktailglas.svg";
+
 export default function RevealBento() {
   return (
     <div className="min-h-screen bg-zinc-900 px-4 py-12 text-zinc-50">
@@ -23,6 +26,11 @@ export default function RevealBento() {
         <HeaderBlock />
         <SocialsBlock />
         <AboutBlock />
+        <WineBlock />
+        <CocktailBlock  />
+        <FootballBlock />
+        <EventBlock />
+        <AlbersBlock />
         <LocationBlock />
         <EmailListBlock />
       </motion.div>
@@ -146,20 +154,127 @@ const SocialsBlock = () => (
 
 const AboutBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
-         <Image
-                src={Flens}
-                alt="Astra Bier"
+    <Image
+      src={Flens}
+      alt="Astra Bier"
+      width={350}
+      height={500}
+      className="mx-auto rounded-full"
+    />
+    <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+      bier vom Fass
+    </h1>
+    <p className="text-white text-center text-xl mt-4">
+      Flensburger Pils, das Kühle blonde von der Waterkant - Astra
+      dasKultbier natürlich direkt vom Kiez
+    </p>
+  </Block>
+);
+
+const WineBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+    <Image
+      src={Wine}
+      alt="Illustration Weinflaschen"
+      width={350}
+      height={500}
+      className="mx-auto rounded-full"
+    />
+    <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+      regionale weine
+    </h1>
+    <p className="text-white text-center text-xl mt-4">
+      Qualitativ hochwertige Weine aus der Region Kaiserstuhl und dem
+      Markgräflerland. Hauslieferant Weingut Heinemann Scherzingen
+    </p>
+  </Block>
+);
+
+const CocktailBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+    <Image
+      src={Cocktail}
+      alt="Illustration Cocktail"
+      width={350}
+      height={500}
+      className="mx-auto rounded-full"
+    />
+   <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+              cocktails & longdrinks
+            </h1>
+            <p className="text-white text-center text-xl mt-4">
+              Zahlreiche internationale Longdrinks und Cocktails - alles was das
+              Herz begehrt. Zahlreiche &quot;Kurze&quot; für jeden Geschmack.
+            </p>
+  </Block>
+);
+
+
+
+// Duplicate CocktailBlock removed (original CocktailBlock is defined earlier)
+
+const FootballBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+    <Image
+                    src="/Assets/Svg/Fussball.svg"
+                    alt="Illustration Fussball"
+                    width={200}
+                    height={200}
+                    className="mx-auto"
+                  />
+    <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+              live tv bundesliga
+            </h1>
+            <p className="text-white text-center text-xl mt-4">
+              Jeden Samstag-Spieltag der laufenden Bundesliga-Saison Live TV
+              Event in unserer Sportarena natürlich mit Schwerpunkt unseres SC
+              Freiburgs. Wann immer möglich auch Spiele der Champions League und
+              natürlich der grossen Turniere von EM und WM. Bei Topspielen des
+              SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen
+              über unser Booking-Tool zu empfehlen - Unten folgender Button und
+              Du bist direkt dabei !
+            </p>
+  </Block>
+);
+
+
+const EventBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+             <Image
+                src="/Assets/Svg/Crowdparty.svg"
+                alt="Illustration Crowd Party"
                 width={350}
                 height={500}
                 className="mx-auto"
               />
-   <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
-                bier vom Fass
-              </h1>
-              <p className="text-white text-center text-xl mt-4">
-                Flensburger Pils, das Kühle blonde von der Waterkant - Astra
-                dasKultbier natürlich direkt vom Kiez
-              </p>
+     <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+              Event oder Party?
+            </h1>
+            <p className="text-white text-center text-xl mt-4">
+              Der Rettungsanker ist die ideale Location für Ihren privaten oder
+              Business Event. Im Rahmen einer &quot;geschlossenen
+              Gesellschaft&quot; stehen Ihnen die Räumlichkeiten des
+              Rettungsankers zur Verfügung. Auf Wunsch Catering durch unseren
+              Kooperationspartner möglich ! Sprechen Sie uns an oder
+              kontaktieren Sie uns per e.mail.
+            </p>
+  </Block>
+);
+const AlbersBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+    <Image
+      src="/Assets/Img/Albers_Illu_white.png"
+      alt="Illustration Hans Albers"
+      width={350}
+      height={500}
+      className="mx-auto"
+    />
+    <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+      hans albers
+    </h1>
+    <p className="text-white text-center text-xl mt-4">
+      Hans Phillip August Albers (* 22.September 1891 in Hamburg , 24. Juli 1960 in Berg, Bayern) war ein deutscher Schauspieler und Sänger, der als &quot;blonder Hans&quot; Volkssidol wurde. Zu den bekanntesten Spielfilmen in denen er mitwirkte gehören &quot;der Mann, der Sherlock Holmes war&quot; (1937), &quot;Münchhausen&quot; (1943), &quot;die grosse Freiheit Nr.7&quot; (1943) sowie &quot;Auf fer Reeperbahn Nachts um halb eins&quot;
+    </p>
   </Block>
 );
 
@@ -217,3 +332,6 @@ const Footer = () => {
     </footer>
   );
 };
+
+
+
