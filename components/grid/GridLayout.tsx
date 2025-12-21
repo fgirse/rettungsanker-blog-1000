@@ -37,8 +37,8 @@ export default function RevealBento() {
         <FootballBlock />
         <EventBlock />
         <AlbersBlock />
-        <LocationBlock />
-        <EmailListBlock />
+        {/*<LocationBlock />*/}
+        {/*<EmailListBlock />*/}
       </motion.div>
       {/*<Footer />*/}
     </div>
@@ -75,7 +75,7 @@ const Block = ({ className, ...rest }: HTMLMotionProps<"div">) => {
   );
 };
 const HeroBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-6">
+  <Block className="col-span-12 row-span-2 md:col-span-12">
 
     <h1 className="mb-12 headingA text-center text-5xl text-yellow-500 leading-tight">
       gastlichkeit ist unsere passion
@@ -287,14 +287,14 @@ const AlbersBlock = () => (
   </Block>
 );
 
-const LocationBlock = () => (
+{/*const LocationBlock = () => (
   <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
     <FiMapPin className="text-3xl" />
     <p className="text-center text-lg text-zinc-400">Cyberspace</p>
   </Block>
-);
+);*/}
 
-const EmailListBlock = () => (
+{/*const EmailListBlock = () => (
   <Block className="col-span-12 md:col-span-9">
     <p className="mb-3 text-lg">Join my mailing list</p>
     <form
@@ -314,7 +314,7 @@ const EmailListBlock = () => (
       </button>
     </form>
   </Block>
-);
+);*/}
 
 const Logo = () => {
   // Temp logo from https://logoipsum.com/
