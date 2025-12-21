@@ -10,6 +10,11 @@ import LogoAlt from "@/public/Assets/Img/LogoAlt.png";
 import Flens from "@/public/Assets/Img/frisch-gezapftes-flens.webp";
 import Wine from "@/public/Assets/Img/bottles03.png";
 import Cocktail from "@/public/Assets/Svg/Cocktailglas.svg";
+import Event from "@/public/Assets/Img/Crowdparty.png";
+import HansAlbers  from "@/public/Assets/Img/Albers_Illu_white.png"
+import Fussball from"@/public/Assets/Svg/Fussball.svg";
+
+
 
 export default function RevealBento() {
   return (
@@ -23,9 +28,10 @@ export default function RevealBento() {
         }}
         className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
       >
+        <HeroBlock />
         <HeaderBlock />
-        <SocialsBlock />
-        <AboutBlock />
+        {/*<SocialsBlock />*/}
+        <BeerBlock />
         <WineBlock />
         <CocktailBlock  />
         <FootballBlock />
@@ -34,7 +40,7 @@ export default function RevealBento() {
         <LocationBlock />
         <EmailListBlock />
       </motion.div>
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }
@@ -68,26 +74,24 @@ const Block = ({ className, ...rest }: HTMLMotionProps<"div">) => {
     />
   );
 };
+const HeroBlock = () => (
+  <Block className="col-span-12 row-span-2 md:col-span-6">
+
+    <h1 className="mb-12 headingA text-center text-5xl text-yellow-500 leading-tight">
+      gastlichkeit ist unsere passion
+      </h1>
+ 
+  </Block>
+);
+
 
 const HeaderBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-6">
-    <img
-      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
-      alt="avatar"
-      className="mb-4 size-14 rounded-full"
-    />
-    <h1 className="mb-12 text-4xl font-medium leading-tight">
-      Hi, I'm Tom.{" "}
-      <span className="text-zinc-400">
-        I build cool websites like this one.
-      </span>
-    </h1>
-    <a
-      href="#"
-      className="flex items-center gap-1 text-red-300 hover:underline"
-    >
-      Contact me <FiArrowRight />
-    </a>
+  <Block className="col-span-12 row-span-2 md:col-span-12 bg-[url('/Assets/Img/schild.jpg ')] bg-cover bg-center ">
+
+    <h1 className="mb-12 headingA text-7xl text-center lg:text-6xl text-red-700 leading-tight">
+      unser angebot{" "}
+      </h1>
+ 
   </Block>
 );
 
@@ -98,13 +102,16 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-red-500 md:col-span-3"
+      className="col-span-6 bg-red- md:col-span-3"
     >
       <a
         href="#"
-        className="grid h-full place-content-center text-3xl text-white"
+        className=" grid h-full place-content-center text-3xl text-white"
       >
-        <SiYoutube />
+        <Image src={Flens} alt="Logo" width={550}  className="
+
+        rounded-full" />
+        
       </a>
     </Block>
     <Block
@@ -152,17 +159,19 @@ const SocialsBlock = () => (
   </>
 );
 
-const AboutBlock = () => (
+const BeerBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
-    <Image
-      src={Flens}
-      alt="Astra Bier"
-      width={350}
-      height={500}
-      className="mx-auto rounded-full"
-    />
+    <div className="lex flex-col justify-center items-center">
+      <Image
+        src={Flens}
+        alt="Astra Bier"
+        width={200}
+        height={200}
+        className="mx-auto rounded-full"
+      />
+    </div>
     <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
-      bier vom Fass
+      bier vom fass
     </h1>
     <p className="text-white text-center text-xl mt-4">
       Flensburger Pils, das Kühle blonde von der Waterkant - Astra
@@ -176,11 +185,11 @@ const WineBlock = () => (
     <Image
       src={Wine}
       alt="Illustration Weinflaschen"
-      width={350}
-      height={500}
-      className="mx-auto rounded-full"
+      width={250}
+      height={250}
+      className="mx-auto"
     />
-    <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+    <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
       regionale weine
     </h1>
     <p className="text-white text-center text-xl mt-4">
@@ -195,11 +204,11 @@ const CocktailBlock = () => (
     <Image
       src={Cocktail}
       alt="Illustration Cocktail"
-      width={350}
-      height={500}
-      className="mx-auto rounded-full"
+      width={250}
+      height={250}
+      className="mx-auto"
     />
-   <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+   <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
               cocktails & longdrinks
             </h1>
             <p className="text-white text-center text-xl mt-4">
@@ -216,23 +225,23 @@ const CocktailBlock = () => (
 const FootballBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
     <Image
-                    src="/Assets/Svg/Fussball.svg"
-                    alt="Illustration Fussball"
-                    width={200}
-                    height={200}
-                    className="mx-auto"
-                  />
-    <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
-              live tv bundesliga
-            </h1>
-            <p className="text-white text-center text-xl mt-4">
-              Jeden Samstag-Spieltag der laufenden Bundesliga-Saison Live TV
-              Event in unserer Sportarena natürlich mit Schwerpunkt unseres SC
-              Freiburgs. Wann immer möglich auch Spiele der Champions League und
-              natürlich der grossen Turniere von EM und WM. Bei Topspielen des
-              SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen
-              über unser Booking-Tool zu empfehlen - Unten folgender Button und
-              Du bist direkt dabei !
+      src={Fussball}
+      alt="Illustration Fussball"
+      width={250}
+      height={250}
+      className="mx-auto"
+    />
+    <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+      live tv bundesliga
+    </h1>
+    <p className="text-white text-center text-xl mt-4">
+      Jeden Samstag-Spieltag der laufenden Bundesliga-Saison Live TV
+      Event in unserer Sportarena natürlich mit Schwerpunkt unseres SC
+      Freiburgs. Wann immer möglich auch Spiele der Champions League und
+      natürlich der grossen Turniere von EM und WM. Bei Topspielen des
+      SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen
+      über unser Booking-Tool zu empfehlen - Unten folgender Button und
+      Du bist direkt dabei !
             </p>
   </Block>
 );
@@ -241,14 +250,14 @@ const FootballBlock = () => (
 const EventBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
              <Image
-                src="/Assets/Svg/Crowdparty.svg"
+                src={Event}
                 alt="Illustration Crowd Party"
-                width={350}
-                height={500}
+                width={250}
+                height={250}
                 className="mx-auto"
               />
-     <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
-              Event oder Party?
+     <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+              event oder party?
             </h1>
             <p className="text-white text-center text-xl mt-4">
               Der Rettungsanker ist die ideale Location für Ihren privaten oder
@@ -263,17 +272,17 @@ const EventBlock = () => (
 const AlbersBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
     <Image
-      src="/Assets/Img/Albers_Illu_white.png"
+      src={HansAlbers}
       alt="Illustration Hans Albers"
-      width={350}
-      height={500}
+      width={250}
+      height={250}
       className="mx-auto"
     />
-    <h1 className="headingA text-center text-3xl text-yellow-600 lg:text-4xl">
+    <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
       hans albers
     </h1>
     <p className="text-white text-center text-xl mt-4">
-      Hans Phillip August Albers (* 22.September 1891 in Hamburg , 24. Juli 1960 in Berg, Bayern) war ein deutscher Schauspieler und Sänger, der als &quot;blonder Hans&quot; Volkssidol wurde. Zu den bekanntesten Spielfilmen in denen er mitwirkte gehören &quot;der Mann, der Sherlock Holmes war&quot; (1937), &quot;Münchhausen&quot; (1943), &quot;die grosse Freiheit Nr.7&quot; (1943) sowie &quot;Auf fer Reeperbahn Nachts um halb eins&quot;
+      Hans Phillip August Albers (22. September 1891 in Hamburg – 24. Juli 1960 in Berg, Bayern) war ein deutscher Schauspieler und Sänger, der als "blonder Hans" Volksschauspieler und Sänger bekannt wurde; zu seinen bekanntesten Filmen zählen "Der Mann, der Sherlock Holmes war" (1937), "Münchhausen" (1943) und "Die große Freiheit Nr. 7" (1943).
     </p>
   </Block>
 );
@@ -313,14 +322,14 @@ const Logo = () => {
     <Image
       src={LogoAlt}
       alt="Logo Rettungsanker"
-      width={240}
+      width={400}
       height={40}
       className="mx-auto mb-12"
     />
   );
 };
 
-const Footer = () => {
+{/*const Footer = () => {
   return (
     <footer className="mt-12">
       <p className="text-center text-zinc-400">
@@ -331,7 +340,7 @@ const Footer = () => {
       </p>
     </footer>
   );
-};
+};*/}
 
 
 
