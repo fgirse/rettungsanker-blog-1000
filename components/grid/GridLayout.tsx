@@ -75,7 +75,7 @@ const Block = ({ className, ...rest }: HTMLMotionProps<"div">) => {
   );
 };
 const HeroBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-12">
+  <Block className="bg-slate-600/60 col-span-12 row-span-2 md:col-span-12">
 
     <h1 className="mb-12 headingA text-center text-5xl text-yellow-500 leading-tight">
       gastlichkeit ist unsere passion
