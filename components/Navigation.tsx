@@ -83,7 +83,7 @@ const Logo = ({ color = "white" }: { color?: string }) => {
 
 const Links = () => {
   return (
-    <div className=" flex items-center gap-6 uppercase md:text-xl text-3xl lg:text-[1.33rem]">
+    <div className=" flex items-center gap-6 uppercase text-[1.66rem] md:text-xl lg:text-[1.33rem]">
       {LINKS.map((l) => (
         <React.Fragment key={l.text}>
           <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-9 h-9 lg:" />

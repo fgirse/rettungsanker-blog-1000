@@ -26,7 +26,7 @@ export default function RevealBento() {
         transition={{
           staggerChildren: 0.05,
         }}
-        className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
+        className="mx-auto grid max-w-5xl grid-flow-dense grid-cols-12 gap-4"
       >
         <HeroBlock />
         <HeaderBlock />
@@ -75,7 +75,7 @@ const Block = ({ className, ...rest }: HTMLMotionProps<"div">) => {
   );
 };
 const HeroBlock = () => (
-  <Block className="bg-slate-600/60 col-span-12 row-span-2 md:col-span-12">
+  <Block className=" col-span-12 row-span-2 md:col-span-12">
 
     <h1 className="mb-12 headingA text-center text-5xl text-yellow-500 leading-tight">
       gastlichkeit ist unsere passion
@@ -86,7 +86,7 @@ const HeroBlock = () => (
 
 
 const HeaderBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-12 bg-[url('/Assets/Img/schild.jpg ')] bg-cover bg-center ">
+  <Block className="col-span-12 row-span-2 md:col-span-12 ">
 
     <h1 className="mb-12 headingA text-7xl text-center lg:text-6xl text-red-700 leading-tight">
       unser angebot{" "}
@@ -204,8 +204,8 @@ const CocktailBlock = () => (
     <Image
       src={Cocktail}
       alt="Illustration Cocktail"
-      width={250}
-      height={250}
+      width={150}
+      height={150}
       className="mx-auto"
     />
    <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
@@ -227,8 +227,8 @@ const FootballBlock = () => (
     <Image
       src={Fussball}
       alt="Illustration Fussball"
-      width={250}
-      height={250}
+      width={150}
+      height={150}
       className="mx-auto"
     />
     <h1 className="mt-12 headingA text-center text-3xl text-yellow-600 lg:text-4xl">
