@@ -55,13 +55,17 @@ const FlyoutNav = () => {
           : "bg-neutral-950/0 py-6 shadow-none"
       }`}
     >
-      <div className="mx-auto flex max-w-8xl items-center justify-between lg:h-[8vh]">
-        <Logo />
-        <div className="hidden gap-6 lg:flex">
-          <Links />
-          <Auth />
+      <div className="mx-auto flex max-w-8xl flex-col lg:flex-row items-center justify-between lg:h-[8vh]">
+        <div className="flex w-full items-center justify-between lg:w-auto">
+          <Logo />
+          <div className="hidden gap-6 lg:flex">
+            <Links />
+            <Auth />
+          </div>
+          <MobileMenu />
         </div>
-        <MobileMenu />
+        {/* Tablet View: Wrapped tabs below logo */}
+        <TabletMenu />
       </div>
     </nav>
   );
@@ -415,7 +419,7 @@ const MobileMenuLink = ({
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="block lg:hidden">
+    <div className="block md:hidden">
       <button onClick={() => setOpen(true)} className="block text-3xl font-bowlby">
         <FiMenu />
       </button>
@@ -452,6 +456,29 @@ const MobileMenu = () => {
           </motion.nav>
         )}
       </AnimatePresence>
+    </div>
+  );
+};
+
+const TabletMenu = () => {
+  return (
+    <div className="hidden md:flex lg:hidden w-full mt-4 flex-wrap items-center justify-center gap-3">
+      {LINKS.map((l) => (
+        <Link
+          key={l.text}
+          href={l.href}
+          className="px-4 py-2 rounded-lg bg-neutral-800/50 hover:bg-neutral-700 
+                     border border-neutral-600 transition-all duration-200
+                     font-semibold text-sm uppercase tracking-wide
+                     flex items-center gap-2"
+        >
+          <Image src={Bulleye} alt="" width={20} height={20} className="w-5 h-5" />
+          {l.text}
+        </Link>
+      ))}
+      <div className="ml-auto">
+        <Auth />
+      </div>
     </div>
   );
 };
