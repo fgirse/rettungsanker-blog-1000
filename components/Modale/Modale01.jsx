@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, Transition, TransitionChild, DialogPanel, DialogTitle } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import Image from "next/image";
 import Tooltip from "../../utils/SimpleTooltip";
@@ -18,7 +18,7 @@ export default function Modal01() {
 
   return (
     <>
-      <div className="inset-0 flex items-center justify-center border border-red-500">
+      <div className="inset-0 flex items-center justify-center">
         <div className="example-wrapper">
           <Tooltip
             content="öffne Kartenillustration Alt-Freiburg !!!"
@@ -37,7 +37,7 @@ export default function Modal01() {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
@@ -46,12 +46,12 @@ export default function Modal01() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0  bg-slate-700/75" />
-          </Transition.Child>
+            <div className="fixed inset-0 bg-slate-700/75" />
+          </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 scale-95"
@@ -60,13 +60,13 @@ export default function Modal01() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="border-gray-100-500 w-full max-w-md transform overflow-hidden rounded-2xl border bg-slate-900 p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
+                <DialogPanel className="border-gray-100-500 w-full max-w-md transform overflow-hidden rounded-2xl border bg-slate-900 p-6 text-left align-middle shadow-xl transition-all">
+                  <DialogTitle
                     as="h3"
                     className="text-3xl font-medium leading-6 text-amber-500"
                   >
                     Karte Altstadt
-                  </Dialog.Title>
+                  </DialogTitle>
                   <div className="mt-2">
                     <div className="mx-auto mt-12  mb-12 w-[90%] max-w-sm items-center border border-gray-50 bg-slate-900 px-5 py-4 text-center shadow-2xl shadow-gray-400 lg:w-96 lg:max-w-xl">
                       <Image
@@ -91,8 +91,8 @@ export default function Modal01() {
                       zurück
                     </button>
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

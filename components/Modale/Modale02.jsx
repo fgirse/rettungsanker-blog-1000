@@ -3,7 +3,7 @@
 import Section from "@/components/Leaf/Section";
 import Container from "@/components/Leaf/Container";
 import Map from "@/components/Leaf/Map";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, Transition, TransitionChild, DialogPanel, DialogTitle } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import Tooltip from "../../utils/SimpleTooltip";
 import styles from "../../styles/Home.module.css";
@@ -37,7 +37,7 @@ export default function Modale02() {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
@@ -46,12 +46,12 @@ export default function Modale02() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0  bg-slate-700/75" />
-          </Transition.Child>
+            <div className="fixed inset-0 bg-slate-700/75" />
+          </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 scale-95"
@@ -60,7 +60,7 @@ export default function Modale02() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="border-gray-100-500 w-full max-w-md transform overflow-hidden rounded-2xl border bg-slate-900 p-6 text-left align-middle shadow-xl transition-all">
+                <DialogPanel className="border-gray-100-500 w-full max-w-md transform overflow-hidden rounded-2xl border bg-slate-900 p-6 text-left align-middle shadow-xl transition-all">
                   <Section>
                     <Container>
                       <h1 className="mb-5 text-yellow-600 text-3xl text-center headingA">
@@ -99,8 +99,8 @@ export default function Modale02() {
                       zurück
                     </button>
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

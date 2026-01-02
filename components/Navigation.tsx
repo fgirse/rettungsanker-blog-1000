@@ -79,7 +79,7 @@ const Logo = ({ color = "white" }: { color?: string }) => {
         
       </span>
       <Link href="/">
-        <Image src={LogoNeu} alt="LogoNeu" width={100} height={30} />
+        <Image src={LogoNeu} alt="LogoNeu" width={80} height={30} className="lg:mr-9"/>
       </Link>
     </div>
   );
