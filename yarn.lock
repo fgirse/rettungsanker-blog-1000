@@ -4484,6 +4484,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tabler/icons-react@npm:^3.36.1":
+  version: 3.36.1
+  resolution: "@tabler/icons-react@npm:3.36.1"
+  dependencies:
+    "@tabler/icons": "npm:"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 10c0/325dd0c7a780ec4713a93790b15517dc176af5778c36c49e1fe586113040d2e71330aa85aa9f5900cbae0fe0b78f69016ba73b4b490783c9b7292215f29c686a
+  languageName: node
+  linkType: hard
+
+"@tabler/icons@npm:":
+  version: 3.36.1
+  resolution: "@tabler/icons@npm:3.36.1"
+  checksum: 10c0/3201b3ccace5756ba9e840ece3922718165b820f760b7bc01bcab21bf7d6fed5da6e876ea9e1155ed498d8eb008e3ac3308b270c402d744014dafad20d99534c
+  languageName: node
+  linkType: hard
+
 "@tanstack/react-virtual@npm:^3.13.9":
   version: 3.13.13
   resolution: "@tanstack/react-virtual@npm:3.13.13"
@@ -6185,6 +6203,7 @@ __metadata:
     "@radix-ui/react-dropdown-menu": "npm:^2.1.16"
     "@radix-ui/react-navigation-menu": "npm:^1.2.14"
     "@radix-ui/react-slot": "npm:^1.2.4"
+    "@tabler/icons-react": "npm:^3.36.1"
     "@types/leaflet": "npm:^1"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
@@ -6193,6 +6212,7 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     cloudinary: "npm:^2.8.0"
     clsx: "npm:^2.1.1"
+    cobe: "npm:^0.6.5"
     dotenv: "npm:^17.2.3"
     eslint: "npm:^9"
     eslint-config-next: "npm:^16.0.4"
@@ -6305,6 +6325,15 @@ __metadata:
   version: 4.6.0
   resolution: "co@npm:4.6.0"
   checksum: 10c0/c0e85ea0ca8bf0a50cbdca82efc5af0301240ca88ebe3644a6ffb8ffe911f34d40f8fbcf8f1d52c5ddd66706abd4d3bfcd64259f1e8e2371d4f47573b0dc8c28
+  languageName: node
+  linkType: hard
+
+"cobe@npm:^0.6.5":
+  version: 0.6.5
+  resolution: "cobe@npm:0.6.5"
+  dependencies:
+    phenomenon: "npm:^1.6.0"
+  checksum: 10c0/a5f28f3c0eac6222769278eda6d1a367978276135c8ed9dbe10f6c4ff56d7fcd762a93f474ac1b0fbfd2b0aa40c783f3790ee832d14649609f63c2e7a0f707b1
   languageName: node
   linkType: hard
 
@@ -12400,6 +12429,13 @@ __metadata:
   version: 2.1.0
   resolution: "performance-now@npm:2.1.0"
   checksum: 10c0/22c54de06f269e29f640e0e075207af57de5052a3d15e360c09b9a8663f393f6f45902006c1e71aa8a5a1cdfb1a47fe268826f8496d6425c362f00f5bc3e85d9
+  languageName: node
+  linkType: hard
+
+"phenomenon@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "phenomenon@npm:1.6.0"
+  checksum: 10c0/32216a8861e69ab1d96c8fa96217769073f446173f3135fbe369ea61f0959c453347004b5aefb22ba18f725273e7c57ce2d2a29c4db6ac431a2839b7bacf9778
   languageName: node
   linkType: hard
 
