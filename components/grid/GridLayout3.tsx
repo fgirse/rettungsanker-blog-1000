@@ -16,7 +16,7 @@ const bentoItems: BentoItem[] = [
   {
     id: "bier",
     title: "Bier vom Fass",
-    description: "Frisch gezapftes Flensburger und andere regionale Biere – eiskalt serviert wie es sein muss.",
+    description: "Flensburger Pils - das kühle Blonde von der Waterkant. Astra-Pils - das Kultbier natürlich direkt vom Kiez !",
     imageSrc: "/Assets/Img/frisch-gezapftes-flens.webp",
     imageAlt: "Frisch gezapftes Flensburger Bier",
     isMain: true,
@@ -24,7 +24,7 @@ const bentoItems: BentoItem[] = [
   {
     id: "weine",
     title: "Regionale Weine",
-    description: "Ausgewählte Weine aus der Region – für jeden Geschmack das passende Glas.",
+    description: "Qualitativ hochwertige Weine aus der Region Kaiserstuhl und dem Markgräflerland. Hauslieferant Weingut Heinemann Scherzingen.",
     imageSrc: "/Assets/Img/bottles03.png",
     imageAlt: "Bunte Weinflaschen in Aquarell-Stil",
   },
@@ -32,14 +32,14 @@ const bentoItems: BentoItem[] = [
     id: "cocktails",
     title: "Cocktails & Longdrinks",
     description:
-      "Von klassischen Cocktails bis zu kreativen Eigenkreationen – unsere Barkeeper zaubern Ihnen den perfekten Drink.",
+      "Zahlreiche internationale Longdrinks und Cocktails - alles was das Herz begehrt. Zahlreiche \"Kurze\" für jeden Geschmack.",
     imageSrc: "/Assets/Svg/Cocktailglas.svg",
     imageAlt: "Cocktailglas Illustration",
   },
   {
     id: "fussball",
     title: "Fußball Live-TV",
-    description: "Alle wichtigen Spiele live auf Großbildschirm – mit Freunden anfeuern und mitfiebern.",
+    description: "Jeden Samstag-Spieltag der laufenden Bundesliga-Saison Live TV Event in unserer Sportarena natürlich mit Schwerpunkt unseres SC Freiburgs. Wann immer möglich auch Spiele der Champions League und natürlich der grossen Turniere von EM und WM. Bei Topspielen des SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen über unser Booking-Tool zu empfehlen - Unten folgender Button und Du bist direkt dabei !",
     imageSrc: "/Assets/Svg/Fussball.svg",
     imageAlt: "Fußball Illustration",
     isMain: true,
@@ -47,14 +47,14 @@ const bentoItems: BentoItem[] = [
   {
     id: "party",
     title: "Party & Events",
-    description: "Private Feiern, Firmenfeste oder spontane Partys – bei uns ist immer was los!",
-    imageSrc: "/Assets/Img/crowdparty.png",
+    description: "Der Rettungsanker ist die ideale Location für Ihren privaten oder Business Event. Im Rahmen einer \"gesckossenen Gesellschaft\" stehen Ihnen die Räumlichkeiten des Rettungsankers zur Verfügung. Auf Wunsch Catering durch unseren Kooperationspartner möglich ! Sprechen Sie uns an oder kontaktieren Sie uns per e.mail.",
+    imageSrc: "/Assets/Img/Crowdparty.png",
     imageAlt: "Party Crowd in Aquarell-Stil",
   },
   {
     id: "albers",
     title: "Hans Albers",
-    description: "Unser Namensgeber und Hamburger Legende – seine Seemanns-Romantik lebt bei uns weiter.",
+    description: " Hans Phillip August Albers (* 22.September 1891 in Hamburg , 24. Juli 1960 in Berg, Bayern) war ein deutscher Schauspieler und Sänger, der als 'blonder Hans' Volkssidol wurde. Zu den bekanntesten Spielfilmen in denen er mitwirkte gehören 'der Mann, der Sherlock Holmes war' (1937), 'Münchhausen' (1943), 'die grosse Freiheit Nr.7' (1943) sowie 'Auf fer Reeperbahn Nachts um halb eins'",
     imageSrc: "/Assets/Img/Albers_Illu_white.png",
     imageAlt: "Hans Albers Illustration als Seemann",
   },
@@ -65,12 +65,12 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
     <Card
       className={cn(
         "group relative overflow-hidden transition-all duration-300 hover:shadow-xl",
-        item.isMain ? "bg-amber-50 border-amber-400 border-2 ring-2 ring-amber-200" : "bg-card border-border",
+        item.isMain ? "bg-amber-700 border-amber-400 border-2 ring-2 ring-amber-200" : "bg-card border-border",
         className,
       )}
     >
       {item.isMain && (
-        <Badge className="absolute top-3 right-3 z-10 bg-amber-500 text-white hover:bg-amber-600">Highlight</Badge>
+        <Badge className="absolute top-3 right-3 z-10 bg-red-700 text-white hover:bg-amber-600">Highlight</Badge>
       )}
       <div className="relative w-full h-40 md:h-48 lg:h-52 overflow-hidden">
         <Image
