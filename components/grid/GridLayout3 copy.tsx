@@ -70,7 +70,7 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
       )}
     >
       {item.isMain && (
-        <Badge className="absolute top-3 right-3 z-10 bg-red-700 text-white hover:bg-amber-600">Highlight</Badge>
+        <Badge className="absolute top-3 right-3 z-10 bg-red-700 text-white hover:bg-amber-700">Highlight</Badge>
       )}
       <div className="relative w-full h-40 md:h-48 lg:h-52 overflow-hidden">
         <Image
@@ -80,16 +80,16 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
           className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <CardHeader className={cn("pb-2", item.isMain ? "bg-amber-50" : "")}>
-        <CardTitle className={cn("text-lg md:text-xl font-bold", item.isMain ? "text-amber-900" : "text-foreground")}>
+      <CardHeader className={cn("pb-2", item.isMain ? "bg-amber-700" : "")}>
+        <CardTitle className={cn("text-lg md:text-xl headingA ", item.isMain ? "text-amber-900" : "text-foreground")}>
           {item.title}
         </CardTitle>
       </CardHeader>
-      <CardContent className={cn(item.isMain ? "bg-amber-50" : "")}>
+      <CardContent className={cn(item.isMain ? "bg-amber-700" : "")}>
         <CardDescription
           className={cn(
             "text-sm md:text-base leading-relaxed",
-            item.isMain ? "text-amber-800" : "text-muted-foreground",
+            item.isMain ? "text-amber-50" : "text-muted-foreground",
           )}
         >
           {item.description}
@@ -107,11 +107,11 @@ export default function BentoGrid() {
           <h1 className="text-3xl headingA md:text-4xl lg:text-7xl font-bold text-yellow-500 mb-7 text-balance">
             Gastlichkeit ist unsere Philosophie
           </h1>
-          <h2 className="text-3xl headingA md:text-4xl lg:text-5xl font-bold text-slate-500 mb-4 text-balance">
-            Was wir bieten
+          <h2 className="text-3xl headingA md:text-4xl lg:text-5xl font-bold text-amber-700 mb-4 text-balance">
+           unser angebot
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto text-pretty">
-            Entdecken Sie unser vielfältiges Angebot – von frisch gezapftem Bier bis zu unvergesslichen Events.
+            Erleben Sie norddeutsche Gastfreundschaft mit erstklassigen Getränken und unvergesslichen Momenten.
           </p>
         </div>
 
