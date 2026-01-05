@@ -111,10 +111,10 @@ export default function BentoGrid() {
     <section className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
-          <h1 className="text-3xl headingA md:text-4xl lg:text-8xl font-bold text-yellow-500 mb-7 text-balance">
+          <h1 className="text-5xl headingA md:text-4xl lg:text-8xl font-bold text-yellow-500 mb-7 text-balance">
             gastlichkeit ist unsere philosophie
           </h1>
-          <h2 className="text-3xl headingA md:text-4xl lg:text-5xl font-bold text-amber-700 mb-4 text-balance">
+          <h2 className="text-4xl headingA md:text-4xl lg:text-5xl font-bold text-amber-700 mb-4 text-balance">
            unser angebot
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto text-pretty">

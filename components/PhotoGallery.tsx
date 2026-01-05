@@ -38,7 +38,7 @@ function renderNextImage({ alt = "", title, sizes }: RenderImageProps, { photo, 
 export default function PhotoGallery() {
   return (
     <div className="w-full py-12 px-4 bg-black">
-      <h2 className="text-3xl font-bold text-white text-center mb-8">Galerie</h2>
+      <h2 className="Galerie headingA font-bold text-yellow-500 text-center mb-8">galerie</h2>
       <div className="w-full max-w-6xl mx-auto">
         <RowsPhotoAlbum
           photos={photos}
