@@ -15,7 +15,7 @@ interface BentoItem {
 const bentoItems: BentoItem[] = [
   {
     id: "bier",
-    title: "Bier vom Fass",
+    title: "bier vom fass",
     description: "Flensburger Pils - das kühle Blonde von der Waterkant. Astra-Pils - das Kultbier natürlich direkt vom Kiez !",
     imageSrc: "/Assets/Img/frisch-gezapftes-flens.webp",
     imageAlt: "Frisch gezapftes Flensburger Bier",
@@ -23,14 +23,14 @@ const bentoItems: BentoItem[] = [
   },
   {
     id: "weine",
-    title: "Regionale Weine",
+    title: "regionale weine",
     description: "Qualitativ hochwertige Weine aus der Region Kaiserstuhl und dem Markgräflerland. Hauslieferant Weingut Heinemann Scherzingen.",
     imageSrc: "/Assets/Img/bottles03.png",
     imageAlt: "Bunte Weinflaschen in Aquarell-Stil",
   },
   {
     id: "cocktails",
-    title: "Cocktails & Longdrinks",
+    title: "cocktails & longdrinks",
     description:
       "Zahlreiche internationale Longdrinks und Cocktails - alles was das Herz begehrt. Zahlreiche \"Kurze\" für jeden Geschmack.",
     imageSrc: "/Assets/Svg/Cocktailglas.svg",
@@ -38,7 +38,7 @@ const bentoItems: BentoItem[] = [
   },
   {
     id: "fussball",
-    title: "Fußball Live-TV",
+    title: "fussball live-tv",
     description: "Jeden Samstag-Spieltag der laufenden Bundesliga-Saison Live TV Event in unserer Sportarena natürlich mit Schwerpunkt unseres SC Freiburgs. Wann immer möglich auch Spiele der Champions League und natürlich der grossen Turniere von EM und WM. Bei Topspielen des SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen über unser Booking-Tool zu empfehlen - Unten folgender Button und Du bist direkt dabei !",
     imageSrc: "/Assets/Svg/Fussball.svg",
     imageAlt: "Fußball Illustration",
@@ -46,17 +46,24 @@ const bentoItems: BentoItem[] = [
   },
   {
     id: "party",
-    title: "Party & Events",
+    title: "party & events",
     description: "Der Rettungsanker ist die ideale Location für Ihren privaten oder Business Event. Im Rahmen einer \"gesckossenen Gesellschaft\" stehen Ihnen die Räumlichkeiten des Rettungsankers zur Verfügung. Auf Wunsch Catering durch unseren Kooperationspartner möglich ! Sprechen Sie uns an oder kontaktieren Sie uns per e.mail.",
     imageSrc: "/Assets/Img/Crowdparty.png",
     imageAlt: "Party Crowd in Aquarell-Stil",
   },
   {
     id: "albers",
-    title: "Hans Albers",
+    title: "hans albers",
     description: " Hans Phillip August Albers (* 22.September 1891 in Hamburg , 24. Juli 1960 in Berg, Bayern) war ein deutscher Schauspieler und Sänger, der als 'blonder Hans' Volkssidol wurde. Zu den bekanntesten Spielfilmen in denen er mitwirkte gehören 'der Mann, der Sherlock Holmes war' (1937), 'Münchhausen' (1943), 'die grosse Freiheit Nr.7' (1943) sowie 'Auf fer Reeperbahn Nachts um halb eins'",
     imageSrc: "/Assets/Img/Albers_Illu_white.png",
     imageAlt: "Hans Albers Illustration als Seemann",
+  },
+  {
+    id: "logoNeu",
+    title: "Neues Logo",
+    description: " Unser neues Logo symbolisiert die Verbindung von Tradition und Moderne. Das alte Rettungsanker Logo ist im oberen Drittel erhalten geblieben. Das mittlere Drittel beschreibt den Rettunganker als trffpunkt für Jung und Alt. Das untere Drittel. zeigt eine Shiluette der Stadt Freiburg Wir freuen uns, Sie unter unserem neuen Zeichen willkommen zu heißen!",
+    imageSrc: "/Assets/Img/LogoNeu.png",
+    imageAlt: "Neues Logo Illustration",
   },
 ]
 
@@ -72,7 +79,7 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
       {item.isMain && (
         <Badge className="absolute top-3 right-3 z-10 bg-red-700 text-white hover:bg-amber-700">Highlight</Badge>
       )}
-      <div className="relative w-full h-40 md:h-48 lg:h-52 overflow-hidden">
+      <div className="relative  w-full h-40 md:h-48 lg:h-52 overflow-hidden">
         <Image
           src={item.imageSrc || "/placeholder.svg"}
           alt={item.imageAlt}
@@ -81,14 +88,14 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
         />
       </div>
       <CardHeader className={cn("pb-2", item.isMain ? "bg-amber-700" : "")}>
-        <CardTitle className={cn("text-lg md:text-xl headingA ", item.isMain ? "text-amber-900" : "text-foreground")}>
+        <CardTitle className={cn("text-2xl md:text-2xl headingA ", item.isMain ? "text-yellow-600" : " text-yellow-600")}>
           {item.title}
         </CardTitle>
       </CardHeader>
       <CardContent className={cn(item.isMain ? "bg-amber-700" : "")}>
         <CardDescription
           className={cn(
-            "text-sm md:text-base leading-relaxed",
+            "text-lg md:text-base leading-relaxed",
             item.isMain ? "text-amber-50" : "text-muted-foreground",
           )}
         >
@@ -104,21 +111,21 @@ export default function BentoGrid() {
     <section className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
-          <h1 className="text-3xl headingA md:text-4xl lg:text-7xl font-bold text-yellow-500 mb-7 text-balance">
-            Gastlichkeit ist unsere Philosophie
+          <h1 className="text-3xl headingA md:text-4xl lg:text-8xl font-bold text-yellow-500 mb-7 text-balance">
+            gastlichkeit ist unsere philosophie
           </h1>
           <h2 className="text-3xl headingA md:text-4xl lg:text-5xl font-bold text-amber-700 mb-4 text-balance">
            unser angebot
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto text-pretty">
-            Erleben Sie norddeutsche Gastfreundschaft mit erstklassigen Getränken und unvergesslichen Momenten.
+            Erleben Sie norddeutsche Gastfreundschaft mit netten Gästen und unvergesslichen Momenten.
           </p>
         </div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {/* Bier vom Fass - Main item, larger on desktop */}
-          <BentoCard item={bentoItems[0]} className="md:col-span-1 lg:col-span-1 lg:row-span-1" />
+          <BentoCard item={bentoItems[0]} className="md:col-span-1 lg:col-span-2 lg:row-span-1" />
 
           {/* Regionale Weine */}
           <BentoCard item={bentoItems[1]} className="md:col-span-1 lg:col-span-1" />
@@ -127,13 +134,16 @@ export default function BentoGrid() {
           <BentoCard item={bentoItems[2]} className="md:col-span-1 lg:col-span-1" />
 
           {/* Fußball Live-TV - Main item */}
-          <BentoCard item={bentoItems[3]} className="md:col-span-1 lg:col-span-1" />
+          <BentoCard item={bentoItems[3]} className="md:col-span-1 lg:col-span-2" />
 
           {/* Party & Events */}
           <BentoCard item={bentoItems[4]} className="md:col-span-1 lg:col-span-1" />
 
           {/* Hans Albers */}
           <BentoCard item={bentoItems[5]} className="md:col-span-2 lg:col-span-1" />
+
+          {/* Logo Neu */}
+          <BentoCard item={bentoItems[6]} className="md:col-span-2 lg:col-span-1" />
         </div>
       </div>
     </section>
