@@ -17,7 +17,7 @@ const bentoItems: BentoItem[] = [
     id: "bier",
     title: "bier vom fass",
     description: "Flensburger Pils - das kühle Blonde von der Waterkant. Astra-Pils - das Kultbier natürlich direkt vom Kiez !",
-    imageSrc: "/Assets/Img/frisch-gezapftes-flens.webp",
+    imageSrc: "/Assets/Img/image.png",
     imageAlt: "Frisch gezapftes Flensburger Bier",
     isMain: true,
   },
@@ -25,7 +25,7 @@ const bentoItems: BentoItem[] = [
     id: "weine",
     title: "regionale weine",
     description: "Qualitativ hochwertige Weine aus der Region Kaiserstuhl und dem Markgräflerland. Hauslieferant Weingut Heinemann Scherzingen.",
-    imageSrc: "/Assets/Img/bottles03.png",
+    imageSrc: "/Assets/Img/bottles04.png",
     imageAlt: "Bunte Weinflaschen in Aquarell-Stil",
   },
   {
@@ -40,7 +40,7 @@ const bentoItems: BentoItem[] = [
     id: "fussball",
     title: "fussball live-tv",
     description: "Jeden Samstag-Spieltag der laufenden Bundesliga-Saison Live TV Event in unserer Sportarena natürlich mit Schwerpunkt unseres SC Freiburgs. Wann immer möglich auch Spiele der Champions League und natürlich der grossen Turniere von EM und WM. Bei Topspielen des SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen über unser Booking-Tool zu empfehlen - Unten folgender Button und Du bist direkt dabei !",
-    imageSrc: "/Assets/Svg/Fussball.svg",
+    imageSrc: "/Assets/Img/Fussball2.png",
     imageAlt: "Fußball Illustration",
     isMain: true,
   },
@@ -48,7 +48,7 @@ const bentoItems: BentoItem[] = [
     id: "party",
     title: "party & events",
     description: "Der Rettungsanker ist die ideale Location für Ihren privaten oder Business Event. Im Rahmen einer \"gesckossenen Gesellschaft\" stehen Ihnen die Räumlichkeiten des Rettungsankers zur Verfügung. Auf Wunsch Catering durch unseren Kooperationspartner möglich ! Sprechen Sie uns an oder kontaktieren Sie uns per e.mail.",
-    imageSrc: "/Assets/Img/Crowdparty.png",
+    imageSrc: "/Assets/Img/Crowdparty2.png",
     imageAlt: "Party Crowd in Aquarell-Stil",
   },
   {
@@ -72,7 +72,7 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
     <Card
       className={cn(
         "group relative overflow-hidden transition-all duration-300 hover:shadow-xl",
-        item.isMain ? "bg-amber-700 border-amber-400 border-2 ring-2 ring-amber-200" : "bg-card border-border",
+        item.isMain ? "bg-amber-400 border-amber-400 border-2 ring-2 ring-amber-200" : "bg-card border-border",
         className,
       )}
     >
@@ -87,12 +87,12 @@ function BentoCard({ item, className }: { item: BentoItem; className?: string })
           className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <CardHeader className={cn("pb-2", item.isMain ? "bg-amber-700" : "")}>
-        <CardTitle className={cn("text-2xl md:text-2xl headingA ", item.isMain ? "text-yellow-600" : " text-yellow-600")}>
+      <CardHeader className={cn("pb-2", item.isMain ? "bg-amber-400" : "")}>
+        <CardTitle className={cn("text-center text-2xl md:text-2xl headingA ", item.isMain ? "text-slate-600" : " text-yellow-600")}>
           {item.title}
         </CardTitle>
       </CardHeader>
-      <CardContent className={cn(item.isMain ? "bg-amber-700" : "")}>
+      <CardContent className={cn(item.isMain ? "bg-amber-400" : "")}>
         <CardDescription
           className={cn(
             "text-lg md:text-base leading-relaxed",
@@ -114,7 +114,7 @@ export default function BentoGrid() {
           <h1 className="text-5xl headingA md:text-4xl lg:text-8xl font-bold text-yellow-500 mb-7 text-balance">
             gastlichkeit ist unsere philosophie
           </h1>
-          <h2 className="text-4xl headingA md:text-4xl lg:text-5xl font-bold text-amber-700 mb-4 text-balance">
+          <h2 className="text-4xl headingA md:text-4xl lg:text-5xl font-bold text-slate-700 mb-4 text-balance">
            unser angebot
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto text-pretty">

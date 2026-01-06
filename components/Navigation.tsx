@@ -188,22 +188,17 @@ const AboutUsContent = () => {
         <div>
           <h2 className="mb-2 text-xl uppercase font-semibold text-white">über uns</h2>
           <p className="mb-6 max-w-xs text-sm text-neutral-400">
-            Alles über n 
+            Alles über den Rettungsanker und seine Mission!
           </p>
         </div>
-        <a
-          href="#"
-          className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
-        >
-          Learn more <FiArrowRight />
-        </a>
+        
       </div>
       <div className="col-span-12 grid grid-cols-2 grid-rows-2 gap-3 bg-white p-6 lg:col-span-8">
         <a
           href="/about/team"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Team</h3>
+          <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Team</h3>
           <p className="text-xs">
             Das Team des Rettungsankers stellt sich vor!
           </p>
@@ -212,7 +207,7 @@ const AboutUsContent = () => {
           href="/about/history"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Geschichte des Rettungsankers</h3>
+         <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Geschichte</h3>
           <p className="text-xs">
             Timeline der Geschichte des Rettungsankers von der Eröffnung bis heute!
           </p>
@@ -221,7 +216,7 @@ const AboutUsContent = () => {
           href="/about/impressum"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Impressum</h3>
+          <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Impressum</h3>
           <p className="text-xs">
             Alle rechtlichen Info gemäss XXXXXXXXX!
           </p>
@@ -230,7 +225,7 @@ const AboutUsContent = () => {
           href="/about/datenschutz"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Datenschutz</h3>
+        <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Datenschutz</h3>
           <p className="text-xs">
             Alles Rechtliche betreffs des Datenschutzes nach DSGVO!
           </p>
