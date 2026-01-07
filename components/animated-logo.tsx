@@ -80,7 +80,7 @@ export default function AnimatedLogo({ header1 = "die", header2 = "kiezkneipe" }
       </h1>
       <h1
         ref={textRef2}
-        className="Galerie relative top-[64vh] md:top-[45vh] lg:top-[-14vh] headingA  md:text-6xl lg:text-[6vw] text-red-700 text-center tracking-wide lg:mb-24"
+        className="Galerie2 relative top-[60vh] md:top-[60vh] lg:top-[0vh] headingA  md:text-6xl lg:text-[6vw] text-red-700 text-center tracking-wide lg:mb-24"
       >
         {header2}
       </h1>

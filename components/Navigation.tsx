@@ -93,7 +93,7 @@ const Links = () => {
           <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-9 h-9 lg:" />
           <NavLink href={l.href} FlyoutContent={l.component} className="font-bowlby">
             {l.text}
-            <span className="Menuitemsfont-bowlby hover:bg-orange-300 text-shadow-lg mr-6" />
+            <span className="Menuitems font-bowlby hover:bg-orange-300 text-shadow-lg mr-6" />
           </NavLink>
         </React.Fragment>
       ))}
