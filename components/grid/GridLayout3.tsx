@@ -33,7 +33,7 @@ const bentoItems: BentoItem[] = [
     title: "cocktails & longdrinks",
     description:
       "Zahlreiche internationale Longdrinks und Cocktails - alles was das Herz begehrt. Zahlreiche \"Kurze\" für jeden Geschmack.",
-    imageSrc: "/Assets/Svg/Cocktailglas.svg",
+    imageSrc: "/Assets/Img/cocktails.png",
     imageAlt: "Cocktailglas Illustration",
   },
   {
@@ -125,7 +125,7 @@ export default function BentoGrid() {
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {/* Bier vom Fass - Main item, larger on desktop */}
-          <BentoCard item={bentoItems[0]} className="md:col-span-1 lg:col-span-2 lg:row-span-1" />
+          <BentoCard item={bentoItems[0]} className="md:col-span-1 lg:col-span-1 lg:row-span-1" />
 
           {/* Regionale Weine */}
           <BentoCard item={bentoItems[1]} className="md:col-span-1 lg:col-span-1" />
@@ -134,7 +134,7 @@ export default function BentoGrid() {
           <BentoCard item={bentoItems[2]} className="md:col-span-1 lg:col-span-1" />
 
           {/* Fußball Live-TV - Main item */}
-          <BentoCard item={bentoItems[3]} className="md:col-span-1 lg:col-span-2" />
+          <BentoCard item={bentoItems[3]} className="md:col-span-1 lg:col-span-1" />
 
           {/* Party & Events */}
           <BentoCard item={bentoItems[4]} className="md:col-span-1 lg:col-span-1" />
@@ -143,7 +143,7 @@ export default function BentoGrid() {
           <BentoCard item={bentoItems[5]} className="md:col-span-2 lg:col-span-1" />
 
           {/* Logo Neu */}
-          <BentoCard item={bentoItems[6]} className="md:col-span-2 lg:col-span-1" />
+          <BentoCard item={bentoItems[6]} className="md:col-span-2 lg:col-span-3" />
         </div>
       </div>
     </section>
