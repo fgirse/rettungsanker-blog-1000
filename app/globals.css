@@ -64,6 +64,10 @@ body {
 font-size: clamp(4.0rem,calc(7vw + 1rem) , 9.0rem);
 }
 
+.Menuitems {
+  font-size: clamp(0.3rem, calc(.66vw + 0.3rem), 1.2rem);
+}
+
 
 .headingA {
   -webkit-text-stroke-width: 2.33px;

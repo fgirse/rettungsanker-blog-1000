@@ -93,7 +93,7 @@ const Links = () => {
           <Image src={Bulleye} alt="Bulleye" width={24} height={24} className="w-9 h-9 lg:" />
           <NavLink href={l.href} FlyoutContent={l.component} className="font-bowlby">
             {l.text}
-            <span className="font-bowlby hover:bg-orange-300 text-shadow-lg mr-6" />
+            <span className="Menuitemsfont-bowlby hover:bg-orange-300 text-shadow-lg mr-6" />
           </NavLink>
         </React.Fragment>
       ))}
@@ -169,7 +169,7 @@ const Auth = () => {
       ) : (
         <>
           <h1 className="text-white lg:text-xs text-xs font-bold">Hallo, {user?.firstName ?? "User"}</h1>
-          <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400 lg:text-base text-sm font-bold">
+          <Link href="/profile" className="uppercase bg-slate-600 p-2 rounded-lg border hover:bg-orange-400 lg:text-base menuitems font-bold">
             Profil
           </Link>
           <div className="flex items-center">
@@ -198,7 +198,7 @@ const AboutUsContent = () => {
           href="/about/team"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Team</h3>
+          <h3 className="text-[1.10rem] text-yellow-600 mb-1 font-semibold">Team</h3>
           <p className="text-xs">
             Das Team des Rettungsankers stellt sich vor!
           </p>
@@ -207,7 +207,7 @@ const AboutUsContent = () => {
           href="/about/history"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-         <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Geschichte</h3>
+         <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Geschichte</h3>
           <p className="text-xs">
             Timeline der Geschichte des Rettungsankers von der Eröffnung bis heute!
           </p>
@@ -216,7 +216,7 @@ const AboutUsContent = () => {
           href="/about/impressum"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Impressum</h3>
+          <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Impressum</h3>
           <p className="text-xs">
             Alle rechtlichen Info gemäss XXXXXXXXX!
           </p>
@@ -225,7 +225,7 @@ const AboutUsContent = () => {
           href="/about/datenschutz"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-        <h3 className="text-xl text-yellow-600 mb-1 font-semibold">Datenschutz</h3>
+        <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Datenschutz</h3>
           <p className="text-xs">
             Alles Rechtliche betreffs des Datenschutzes nach DSGVO!
           </p>
@@ -237,107 +237,106 @@ const AboutUsContent = () => {
 
 const AngebotContent = () => {
   return (
-    <div className="w-full bg-white p-6 shadow-none lg:w-[250px] lg:shadow-xl">
-      <div className="grid grid-cols-2 lg:grid-cols-1">
-        <div className="mb-3 space-y-3">
-          <h3 className="font-semibold">For Individuals</h3>
-          <a href="#" className="block text-sm hover:underline">
-            Introduction
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Pay as you go
-          </a>
+    <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
+      <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-6 lg:col-span-4">
+        <div>
+          <h2 className="mb-2 text-xl uppercase font-semibold text-white">über uns</h2>
+          <p className="mb-6 max-w-xs text-sm text-neutral-400">
+            Alle DrinksundSnäcks,die der Rettungsanker zu bieten hat!
+          </p>
         </div>
-        <div className="mb-6 space-y-3">
-          <h3 className="font-semibold">For Companies</h3>
-          <a href="#" className="block text-sm hover:underline">
-            Startups
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            SMBs
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Enterprise
-          </a>
-        </div>
+        
       </div>
-      <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
-        Contact sales
-      </button>
+      <div className="col-span-12 grid grid-cols-2 grid-rows-2 gap-3 bg-white p-6 lg:col-span-8">
+        <a
+          href="/drinks/biere"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+          <h3 className="text-[1.10rem] text-yellow-600 mb-1 font-semibold">Biere</h3>
+          <p className="text-xs">
+            Vom Flensurger herb frisch vom Fass bis Heferwezen von Ganter!
+          </p>
+        </a>
+        <a
+          href="/drinks/weine"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+         <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Weine</h3>
+          <p className="text-xs">
+            Regionale Weine aus dem Margräflerland und Kaiserstuhl. Hauslieferant Weingut Heinemann - Scherzingen.
+          </p>
+        </a>
+        <a
+          href="/drinks/cocktails"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+          <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Cocktails</h3>
+          <p className="text-xs">
+0           Internationale Cocktails. Longdrinks für jeden Geschmack. Zahlreiche Klassiker und kreative Eigenkreationen.
+          </p>
+        </a>
+        <a
+          href="/drinks/softdrinks"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+        <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Softdrinks</h3>
+          <p className="text-xs">
+            Erfrischungs- und Heissgetränke für jeden Geschmack!
+          </p>
+        </a>
+        <a
+          href="/drinks/softdrinks"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+        <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Snacks</h3>
+          <p className="text-xs">
+            Köstlich crosse Flammkuchen in verschiedenen Variationen!
+          </p>
+        </a>
+      </div>
     </div>
   );
 };
 
+
 const SportarenaContent = () => {
   return (
-    <div className="grid w-full grid-cols-12 shadow-xl lg:w-[750px]">
-      <div className="col-span-12 flex flex-col justify-between bg-indigo-600 p-6 lg:col-span-4">
-        <div className="mb-6">
-          <h2 className="mb-2 text-xl font-semibold text-white">Careers</h2>
-          <p className="text-sm text-indigo-100">
-            Placeholder was rated a top place to work by Placeholder.
-          </p>
+    <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
+      <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-6 lg:col-span-4">
+        <div>                                         
+          <h2 className="mb-2 text-xl uppercase font-semibold text-white">Sportarena</h2>
+          <p className="mb-6 max-w-xs text-sm text-neutral-400">
+            Alles über den SC Freiburg! Daten & Zahlen und Fakten zur aktuellen Saison. Bundesliga Tabelle, Spielerstatistiken und mehr. </p>
         </div>
-        <a
-          href="#"
-          className="flex items-center gap-1 text-xs text-indigo-200 hover:underline"
-        >
-          Careers site <FiArrowRight />
-        </a>
+        
       </div>
-      <div className="col-span-12 grid grid-cols-2 gap-3 bg-white p-6 lg:col-span-8 lg:grid-cols-3">
-        <div className="space-y-3">
-          <h3 className="font-semibold">Business</h3>
-          <a href="#" className="block text-sm hover:underline">
-            Marketing
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Finance
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Legal
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Sales
-          </a>
-        </div>
-        <div className="space-y-3">
-          <h3 className="font-semibold">Engineering</h3>
-          <a href="#" className="block text-sm hover:underline">
-            Full stack
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Dev ops
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            QA
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Data
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Machine learning
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Management
-          </a>
-        </div>
-        <div className="space-y-3">
-          <h3 className="font-semibold">More</h3>
-          <a href="#" className="block text-sm hover:underline">
-            Support
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Office
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Other
-          </a>
-        </div>
+      <div className="col-span-12 grid grid-cols-2 grid-rows-2 gap-3 bg-white p-6 lg:col-span-8">
+        <a
+          href="/sportarena/scfreiburg"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+          <h3 className="text-[1.10rem] text-yellow-600 mb-1 font-semibold">SC Freiburg</h3>
+          <p className="text-xs">
+            Daten Zahlen und Fakten zur aktuellen Saison!
+          </p>
+        </a>
+        <a
+          href="/sportarena/bundesliga"
+          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
+        >
+         <h3 className="text-[1.1rem] text-yellow-600 mb-1 font-semibold">Bundesliga</h3>
+          <p className="text-xs">
+            Aktuelle Bundesliga Tabelle und Spielerstatistiken! 
+          </p>
+        </a>
+     
+       
       </div>
     </div>
   );
 };
+
+
 
 const MobileMenuLink = ({
   children,
